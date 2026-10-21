@@ -123,3 +123,28 @@ This research establishes the causal understanding needed to investigate that pr
 It therefore provides the foundation for determining **what we need to measure, what differences we need to explain, and what evidence is required to establish genuine cross-building generalization**—before selecting a modeling approach or designing experiments.
 
 The accompanying document contains the detailed investigations, scientific evidence, equations, explanatory diagrams, competition-specific findings and unresolved questions.
+
+### Data Understanding — Grounding Research in Empirical Evidence (Phase 02)
+
+https://github.com/muma005/smart-buildings-data-project-/blob/main/02_DATA_UNDERSTANDING/DATA_UNDERSTANDING_GUIDE.md
+
+The Data Understanding phase translates the scientific principles established in Problem Research into verified facts, physical parameters, interface invariants, and simulation mechanics. It investigates the actual supplied competition data, procedural generators, finite-difference thermal solver, and evaluation pipeline through reproducible diagnostics and empirical audits.
+
+This investigation establishes how the challenge's underlying physics and operating contracts are actually represented across five core areas:
+
+- **Data Origins & Physical Truth:** Traces where all competition data originates, establishing that external forcing is driven exclusively by historical dry-bulb temperature (`TempF`), while solar radiation, air infiltration, and humidity are completely omitted. Confirms that sensible heat is actively injected by internal equipment ($10.0\text{ W/m}^2$, $2.0\text{ W/m}^2$ standby) and dynamic occupants ($70.0\text{ W/person}$ via Markov chain).
+- **Structure, Semantics & Policy Interfaces:** Establishes the strict Four-Tier Information Access Boundary (distinguishing live observations and static metadata from hidden simulator state) and proves closed-form interface invariants across all buildings: $D = K + 1$ discrete actions, $C = 3K + 2 + 2V$ continuous setpoints, and $\mathrm{Obs} = 6V + 15K + 58$ observation features.
+- **Data Quality & Integrity:** Validates 52,560 hourly meteorological records and all building CAD rasters, confirming zero missing values, zero NaNs, strict timestamp monotonicity, and complete spatial boundary isolation with zero blocking defects.
+- **Building & Meteorological Diversity:** Quantifies physical heterogeneity across the population, deriving facade $U$-values ($1.18\text{--}2.08\text{ W}/(\text{m}^2\text{K})$), envelope heat capacities ($0.40\text{--}1.87\text{ MJ}/(\text{m}^3\text{K})$), and a $7.4\times$ variation in thermal inertia index ($\tau \in [1.94, 14.43]$). Characterizes 5 extreme climatic regimes (Fairbanks to Phoenix) and identifies the balanced-block experimental confounding in the 30 development pairings.
+- **Simulator Behaviour & Evaluation Truth:** Proves 100% bitwise simulation determinism ($\Delta_{\mathrm{obs}}^{\max} = 0.0$, $\Delta_{\mathrm{reward}}^{\max} = 0.0$), analyzes thermal lag ($45\text{--}120\text{ min}$) and lookahead pre-conditioning (`comfort_mode_soon`), and reconstructs the 10-component reward function ($r_t = 0.6 p_t - 0.2 c_t - 0.2 e_t$) to exact floating-point precision ($0.00\text{e}+00$ discrepancy), identifying the severe quadratic discomfort cliff beyond $5.0^\circ\text{C}$ violation.
+
+**Its role in the project**
+
+Problem Research established why cross-building transfer is difficult in theory; Data Understanding proves how that difficulty manifests in the actual competition environment.
+
+It establishes the concrete operational reality of the challenge: that observation and action spaces vary in length across buildings, that buildings store and lose heat at radically different rates, and that allowing indoor temperatures to drift into the quadratic penalty zone rapidly destroys controller performance.
+
+It therefore provides the empirical foundation for determining **what architectures a policy must adopt (modular decentralized vs. graph representations), how pre-conditioning lead times must adapt to thermal inertia, and how candidate policies must be benchmarked without seasonal bias**—ensuring that solution development is grounded in ground-truth simulator behavior rather than untested assumptions.
+
+The accompanying directory contains the complete reader-facing guide ([DATA_UNDERSTANDING_GUIDE.md](02_DATA_UNDERSTANDING/DATA_UNDERSTANDING_GUIDE.md)), publication figures, structured evidence registers, diagnostic scripts, and formal handoff sign-off.
+
