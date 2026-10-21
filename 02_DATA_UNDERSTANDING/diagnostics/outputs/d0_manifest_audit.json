@@ -1,0 +1,393 @@
+{
+  "manifest_file": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\training_set.yaml",
+  "total_manifest_scenarios": 30,
+  "unique_buildings_count": 6,
+  "unique_buildings": [
+    "building_train_1",
+    "building_train_2",
+    "building_train_4",
+    "building_train_5",
+    "building_train_7",
+    "building_train_8"
+  ],
+  "shipped_building_configs": [
+    "building_train_1",
+    "building_train_2",
+    "building_train_4",
+    "building_train_5",
+    "building_train_7",
+    "building_train_8"
+  ],
+  "unreferenced_building_configs": [],
+  "missing_building_configs": [],
+  "unique_weather_strips_count": 30,
+  "unique_weather_strips": [
+    "atlanta_1",
+    "atlanta_2",
+    "atlanta_3",
+    "atlanta_5",
+    "atlanta_6",
+    "atlanta_8",
+    "denver_2",
+    "denver_3",
+    "denver_5",
+    "denver_6",
+    "denver_7",
+    "denver_8",
+    "fairbanks_1",
+    "fairbanks_2",
+    "fairbanks_4",
+    "fairbanks_5",
+    "fairbanks_7",
+    "fairbanks_8",
+    "phoenix_1",
+    "phoenix_3",
+    "phoenix_4",
+    "phoenix_5",
+    "phoenix_6",
+    "phoenix_8",
+    "singapore_1",
+    "singapore_3",
+    "singapore_4",
+    "singapore_6",
+    "singapore_7",
+    "singapore_8"
+  ],
+  "unique_weather_families_count": 5,
+  "unique_weather_families": [
+    "atlanta",
+    "denver",
+    "fairbanks",
+    "phoenix",
+    "singapore"
+  ],
+  "total_shipped_weather_presets": 48,
+  "unreferenced_weather_presets": [
+    "atlanta_4",
+    "atlanta_7",
+    "denver_1",
+    "denver_4",
+    "fairbanks_3",
+    "fairbanks_6",
+    "minneapolis_1",
+    "minneapolis_2",
+    "minneapolis_3",
+    "minneapolis_4",
+    "minneapolis_5",
+    "minneapolis_6",
+    "minneapolis_7",
+    "minneapolis_8",
+    "phoenix_2",
+    "phoenix_7",
+    "singapore_2",
+    "singapore_5"
+  ],
+  "missing_weather_presets": [],
+  "missing_scenario_directories": [],
+  "unmanifested_scenarios_found": [],
+  "evaluation_scenarios_found": [
+    "building_train_1/atlanta_2"
+  ],
+  "scenario_status": [
+    {
+      "building": "building_train_1",
+      "weather": "atlanta_2",
+      "directory_exists": true,
+      "config_gin": true,
+      "config_yaml": true,
+      "floor_plan_npy": true,
+      "zone_map_npy": true,
+      "fully_formed": true
+    },
+    {
+      "building": "building_train_1",
+      "weather": "denver_7",
+      "directory_exists": true,
+      "config_gin": true,
+      "config_yaml": true,
+      "floor_plan_npy": true,
+      "zone_map_npy": true,
+      "fully_formed": true
+    },
+    {
+      "building": "building_train_1",
+      "weather": "fairbanks_1",
+      "directory_exists": true,
+      "config_gin": true,
+      "config_yaml": true,
+      "floor_plan_npy": true,
+      "zone_map_npy": true,
+      "fully_formed": true
+    },
+    {
+      "building": "building_train_1",
+      "weather": "phoenix_5",
+      "directory_exists": true,
+      "config_gin": true,
+      "config_yaml": true,
+      "floor_plan_npy": true,
+      "zone_map_npy": true,
+      "fully_formed": true
+    },
+    {
+      "building": "building_train_1",
+      "weather": "singapore_8",
+      "directory_exists": true,
+      "config_gin": true,
+      "config_yaml": true,
+      "floor_plan_npy": true,
+      "zone_map_npy": true,
+      "fully_formed": true
+    },
+    {
+      "building": "building_train_2",
+      "weather": "atlanta_3",
+      "directory_exists": true,
+      "config_gin": true,
+      "config_yaml": true,
+      "floor_plan_npy": true,
+      "zone_map_npy": true,
+      "fully_formed": true
+    },
+    {
+      "building": "building_train_2",
+      "weather": "denver_8",
+      "directory_exists": true,
+      "config_gin": true,
+      "config_yaml": true,
+      "floor_plan_npy": true,
+      "zone_map_npy": true,
+      "fully_formed": true
+    },
+    {
+      "building": "building_train_2",
+      "weather": "fairbanks_2",
+      "directory_exists": true,
+      "config_gin": true,
+      "config_yaml": true,
+      "floor_plan_npy": true,
+      "zone_map_npy": true,
+      "fully_formed": true
+    },
+    {
+      "building": "building_train_2",
+      "weather": "phoenix_6",
+      "directory_exists": true,
+      "config_gin": true,
+      "config_yaml": true,
+      "floor_plan_npy": true,
+      "zone_map_npy": true,
+      "fully_formed": true
+    },
+    {
+      "building": "building_train_2",
+      "weather": "singapore_1",
+      "directory_exists": true,
+      "config_gin": true,
+      "config_yaml": true,
+      "floor_plan_npy": true,
+      "zone_map_npy": true,
+      "fully_formed": true
+    },
+    {
+      "building": "building_train_4",
+      "weather": "atlanta_5",
+      "directory_exists": true,
+      "config_gin": true,
+      "config_yaml": true,
+      "floor_plan_npy": true,
+      "zone_map_npy": true,
+      "fully_formed": true
+    },
+    {
+      "building": "building_train_4",
+      "weather": "denver_2",
+      "directory_exists": true,
+      "config_gin": true,
+      "config_yaml": true,
+      "floor_plan_npy": true,
+      "zone_map_npy": true,
+      "fully_formed": true
+    },
+    {
+      "building": "building_train_4",
+      "weather": "fairbanks_4",
+      "directory_exists": true,
+      "config_gin": true,
+      "config_yaml": true,
+      "floor_plan_npy": true,
+      "zone_map_npy": true,
+      "fully_formed": true
+    },
+    {
+      "building": "building_train_4",
+      "weather": "phoenix_8",
+      "directory_exists": true,
+      "config_gin": true,
+      "config_yaml": true,
+      "floor_plan_npy": true,
+      "zone_map_npy": true,
+      "fully_formed": true
+    },
+    {
+      "building": "building_train_4",
+      "weather": "singapore_3",
+      "directory_exists": true,
+      "config_gin": true,
+      "config_yaml": true,
+      "floor_plan_npy": true,
+      "zone_map_npy": true,
+      "fully_formed": true
+    },
+    {
+      "building": "building_train_5",
+      "weather": "atlanta_6",
+      "directory_exists": true,
+      "config_gin": true,
+      "config_yaml": true,
+      "floor_plan_npy": true,
+      "zone_map_npy": true,
+      "fully_formed": true
+    },
+    {
+      "building": "building_train_5",
+      "weather": "denver_3",
+      "directory_exists": true,
+      "config_gin": true,
+      "config_yaml": true,
+      "floor_plan_npy": true,
+      "zone_map_npy": true,
+      "fully_formed": true
+    },
+    {
+      "building": "building_train_5",
+      "weather": "fairbanks_5",
+      "directory_exists": true,
+      "config_gin": true,
+      "config_yaml": true,
+      "floor_plan_npy": true,
+      "zone_map_npy": true,
+      "fully_formed": true
+    },
+    {
+      "building": "building_train_5",
+      "weather": "phoenix_1",
+      "directory_exists": true,
+      "config_gin": true,
+      "config_yaml": true,
+      "floor_plan_npy": true,
+      "zone_map_npy": true,
+      "fully_formed": true
+    },
+    {
+      "building": "building_train_5",
+      "weather": "singapore_4",
+      "directory_exists": true,
+      "config_gin": true,
+      "config_yaml": true,
+      "floor_plan_npy": true,
+      "zone_map_npy": true,
+      "fully_formed": true
+    },
+    {
+      "building": "building_train_7",
+      "weather": "atlanta_8",
+      "directory_exists": true,
+      "config_gin": true,
+      "config_yaml": true,
+      "floor_plan_npy": true,
+      "zone_map_npy": true,
+      "fully_formed": true
+    },
+    {
+      "building": "building_train_7",
+      "weather": "denver_5",
+      "directory_exists": true,
+      "config_gin": true,
+      "config_yaml": true,
+      "floor_plan_npy": true,
+      "zone_map_npy": true,
+      "fully_formed": true
+    },
+    {
+      "building": "building_train_7",
+      "weather": "fairbanks_7",
+      "directory_exists": true,
+      "config_gin": true,
+      "config_yaml": true,
+      "floor_plan_npy": true,
+      "zone_map_npy": true,
+      "fully_formed": true
+    },
+    {
+      "building": "building_train_7",
+      "weather": "phoenix_3",
+      "directory_exists": true,
+      "config_gin": true,
+      "config_yaml": true,
+      "floor_plan_npy": true,
+      "zone_map_npy": true,
+      "fully_formed": true
+    },
+    {
+      "building": "building_train_7",
+      "weather": "singapore_6",
+      "directory_exists": true,
+      "config_gin": true,
+      "config_yaml": true,
+      "floor_plan_npy": true,
+      "zone_map_npy": true,
+      "fully_formed": true
+    },
+    {
+      "building": "building_train_8",
+      "weather": "atlanta_1",
+      "directory_exists": true,
+      "config_gin": true,
+      "config_yaml": true,
+      "floor_plan_npy": true,
+      "zone_map_npy": true,
+      "fully_formed": true
+    },
+    {
+      "building": "building_train_8",
+      "weather": "denver_6",
+      "directory_exists": true,
+      "config_gin": true,
+      "config_yaml": true,
+      "floor_plan_npy": true,
+      "zone_map_npy": true,
+      "fully_formed": true
+    },
+    {
+      "building": "building_train_8",
+      "weather": "fairbanks_8",
+      "directory_exists": true,
+      "config_gin": true,
+      "config_yaml": true,
+      "floor_plan_npy": true,
+      "zone_map_npy": true,
+      "fully_formed": true
+    },
+    {
+      "building": "building_train_8",
+      "weather": "phoenix_4",
+      "directory_exists": true,
+      "config_gin": true,
+      "config_yaml": true,
+      "floor_plan_npy": true,
+      "zone_map_npy": true,
+      "fully_formed": true
+    },
+    {
+      "building": "building_train_8",
+      "weather": "singapore_7",
+      "directory_exists": true,
+      "config_gin": true,
+      "config_yaml": true,
+      "floor_plan_npy": true,
+      "zone_map_npy": true,
+      "fully_formed": true
+    }
+  ]
+}

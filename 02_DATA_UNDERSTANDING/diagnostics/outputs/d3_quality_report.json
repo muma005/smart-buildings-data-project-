@@ -1,0 +1,1283 @@
+{
+  "weather_csv_audit": {
+    "atlanta.csv": {
+      "total_rows": 8760,
+      "columns": [
+        "Unnamed: 0",
+        "Time",
+        "StationName",
+        "Location",
+        "TempC",
+        "DewPointC",
+        "WindspeedKmph",
+        "Humidity",
+        "TempF"
+      ],
+      "null_counts": {
+        "Unnamed: 0": 0,
+        "Time": 0,
+        "StationName": 0,
+        "Location": 0,
+        "TempC": 0,
+        "DewPointC": 0,
+        "WindspeedKmph": 0,
+        "Humidity": 0,
+        "TempF": 0
+      },
+      "invalid_timestamps": 0,
+      "is_monotonic": true,
+      "duplicates": 0,
+      "non_hourly_steps": 0,
+      "temp_f_stats": {
+        "min": 14.0,
+        "max": 95.0,
+        "mean": 64.22645205479452,
+        "nan_count": 0
+      },
+      "temp_c_stats": {
+        "min": -10.0,
+        "max": 35.0,
+        "mean": 17.903584474885843,
+        "nan_count": 0
+      },
+      "min_timestamp": "2023-01-01 00:00:00+00:00",
+      "max_timestamp": "2023-12-31 23:00:00+00:00"
+    },
+    "atlanta_may.csv": {
+      "total_rows": 8760,
+      "columns": [
+        "Unnamed: 0",
+        "Time",
+        "StationName",
+        "Location",
+        "TempC",
+        "DewPointC",
+        "WindspeedKmph",
+        "Humidity",
+        "TempF"
+      ],
+      "null_counts": {
+        "Unnamed: 0": 0,
+        "Time": 0,
+        "StationName": 0,
+        "Location": 0,
+        "TempC": 0,
+        "DewPointC": 0,
+        "WindspeedKmph": 0,
+        "Humidity": 0,
+        "TempF": 0
+      },
+      "invalid_timestamps": 0,
+      "is_monotonic": true,
+      "duplicates": 0,
+      "non_hourly_steps": 0,
+      "temp_f_stats": {
+        "min": 14.0,
+        "max": 95.0,
+        "mean": 64.22645205479452,
+        "nan_count": 0
+      },
+      "temp_c_stats": {
+        "min": -10.0,
+        "max": 35.0,
+        "mean": 17.903584474885843,
+        "nan_count": 0
+      },
+      "min_timestamp": "2023-01-01 00:00:00+00:00",
+      "max_timestamp": "2023-12-31 23:00:00+00:00"
+    },
+    "denver.csv": {
+      "total_rows": 8760,
+      "columns": [
+        "Unnamed: 0",
+        "Time",
+        "StationName",
+        "Location",
+        "TempC",
+        "DewPointC",
+        "WindspeedKmph",
+        "Humidity",
+        "TempF"
+      ],
+      "null_counts": {
+        "Unnamed: 0": 0,
+        "Time": 0,
+        "StationName": 0,
+        "Location": 0,
+        "TempC": 0,
+        "DewPointC": 0,
+        "WindspeedKmph": 0,
+        "Humidity": 0,
+        "TempF": 0
+      },
+      "invalid_timestamps": 0,
+      "is_monotonic": true,
+      "duplicates": 0,
+      "non_hourly_steps": 0,
+      "temp_f_stats": {
+        "min": -5.980000000000004,
+        "max": 98.96,
+        "mean": 52.45948630136986,
+        "nan_count": 0
+      },
+      "temp_c_stats": {
+        "min": -21.1,
+        "max": 37.2,
+        "mean": 11.366381278538812,
+        "nan_count": 0
+      },
+      "min_timestamp": "2023-01-01 00:00:00+00:00",
+      "max_timestamp": "2023-12-31 23:00:00+00:00"
+    },
+    "denver_apr.csv": {
+      "total_rows": 8760,
+      "columns": [
+        "Unnamed: 0",
+        "Time",
+        "StationName",
+        "Location",
+        "TempC",
+        "DewPointC",
+        "WindspeedKmph",
+        "Humidity",
+        "TempF"
+      ],
+      "null_counts": {
+        "Unnamed: 0": 0,
+        "Time": 0,
+        "StationName": 0,
+        "Location": 0,
+        "TempC": 0,
+        "DewPointC": 0,
+        "WindspeedKmph": 0,
+        "Humidity": 0,
+        "TempF": 0
+      },
+      "invalid_timestamps": 0,
+      "is_monotonic": true,
+      "duplicates": 0,
+      "non_hourly_steps": 0,
+      "temp_f_stats": {
+        "min": -5.980000000000004,
+        "max": 98.96,
+        "mean": 52.45948630136986,
+        "nan_count": 0
+      },
+      "temp_c_stats": {
+        "min": -21.1,
+        "max": 37.2,
+        "mean": 11.366381278538812,
+        "nan_count": 0
+      },
+      "min_timestamp": "2023-01-01 00:00:00+00:00",
+      "max_timestamp": "2023-12-31 23:00:00+00:00"
+    },
+    "fairbanks.csv": {
+      "total_rows": 8760,
+      "columns": [
+        "Unnamed: 0",
+        "Time",
+        "StationName",
+        "Location",
+        "TempC",
+        "DewPointC",
+        "WindspeedKmph",
+        "Humidity",
+        "TempF"
+      ],
+      "null_counts": {
+        "Unnamed: 0": 0,
+        "Time": 0,
+        "StationName": 0,
+        "Location": 0,
+        "TempC": 0,
+        "DewPointC": 0,
+        "WindspeedKmph": 0,
+        "Humidity": 0,
+        "TempF": 0
+      },
+      "invalid_timestamps": 0,
+      "is_monotonic": true,
+      "duplicates": 0,
+      "non_hourly_steps": 0,
+      "temp_f_stats": {
+        "min": -43.6,
+        "max": 84.02,
+        "mean": 30.359678082191785,
+        "nan_count": 0
+      },
+      "temp_c_stats": {
+        "min": -42.0,
+        "max": 28.9,
+        "mean": -0.9112899543379002,
+        "nan_count": 0
+      },
+      "min_timestamp": "2023-01-01 00:00:00+00:00",
+      "max_timestamp": "2023-12-31 23:00:00+00:00"
+    },
+    "fairbanks_jan.csv": {
+      "total_rows": 8760,
+      "columns": [
+        "Unnamed: 0",
+        "Time",
+        "StationName",
+        "Location",
+        "TempC",
+        "DewPointC",
+        "WindspeedKmph",
+        "Humidity",
+        "TempF"
+      ],
+      "null_counts": {
+        "Unnamed: 0": 0,
+        "Time": 0,
+        "StationName": 0,
+        "Location": 0,
+        "TempC": 0,
+        "DewPointC": 0,
+        "WindspeedKmph": 0,
+        "Humidity": 0,
+        "TempF": 0
+      },
+      "invalid_timestamps": 0,
+      "is_monotonic": true,
+      "duplicates": 0,
+      "non_hourly_steps": 0,
+      "temp_f_stats": {
+        "min": -43.6,
+        "max": 84.02,
+        "mean": 30.359678082191785,
+        "nan_count": 0
+      },
+      "temp_c_stats": {
+        "min": -42.0,
+        "max": 28.9,
+        "mean": -0.9112899543379002,
+        "nan_count": 0
+      },
+      "min_timestamp": "2023-01-01 00:00:00+00:00",
+      "max_timestamp": "2023-12-31 23:00:00+00:00"
+    },
+    "minneapolis.csv": {
+      "total_rows": 8760,
+      "columns": [
+        "Unnamed: 0",
+        "Time",
+        "StationName",
+        "Location",
+        "TempC",
+        "DewPointC",
+        "WindspeedKmph",
+        "Humidity",
+        "TempF"
+      ],
+      "null_counts": {
+        "Unnamed: 0": 0,
+        "Time": 0,
+        "StationName": 0,
+        "Location": 0,
+        "TempC": 0,
+        "DewPointC": 0,
+        "WindspeedKmph": 0,
+        "Humidity": 0,
+        "TempF": 0
+      },
+      "invalid_timestamps": 0,
+      "is_monotonic": true,
+      "duplicates": 0,
+      "non_hourly_steps": 0,
+      "temp_f_stats": {
+        "min": -11.920000000000002,
+        "max": 95.0,
+        "mean": 48.07728767123287,
+        "nan_count": 0
+      },
+      "temp_c_stats": {
+        "min": -24.4,
+        "max": 35.0,
+        "mean": 8.931826484018263,
+        "nan_count": 0
+      },
+      "min_timestamp": "2023-01-01 00:00:00+00:00",
+      "max_timestamp": "2023-12-31 23:00:00+00:00"
+    },
+    "minneapolis_jan.csv": {
+      "total_rows": 8760,
+      "columns": [
+        "Unnamed: 0",
+        "Time",
+        "StationName",
+        "Location",
+        "TempC",
+        "DewPointC",
+        "WindspeedKmph",
+        "Humidity",
+        "TempF"
+      ],
+      "null_counts": {
+        "Unnamed: 0": 0,
+        "Time": 0,
+        "StationName": 0,
+        "Location": 0,
+        "TempC": 0,
+        "DewPointC": 0,
+        "WindspeedKmph": 0,
+        "Humidity": 0,
+        "TempF": 0
+      },
+      "invalid_timestamps": 0,
+      "is_monotonic": true,
+      "duplicates": 0,
+      "non_hourly_steps": 0,
+      "temp_f_stats": {
+        "min": -11.920000000000002,
+        "max": 95.0,
+        "mean": 48.07728767123287,
+        "nan_count": 0
+      },
+      "temp_c_stats": {
+        "min": -24.4,
+        "max": 35.0,
+        "mean": 8.931826484018263,
+        "nan_count": 0
+      },
+      "min_timestamp": "2023-01-01 00:00:00+00:00",
+      "max_timestamp": "2023-12-31 23:00:00+00:00"
+    },
+    "phoenix.csv": {
+      "total_rows": 8760,
+      "columns": [
+        "Unnamed: 0",
+        "Time",
+        "StationName",
+        "Location",
+        "TempC",
+        "DewPointC",
+        "WindspeedKmph",
+        "Humidity",
+        "TempF"
+      ],
+      "null_counts": {
+        "Unnamed: 0": 0,
+        "Time": 0,
+        "StationName": 0,
+        "Location": 0,
+        "TempC": 0,
+        "DewPointC": 0,
+        "WindspeedKmph": 0,
+        "Humidity": 0,
+        "TempF": 0
+      },
+      "invalid_timestamps": 0,
+      "is_monotonic": true,
+      "duplicates": 0,
+      "non_hourly_steps": 0,
+      "temp_f_stats": {
+        "min": 32.72,
+        "max": 114.98,
+        "mean": 76.2361506849315,
+        "nan_count": 0
+      },
+      "temp_c_stats": {
+        "min": 0.4,
+        "max": 46.1,
+        "mean": 24.57563926940639,
+        "nan_count": 0
+      },
+      "min_timestamp": "2023-01-01 00:00:00+00:00",
+      "max_timestamp": "2023-12-31 23:00:00+00:00"
+    },
+    "phoenix_jul.csv": {
+      "total_rows": 8760,
+      "columns": [
+        "Unnamed: 0",
+        "Time",
+        "StationName",
+        "Location",
+        "TempC",
+        "DewPointC",
+        "WindspeedKmph",
+        "Humidity",
+        "TempF"
+      ],
+      "null_counts": {
+        "Unnamed: 0": 0,
+        "Time": 0,
+        "StationName": 0,
+        "Location": 0,
+        "TempC": 0,
+        "DewPointC": 0,
+        "WindspeedKmph": 0,
+        "Humidity": 0,
+        "TempF": 0
+      },
+      "invalid_timestamps": 0,
+      "is_monotonic": true,
+      "duplicates": 0,
+      "non_hourly_steps": 0,
+      "temp_f_stats": {
+        "min": 32.72,
+        "max": 114.98,
+        "mean": 76.2361506849315,
+        "nan_count": 0
+      },
+      "temp_c_stats": {
+        "min": 0.4,
+        "max": 46.1,
+        "mean": 24.57563926940639,
+        "nan_count": 0
+      },
+      "min_timestamp": "2023-01-01 00:00:00+00:00",
+      "max_timestamp": "2023-12-31 23:00:00+00:00"
+    },
+    "singapore.csv": {
+      "total_rows": 8760,
+      "columns": [
+        "Unnamed: 0",
+        "Time",
+        "StationName",
+        "Location",
+        "TempC",
+        "DewPointC",
+        "WindspeedKmph",
+        "Humidity",
+        "TempF"
+      ],
+      "null_counts": {
+        "Unnamed: 0": 0,
+        "Time": 0,
+        "StationName": 0,
+        "Location": 0,
+        "TempC": 0,
+        "DewPointC": 0,
+        "WindspeedKmph": 0,
+        "Humidity": 0,
+        "TempF": 0
+      },
+      "invalid_timestamps": 0,
+      "is_monotonic": true,
+      "duplicates": 0,
+      "non_hourly_steps": 0,
+      "temp_f_stats": {
+        "min": 73.22,
+        "max": 93.2,
+        "mean": 82.34778767123287,
+        "nan_count": 0
+      },
+      "temp_c_stats": {
+        "min": 22.9,
+        "max": 34.0,
+        "mean": 27.97099315068493,
+        "nan_count": 0
+      },
+      "min_timestamp": "2023-01-01 00:00:00+00:00",
+      "max_timestamp": "2023-12-31 23:00:00+00:00"
+    }
+  },
+  "weather_preset_audit": {
+    "atlanta_1": {
+      "preset_name": "atlanta_1",
+      "weather_csv": "csv/atlanta.csv",
+      "csv_exists": true,
+      "convection_coefficient": 19.1,
+      "start_timestamp": "2023-01-22 06:00:00+00:00",
+      "end_timestamp": "2023-02-21 06:00:00+00:00",
+      "window_fits_in_csv": true
+    },
+    "atlanta_2": {
+      "preset_name": "atlanta_2",
+      "weather_csv": "csv/atlanta.csv",
+      "csv_exists": true,
+      "convection_coefficient": 19.1,
+      "start_timestamp": "2023-03-05 06:00:00+00:00",
+      "end_timestamp": "2023-04-04 06:00:00+00:00",
+      "window_fits_in_csv": true
+    },
+    "atlanta_3": {
+      "preset_name": "atlanta_3",
+      "weather_csv": "csv/atlanta.csv",
+      "csv_exists": true,
+      "convection_coefficient": 19.1,
+      "start_timestamp": "2023-04-16 06:00:00+00:00",
+      "end_timestamp": "2023-05-16 06:00:00+00:00",
+      "window_fits_in_csv": true
+    },
+    "atlanta_4": {
+      "preset_name": "atlanta_4",
+      "weather_csv": "csv/atlanta.csv",
+      "csv_exists": true,
+      "convection_coefficient": 19.1,
+      "start_timestamp": "2023-05-28 06:00:00+00:00",
+      "end_timestamp": "2023-06-27 06:00:00+00:00",
+      "window_fits_in_csv": true
+    },
+    "atlanta_5": {
+      "preset_name": "atlanta_5",
+      "weather_csv": "csv/atlanta.csv",
+      "csv_exists": true,
+      "convection_coefficient": 19.1,
+      "start_timestamp": "2023-07-09 06:00:00+00:00",
+      "end_timestamp": "2023-08-08 06:00:00+00:00",
+      "window_fits_in_csv": true
+    },
+    "atlanta_6": {
+      "preset_name": "atlanta_6",
+      "weather_csv": "csv/atlanta.csv",
+      "csv_exists": true,
+      "convection_coefficient": 19.1,
+      "start_timestamp": "2023-08-20 06:00:00+00:00",
+      "end_timestamp": "2023-09-19 06:00:00+00:00",
+      "window_fits_in_csv": true
+    },
+    "atlanta_7": {
+      "preset_name": "atlanta_7",
+      "weather_csv": "csv/atlanta.csv",
+      "csv_exists": true,
+      "convection_coefficient": 19.1,
+      "start_timestamp": "2023-10-01 06:00:00+00:00",
+      "end_timestamp": "2023-10-31 06:00:00+00:00",
+      "window_fits_in_csv": true
+    },
+    "atlanta_8": {
+      "preset_name": "atlanta_8",
+      "weather_csv": "csv/atlanta.csv",
+      "csv_exists": true,
+      "convection_coefficient": 19.1,
+      "start_timestamp": "2023-11-12 06:00:00+00:00",
+      "end_timestamp": "2023-12-12 06:00:00+00:00",
+      "window_fits_in_csv": true
+    },
+    "denver_1": {
+      "preset_name": "denver_1",
+      "weather_csv": "csv/denver.csv",
+      "csv_exists": true,
+      "convection_coefficient": 26.7,
+      "start_timestamp": "2023-01-15 06:00:00+00:00",
+      "end_timestamp": "2023-02-14 06:00:00+00:00",
+      "window_fits_in_csv": true
+    },
+    "denver_2": {
+      "preset_name": "denver_2",
+      "weather_csv": "csv/denver.csv",
+      "csv_exists": true,
+      "convection_coefficient": 26.7,
+      "start_timestamp": "2023-02-26 06:00:00+00:00",
+      "end_timestamp": "2023-03-28 06:00:00+00:00",
+      "window_fits_in_csv": true
+    },
+    "denver_3": {
+      "preset_name": "denver_3",
+      "weather_csv": "csv/denver.csv",
+      "csv_exists": true,
+      "convection_coefficient": 26.7,
+      "start_timestamp": "2023-04-09 06:00:00+00:00",
+      "end_timestamp": "2023-05-09 06:00:00+00:00",
+      "window_fits_in_csv": true
+    },
+    "denver_4": {
+      "preset_name": "denver_4",
+      "weather_csv": "csv/denver.csv",
+      "csv_exists": true,
+      "convection_coefficient": 26.7,
+      "start_timestamp": "2023-05-21 06:00:00+00:00",
+      "end_timestamp": "2023-06-20 06:00:00+00:00",
+      "window_fits_in_csv": true
+    },
+    "denver_5": {
+      "preset_name": "denver_5",
+      "weather_csv": "csv/denver.csv",
+      "csv_exists": true,
+      "convection_coefficient": 26.7,
+      "start_timestamp": "2023-07-02 06:00:00+00:00",
+      "end_timestamp": "2023-08-01 06:00:00+00:00",
+      "window_fits_in_csv": true
+    },
+    "denver_6": {
+      "preset_name": "denver_6",
+      "weather_csv": "csv/denver.csv",
+      "csv_exists": true,
+      "convection_coefficient": 26.7,
+      "start_timestamp": "2023-08-13 06:00:00+00:00",
+      "end_timestamp": "2023-09-12 06:00:00+00:00",
+      "window_fits_in_csv": true
+    },
+    "denver_7": {
+      "preset_name": "denver_7",
+      "weather_csv": "csv/denver.csv",
+      "csv_exists": true,
+      "convection_coefficient": 26.7,
+      "start_timestamp": "2023-09-24 06:00:00+00:00",
+      "end_timestamp": "2023-10-24 06:00:00+00:00",
+      "window_fits_in_csv": true
+    },
+    "denver_8": {
+      "preset_name": "denver_8",
+      "weather_csv": "csv/denver.csv",
+      "csv_exists": true,
+      "convection_coefficient": 26.7,
+      "start_timestamp": "2023-11-05 06:00:00+00:00",
+      "end_timestamp": "2023-12-05 06:00:00+00:00",
+      "window_fits_in_csv": true
+    },
+    "fairbanks_1": {
+      "preset_name": "fairbanks_1",
+      "weather_csv": "csv/fairbanks.csv",
+      "csv_exists": true,
+      "convection_coefficient": 8.8,
+      "start_timestamp": "2023-01-01 06:00:00+00:00",
+      "end_timestamp": "2023-01-31 06:00:00+00:00",
+      "window_fits_in_csv": true
+    },
+    "fairbanks_2": {
+      "preset_name": "fairbanks_2",
+      "weather_csv": "csv/fairbanks.csv",
+      "csv_exists": true,
+      "convection_coefficient": 8.8,
+      "start_timestamp": "2023-02-12 06:00:00+00:00",
+      "end_timestamp": "2023-03-14 06:00:00+00:00",
+      "window_fits_in_csv": true
+    },
+    "fairbanks_3": {
+      "preset_name": "fairbanks_3",
+      "weather_csv": "csv/fairbanks.csv",
+      "csv_exists": true,
+      "convection_coefficient": 8.8,
+      "start_timestamp": "2023-03-26 06:00:00+00:00",
+      "end_timestamp": "2023-04-25 06:00:00+00:00",
+      "window_fits_in_csv": true
+    },
+    "fairbanks_4": {
+      "preset_name": "fairbanks_4",
+      "weather_csv": "csv/fairbanks.csv",
+      "csv_exists": true,
+      "convection_coefficient": 8.8,
+      "start_timestamp": "2023-05-07 06:00:00+00:00",
+      "end_timestamp": "2023-06-06 06:00:00+00:00",
+      "window_fits_in_csv": true
+    },
+    "fairbanks_5": {
+      "preset_name": "fairbanks_5",
+      "weather_csv": "csv/fairbanks.csv",
+      "csv_exists": true,
+      "convection_coefficient": 8.8,
+      "start_timestamp": "2023-06-18 06:00:00+00:00",
+      "end_timestamp": "2023-07-18 06:00:00+00:00",
+      "window_fits_in_csv": true
+    },
+    "fairbanks_6": {
+      "preset_name": "fairbanks_6",
+      "weather_csv": "csv/fairbanks.csv",
+      "csv_exists": true,
+      "convection_coefficient": 8.8,
+      "start_timestamp": "2023-07-30 06:00:00+00:00",
+      "end_timestamp": "2023-08-29 06:00:00+00:00",
+      "window_fits_in_csv": true
+    },
+    "fairbanks_7": {
+      "preset_name": "fairbanks_7",
+      "weather_csv": "csv/fairbanks.csv",
+      "csv_exists": true,
+      "convection_coefficient": 8.8,
+      "start_timestamp": "2023-09-10 06:00:00+00:00",
+      "end_timestamp": "2023-10-10 06:00:00+00:00",
+      "window_fits_in_csv": true
+    },
+    "fairbanks_8": {
+      "preset_name": "fairbanks_8",
+      "weather_csv": "csv/fairbanks.csv",
+      "csv_exists": true,
+      "convection_coefficient": 8.8,
+      "start_timestamp": "2023-10-22 06:00:00+00:00",
+      "end_timestamp": "2023-11-21 06:00:00+00:00",
+      "window_fits_in_csv": true
+    },
+    "minneapolis_1": {
+      "preset_name": "minneapolis_1",
+      "weather_csv": "csv/minneapolis.csv",
+      "csv_exists": true,
+      "convection_coefficient": 21.5,
+      "start_timestamp": "2023-01-08 06:00:00+00:00",
+      "end_timestamp": "2023-02-07 06:00:00+00:00",
+      "window_fits_in_csv": true
+    },
+    "minneapolis_2": {
+      "preset_name": "minneapolis_2",
+      "weather_csv": "csv/minneapolis.csv",
+      "csv_exists": true,
+      "convection_coefficient": 21.5,
+      "start_timestamp": "2023-02-19 06:00:00+00:00",
+      "end_timestamp": "2023-03-21 06:00:00+00:00",
+      "window_fits_in_csv": true
+    },
+    "minneapolis_3": {
+      "preset_name": "minneapolis_3",
+      "weather_csv": "csv/minneapolis.csv",
+      "csv_exists": true,
+      "convection_coefficient": 21.5,
+      "start_timestamp": "2023-04-02 06:00:00+00:00",
+      "end_timestamp": "2023-05-02 06:00:00+00:00",
+      "window_fits_in_csv": true
+    },
+    "minneapolis_4": {
+      "preset_name": "minneapolis_4",
+      "weather_csv": "csv/minneapolis.csv",
+      "csv_exists": true,
+      "convection_coefficient": 21.5,
+      "start_timestamp": "2023-05-14 06:00:00+00:00",
+      "end_timestamp": "2023-06-13 06:00:00+00:00",
+      "window_fits_in_csv": true
+    },
+    "minneapolis_5": {
+      "preset_name": "minneapolis_5",
+      "weather_csv": "csv/minneapolis.csv",
+      "csv_exists": true,
+      "convection_coefficient": 21.5,
+      "start_timestamp": "2023-06-25 06:00:00+00:00",
+      "end_timestamp": "2023-07-25 06:00:00+00:00",
+      "window_fits_in_csv": true
+    },
+    "minneapolis_6": {
+      "preset_name": "minneapolis_6",
+      "weather_csv": "csv/minneapolis.csv",
+      "csv_exists": true,
+      "convection_coefficient": 21.5,
+      "start_timestamp": "2023-08-06 06:00:00+00:00",
+      "end_timestamp": "2023-09-05 06:00:00+00:00",
+      "window_fits_in_csv": true
+    },
+    "minneapolis_7": {
+      "preset_name": "minneapolis_7",
+      "weather_csv": "csv/minneapolis.csv",
+      "csv_exists": true,
+      "convection_coefficient": 21.5,
+      "start_timestamp": "2023-09-17 06:00:00+00:00",
+      "end_timestamp": "2023-10-17 06:00:00+00:00",
+      "window_fits_in_csv": true
+    },
+    "minneapolis_8": {
+      "preset_name": "minneapolis_8",
+      "weather_csv": "csv/minneapolis.csv",
+      "csv_exists": true,
+      "convection_coefficient": 21.5,
+      "start_timestamp": "2023-10-29 06:00:00+00:00",
+      "end_timestamp": "2023-11-28 06:00:00+00:00",
+      "window_fits_in_csv": true
+    },
+    "phoenix_1": {
+      "preset_name": "phoenix_1",
+      "weather_csv": "csv/phoenix.csv",
+      "csv_exists": true,
+      "convection_coefficient": 19.5,
+      "start_timestamp": "2023-01-29 06:00:00+00:00",
+      "end_timestamp": "2023-02-28 06:00:00+00:00",
+      "window_fits_in_csv": true
+    },
+    "phoenix_2": {
+      "preset_name": "phoenix_2",
+      "weather_csv": "csv/phoenix.csv",
+      "csv_exists": true,
+      "convection_coefficient": 19.5,
+      "start_timestamp": "2023-03-12 06:00:00+00:00",
+      "end_timestamp": "2023-04-11 06:00:00+00:00",
+      "window_fits_in_csv": true
+    },
+    "phoenix_3": {
+      "preset_name": "phoenix_3",
+      "weather_csv": "csv/phoenix.csv",
+      "csv_exists": true,
+      "convection_coefficient": 19.5,
+      "start_timestamp": "2023-04-23 06:00:00+00:00",
+      "end_timestamp": "2023-05-23 06:00:00+00:00",
+      "window_fits_in_csv": true
+    },
+    "phoenix_4": {
+      "preset_name": "phoenix_4",
+      "weather_csv": "csv/phoenix.csv",
+      "csv_exists": true,
+      "convection_coefficient": 19.5,
+      "start_timestamp": "2023-06-04 06:00:00+00:00",
+      "end_timestamp": "2023-07-04 06:00:00+00:00",
+      "window_fits_in_csv": true
+    },
+    "phoenix_5": {
+      "preset_name": "phoenix_5",
+      "weather_csv": "csv/phoenix.csv",
+      "csv_exists": true,
+      "convection_coefficient": 19.5,
+      "start_timestamp": "2023-07-16 06:00:00+00:00",
+      "end_timestamp": "2023-08-15 06:00:00+00:00",
+      "window_fits_in_csv": true
+    },
+    "phoenix_6": {
+      "preset_name": "phoenix_6",
+      "weather_csv": "csv/phoenix.csv",
+      "csv_exists": true,
+      "convection_coefficient": 19.5,
+      "start_timestamp": "2023-08-27 06:00:00+00:00",
+      "end_timestamp": "2023-09-26 06:00:00+00:00",
+      "window_fits_in_csv": true
+    },
+    "phoenix_7": {
+      "preset_name": "phoenix_7",
+      "weather_csv": "csv/phoenix.csv",
+      "csv_exists": true,
+      "convection_coefficient": 19.5,
+      "start_timestamp": "2023-10-08 06:00:00+00:00",
+      "end_timestamp": "2023-11-07 06:00:00+00:00",
+      "window_fits_in_csv": true
+    },
+    "phoenix_8": {
+      "preset_name": "phoenix_8",
+      "weather_csv": "csv/phoenix.csv",
+      "csv_exists": true,
+      "convection_coefficient": 19.5,
+      "start_timestamp": "2023-11-19 06:00:00+00:00",
+      "end_timestamp": "2023-12-19 06:00:00+00:00",
+      "window_fits_in_csv": true
+    },
+    "singapore_1": {
+      "preset_name": "singapore_1",
+      "weather_csv": "csv/singapore.csv",
+      "csv_exists": true,
+      "convection_coefficient": 17.6,
+      "start_timestamp": "2023-02-05 06:00:00+00:00",
+      "end_timestamp": "2023-03-07 06:00:00+00:00",
+      "window_fits_in_csv": true
+    },
+    "singapore_2": {
+      "preset_name": "singapore_2",
+      "weather_csv": "csv/singapore.csv",
+      "csv_exists": true,
+      "convection_coefficient": 17.6,
+      "start_timestamp": "2023-03-19 06:00:00+00:00",
+      "end_timestamp": "2023-04-18 06:00:00+00:00",
+      "window_fits_in_csv": true
+    },
+    "singapore_3": {
+      "preset_name": "singapore_3",
+      "weather_csv": "csv/singapore.csv",
+      "csv_exists": true,
+      "convection_coefficient": 17.6,
+      "start_timestamp": "2023-04-30 06:00:00+00:00",
+      "end_timestamp": "2023-05-30 06:00:00+00:00",
+      "window_fits_in_csv": true
+    },
+    "singapore_4": {
+      "preset_name": "singapore_4",
+      "weather_csv": "csv/singapore.csv",
+      "csv_exists": true,
+      "convection_coefficient": 17.6,
+      "start_timestamp": "2023-06-11 06:00:00+00:00",
+      "end_timestamp": "2023-07-11 06:00:00+00:00",
+      "window_fits_in_csv": true
+    },
+    "singapore_5": {
+      "preset_name": "singapore_5",
+      "weather_csv": "csv/singapore.csv",
+      "csv_exists": true,
+      "convection_coefficient": 17.6,
+      "start_timestamp": "2023-07-23 06:00:00+00:00",
+      "end_timestamp": "2023-08-22 06:00:00+00:00",
+      "window_fits_in_csv": true
+    },
+    "singapore_6": {
+      "preset_name": "singapore_6",
+      "weather_csv": "csv/singapore.csv",
+      "csv_exists": true,
+      "convection_coefficient": 17.6,
+      "start_timestamp": "2023-09-03 06:00:00+00:00",
+      "end_timestamp": "2023-10-03 06:00:00+00:00",
+      "window_fits_in_csv": true
+    },
+    "singapore_7": {
+      "preset_name": "singapore_7",
+      "weather_csv": "csv/singapore.csv",
+      "csv_exists": true,
+      "convection_coefficient": 17.6,
+      "start_timestamp": "2023-10-15 06:00:00+00:00",
+      "end_timestamp": "2023-11-14 06:00:00+00:00",
+      "window_fits_in_csv": true
+    },
+    "singapore_8": {
+      "preset_name": "singapore_8",
+      "weather_csv": "csv/singapore.csv",
+      "csv_exists": true,
+      "convection_coefficient": 17.6,
+      "start_timestamp": "2023-11-26 06:00:00+00:00",
+      "end_timestamp": "2023-12-26 06:00:00+00:00",
+      "window_fits_in_csv": true
+    }
+  },
+  "building_audit": {
+    "building_train_1": {
+      "width_cfg": 373,
+      "height_cfg": 188,
+      "num_floors": 3,
+      "num_ahus_cfg": 4,
+      "fp_shape": [
+        606,
+        339
+      ],
+      "zm_shape": [
+        606,
+        339
+      ],
+      "shapes_match": true,
+      "unique_fp_values": [
+        0,
+        1,
+        2
+      ],
+      "unique_zone_count": 2,
+      "wall_in_zm_count": 56709,
+      "room_unassigned_count": 0,
+      "materials_check": {
+        "exterior_cv_conductivity": {
+          "value": 0.2119,
+          "lo": 0.15,
+          "hi": 0.55,
+          "in_range": true
+        },
+        "exterior_cv_density": {
+          "value": 1967.2446,
+          "lo": 350.0,
+          "hi": 2400.0,
+          "in_range": true
+        },
+        "interior_mass_cv_density": {
+          "value": 32.2919,
+          "lo": 10.0,
+          "hi": 40.0,
+          "in_range": true
+        },
+        "interior_wall_cv_conductivity": {
+          "value": 0.5362,
+          "lo": 0.45,
+          "hi": 0.6,
+          "in_range": true
+        },
+        "interior_wall_cv_density": {
+          "value": 414.9743,
+          "lo": 110.0,
+          "hi": 700.0,
+          "in_range": true
+        },
+        "exterior_cv_heat_capacity": {
+          "value": 951.3387,
+          "lo": 840.0,
+          "hi": 1000.0,
+          "in_range": true
+        }
+      }
+    },
+    "building_train_2": {
+      "width_cfg": 420,
+      "height_cfg": 301,
+      "num_floors": 2,
+      "num_ahus_cfg": 9,
+      "fp_shape": [
+        624,
+        422
+      ],
+      "zm_shape": [
+        624,
+        422
+      ],
+      "shapes_match": true,
+      "unique_fp_values": [
+        0,
+        1,
+        2
+      ],
+      "unique_zone_count": 2,
+      "wall_in_zm_count": 21896,
+      "room_unassigned_count": 0,
+      "materials_check": {
+        "exterior_cv_conductivity": {
+          "value": 0.3385,
+          "lo": 0.15,
+          "hi": 0.55,
+          "in_range": true
+        },
+        "exterior_cv_density": {
+          "value": 577.6431,
+          "lo": 350.0,
+          "hi": 2400.0,
+          "in_range": true
+        },
+        "interior_mass_cv_density": {
+          "value": 14.3595,
+          "lo": 10.0,
+          "hi": 40.0,
+          "in_range": true
+        },
+        "interior_wall_cv_conductivity": {
+          "value": 0.5149,
+          "lo": 0.45,
+          "hi": 0.6,
+          "in_range": true
+        },
+        "interior_wall_cv_density": {
+          "value": 179.5965,
+          "lo": 110.0,
+          "hi": 700.0,
+          "in_range": true
+        },
+        "exterior_cv_heat_capacity": {
+          "value": 905.5571,
+          "lo": 840.0,
+          "hi": 1000.0,
+          "in_range": true
+        }
+      }
+    },
+    "building_train_4": {
+      "width_cfg": 430,
+      "height_cfg": 211,
+      "num_floors": 3,
+      "num_ahus_cfg": 6,
+      "fp_shape": [
+        664,
+        432
+      ],
+      "zm_shape": [
+        664,
+        432
+      ],
+      "shapes_match": true,
+      "unique_fp_values": [
+        0,
+        1,
+        2
+      ],
+      "unique_zone_count": 2,
+      "wall_in_zm_count": 80034,
+      "room_unassigned_count": 0,
+      "materials_check": {
+        "exterior_cv_conductivity": {
+          "value": 0.182,
+          "lo": 0.15,
+          "hi": 0.55,
+          "in_range": true
+        },
+        "exterior_cv_density": {
+          "value": 474.8436,
+          "lo": 350.0,
+          "hi": 2400.0,
+          "in_range": true
+        },
+        "interior_mass_cv_density": {
+          "value": 23.3826,
+          "lo": 10.0,
+          "hi": 40.0,
+          "in_range": true
+        },
+        "interior_wall_cv_conductivity": {
+          "value": 0.4635,
+          "lo": 0.45,
+          "hi": 0.6,
+          "in_range": true
+        },
+        "interior_wall_cv_density": {
+          "value": 484.1102,
+          "lo": 110.0,
+          "hi": 700.0,
+          "in_range": true
+        },
+        "exterior_cv_heat_capacity": {
+          "value": 896.9743,
+          "lo": 840.0,
+          "hi": 1000.0,
+          "in_range": true
+        }
+      }
+    },
+    "building_train_5": {
+      "width_cfg": 340,
+      "height_cfg": 199,
+      "num_floors": 4,
+      "num_ahus_cfg": 8,
+      "fp_shape": [
+        858,
+        342
+      ],
+      "zm_shape": [
+        858,
+        342
+      ],
+      "shapes_match": true,
+      "unique_fp_values": [
+        0,
+        1,
+        2
+      ],
+      "unique_zone_count": 2,
+      "wall_in_zm_count": 109484,
+      "room_unassigned_count": 0,
+      "materials_check": {
+        "exterior_cv_conductivity": {
+          "value": 0.3041,
+          "lo": 0.15,
+          "hi": 0.55,
+          "in_range": true
+        },
+        "exterior_cv_density": {
+          "value": 1187.2131,
+          "lo": 350.0,
+          "hi": 2400.0,
+          "in_range": true
+        },
+        "interior_mass_cv_density": {
+          "value": 28.0107,
+          "lo": 10.0,
+          "hi": 40.0,
+          "in_range": true
+        },
+        "interior_wall_cv_conductivity": {
+          "value": 0.4974,
+          "lo": 0.45,
+          "hi": 0.6,
+          "in_range": true
+        },
+        "interior_wall_cv_density": {
+          "value": 643.0546,
+          "lo": 110.0,
+          "hi": 700.0,
+          "in_range": true
+        },
+        "exterior_cv_heat_capacity": {
+          "value": 866.0221,
+          "lo": 840.0,
+          "hi": 1000.0,
+          "in_range": true
+        }
+      }
+    },
+    "building_train_7": {
+      "width_cfg": 325,
+      "height_cfg": 218,
+      "num_floors": 2,
+      "num_ahus_cfg": 4,
+      "fp_shape": [
+        458,
+        279
+      ],
+      "zm_shape": [
+        458,
+        279
+      ],
+      "shapes_match": true,
+      "unique_fp_values": [
+        0,
+        1,
+        2
+      ],
+      "unique_zone_count": 2,
+      "wall_in_zm_count": 35676,
+      "room_unassigned_count": 0,
+      "materials_check": {
+        "exterior_cv_conductivity": {
+          "value": 0.5479,
+          "lo": 0.15,
+          "hi": 0.55,
+          "in_range": true
+        },
+        "exterior_cv_density": {
+          "value": 414.816,
+          "lo": 350.0,
+          "hi": 2400.0,
+          "in_range": true
+        },
+        "interior_mass_cv_density": {
+          "value": 35.6803,
+          "lo": 10.0,
+          "hi": 40.0,
+          "in_range": true
+        },
+        "interior_wall_cv_conductivity": {
+          "value": 0.4775,
+          "lo": 0.45,
+          "hi": 0.6,
+          "in_range": true
+        },
+        "interior_wall_cv_density": {
+          "value": 155.0786,
+          "lo": 110.0,
+          "hi": 700.0,
+          "in_range": true
+        },
+        "exterior_cv_heat_capacity": {
+          "value": 972.1497,
+          "lo": 840.0,
+          "hi": 1000.0,
+          "in_range": true
+        }
+      }
+    },
+    "building_train_8": {
+      "width_cfg": 318,
+      "height_cfg": 198,
+      "num_floors": 2,
+      "num_ahus_cfg": 3,
+      "fp_shape": [
+        386,
+        320
+      ],
+      "zm_shape": [
+        386,
+        320
+      ],
+      "shapes_match": true,
+      "unique_fp_values": [
+        0,
+        1,
+        2
+      ],
+      "unique_zone_count": 2,
+      "wall_in_zm_count": 42132,
+      "room_unassigned_count": 0,
+      "materials_check": {
+        "exterior_cv_conductivity": {
+          "value": 0.2703,
+          "lo": 0.15,
+          "hi": 0.55,
+          "in_range": true
+        },
+        "exterior_cv_density": {
+          "value": 1138.8883,
+          "lo": 350.0,
+          "hi": 2400.0,
+          "in_range": true
+        },
+        "interior_mass_cv_density": {
+          "value": 11.4679,
+          "lo": 10.0,
+          "hi": 40.0,
+          "in_range": true
+        },
+        "interior_wall_cv_conductivity": {
+          "value": 0.5807,
+          "lo": 0.45,
+          "hi": 0.6,
+          "in_range": true
+        },
+        "interior_wall_cv_density": {
+          "value": 336.4363,
+          "lo": 110.0,
+          "hi": 700.0,
+          "in_range": true
+        },
+        "exterior_cv_heat_capacity": {
+          "value": 842.5389,
+          "lo": 840.0,
+          "hi": 1000.0,
+          "in_range": true
+        }
+      }
+    }
+  },
+  "total_issues_found": 8,
+  "blocking_issues_count": 0,
+  "material_limitations_count": 6,
+  "expected_characteristics_count": 2
+}

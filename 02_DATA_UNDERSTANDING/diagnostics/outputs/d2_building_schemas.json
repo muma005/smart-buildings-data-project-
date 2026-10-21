@@ -1,0 +1,242 @@
+{
+  "building_train_1": {
+    "building": "building_train_1",
+    "sample_weather": "atlanta_2",
+    "num_ahus_K": 4,
+    "num_zones_V": 39,
+    "total_assigned_zones": 39,
+    "observation_dimension": 352,
+    "discrete_action_dim": 5,
+    "expected_discrete_dim": 5,
+    "discrete_dim_invariant_holds": true,
+    "continuous_action_dim": 92,
+    "expected_continuous_dim": 92,
+    "continuous_dim_invariant_holds": true,
+    "observation_field_names_count": 352,
+    "zone_action_indices_count": 39,
+    "zone_temp_indices_count": 39,
+    "temp_indices_count": 4,
+    "pressure_indices_count": 5,
+    "water_indices_count": 1,
+    "recirculation_indices_count": 4,
+    "floor_plan_shape": [
+      606,
+      339
+    ],
+    "zone_map_shape": [
+      606,
+      339
+    ],
+    "num_floors": 3,
+    "morning_start_hour": 6,
+    "evening_start_hour": 19,
+    "comfort_temp_window": [
+      294.0,
+      297.0
+    ],
+    "eco_temp_window": [
+      289.0,
+      298.0
+    ]
+  },
+  "building_train_2": {
+    "building": "building_train_2",
+    "sample_weather": "atlanta_3",
+    "num_ahus_K": 9,
+    "num_zones_V": 85,
+    "total_assigned_zones": 85,
+    "observation_dimension": 703,
+    "discrete_action_dim": 10,
+    "expected_discrete_dim": 10,
+    "discrete_dim_invariant_holds": true,
+    "continuous_action_dim": 199,
+    "expected_continuous_dim": 199,
+    "continuous_dim_invariant_holds": true,
+    "observation_field_names_count": 703,
+    "zone_action_indices_count": 85,
+    "zone_temp_indices_count": 85,
+    "temp_indices_count": 9,
+    "pressure_indices_count": 10,
+    "water_indices_count": 1,
+    "recirculation_indices_count": 9,
+    "floor_plan_shape": [
+      624,
+      422
+    ],
+    "zone_map_shape": [
+      624,
+      422
+    ],
+    "num_floors": 2,
+    "morning_start_hour": 6,
+    "evening_start_hour": 19,
+    "comfort_temp_window": [
+      294.0,
+      297.0
+    ],
+    "eco_temp_window": [
+      289.0,
+      298.0
+    ]
+  },
+  "building_train_4": {
+    "building": "building_train_4",
+    "sample_weather": "atlanta_5",
+    "num_ahus_K": 6,
+    "num_zones_V": 54,
+    "total_assigned_zones": 54,
+    "observation_dimension": 472,
+    "discrete_action_dim": 7,
+    "expected_discrete_dim": 7,
+    "discrete_dim_invariant_holds": true,
+    "continuous_action_dim": 128,
+    "expected_continuous_dim": 128,
+    "continuous_dim_invariant_holds": true,
+    "observation_field_names_count": 472,
+    "zone_action_indices_count": 54,
+    "zone_temp_indices_count": 54,
+    "temp_indices_count": 6,
+    "pressure_indices_count": 7,
+    "water_indices_count": 1,
+    "recirculation_indices_count": 6,
+    "floor_plan_shape": [
+      664,
+      432
+    ],
+    "zone_map_shape": [
+      664,
+      432
+    ],
+    "num_floors": 3,
+    "morning_start_hour": 6,
+    "evening_start_hour": 19,
+    "comfort_temp_window": [
+      294.0,
+      297.0
+    ],
+    "eco_temp_window": [
+      289.0,
+      298.0
+    ]
+  },
+  "building_train_5": {
+    "building": "building_train_5",
+    "sample_weather": "atlanta_6",
+    "num_ahus_K": 8,
+    "num_zones_V": 79,
+    "total_assigned_zones": 79,
+    "observation_dimension": 652,
+    "discrete_action_dim": 9,
+    "expected_discrete_dim": 9,
+    "discrete_dim_invariant_holds": true,
+    "continuous_action_dim": 184,
+    "expected_continuous_dim": 184,
+    "continuous_dim_invariant_holds": true,
+    "observation_field_names_count": 652,
+    "zone_action_indices_count": 79,
+    "zone_temp_indices_count": 79,
+    "temp_indices_count": 8,
+    "pressure_indices_count": 9,
+    "water_indices_count": 1,
+    "recirculation_indices_count": 8,
+    "floor_plan_shape": [
+      858,
+      342
+    ],
+    "zone_map_shape": [
+      858,
+      342
+    ],
+    "num_floors": 4,
+    "morning_start_hour": 6,
+    "evening_start_hour": 19,
+    "comfort_temp_window": [
+      294.0,
+      297.0
+    ],
+    "eco_temp_window": [
+      289.0,
+      298.0
+    ]
+  },
+  "building_train_7": {
+    "building": "building_train_7",
+    "sample_weather": "atlanta_8",
+    "num_ahus_K": 4,
+    "num_zones_V": 36,
+    "total_assigned_zones": 36,
+    "observation_dimension": 334,
+    "discrete_action_dim": 5,
+    "expected_discrete_dim": 5,
+    "discrete_dim_invariant_holds": true,
+    "continuous_action_dim": 86,
+    "expected_continuous_dim": 86,
+    "continuous_dim_invariant_holds": true,
+    "observation_field_names_count": 334,
+    "zone_action_indices_count": 36,
+    "zone_temp_indices_count": 36,
+    "temp_indices_count": 4,
+    "pressure_indices_count": 5,
+    "water_indices_count": 1,
+    "recirculation_indices_count": 4,
+    "floor_plan_shape": [
+      458,
+      279
+    ],
+    "zone_map_shape": [
+      458,
+      279
+    ],
+    "num_floors": 2,
+    "morning_start_hour": 6,
+    "evening_start_hour": 19,
+    "comfort_temp_window": [
+      294.0,
+      297.0
+    ],
+    "eco_temp_window": [
+      289.0,
+      298.0
+    ]
+  },
+  "building_train_8": {
+    "building": "building_train_8",
+    "sample_weather": "atlanta_1",
+    "num_ahus_K": 3,
+    "num_zones_V": 30,
+    "total_assigned_zones": 30,
+    "observation_dimension": 283,
+    "discrete_action_dim": 4,
+    "expected_discrete_dim": 4,
+    "discrete_dim_invariant_holds": true,
+    "continuous_action_dim": 71,
+    "expected_continuous_dim": 71,
+    "continuous_dim_invariant_holds": true,
+    "observation_field_names_count": 283,
+    "zone_action_indices_count": 30,
+    "zone_temp_indices_count": 30,
+    "temp_indices_count": 3,
+    "pressure_indices_count": 4,
+    "water_indices_count": 1,
+    "recirculation_indices_count": 3,
+    "floor_plan_shape": [
+      386,
+      320
+    ],
+    "zone_map_shape": [
+      386,
+      320
+    ],
+    "num_floors": 2,
+    "morning_start_hour": 6,
+    "evening_start_hour": 19,
+    "comfort_temp_window": [
+      294.0,
+      297.0
+    ],
+    "eco_temp_window": [
+      289.0,
+      298.0
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "weather_lineage_example": {
+    "raw_csv": "atlanta.csv",
+    "target_ts_utc": "2023-03-05 06:00:00+00:00",
+    "raw_time_str": "20230305-0600",
+    "raw_temp_c": 2.5,
+    "raw_temp_f": 36.5,
+    "raw_humidity": 59.0,
+    "raw_wind_kmph": 7.56,
+    "raw_dewpoint_c": -1.1,
+    "converted_temp_kelvin": 275.65,
+    "used_in_simulator": {
+      "TempF": "Used directly for outdoor air temperature (linear interpolation in time, converted to Kelvin)",
+      "TempC": "Unused (TempF preferred)",
+      "Humidity": "Unused (never called by simulator)",
+      "WindspeedKmph": "Unused (convection coefficient is fixed constant)",
+      "DewPointC": "Unused"
+    }
+  },
+  "environment_step_trace": {
+    "outside_temp_feature_name": "ahs_ahu_1_outside_air_temperature_sensor",
+    "outside_temp_feature_index": 238,
+    "normalized_outside_temp_step_0": 275.6499938964844,
+    "sample_zone": "room_1",
+    "sample_zone_temp_kelvin": 294.06182184227316,
+    "materials": {
+      "exterior_cv_conductivity": 0.2119,
+      "exterior_cv_density": 1967.2446,
+      "exterior_cv_heat_capacity": 951.3387,
+      "interior_cv_conductivity": 50.0,
+      "interior_cv_density": 1.2,
+      "interior_cv_heat_capacity": 1005.0,
+      "interior_mass_cv_conductivity": 15.0,
+      "interior_mass_cv_density": 32.2919,
+      "interior_mass_cv_heat_capacity": 1000.0,
+      "interior_wall_cv_conductivity": 0.5362,
+      "interior_wall_cv_density": 414.9743,
+      "interior_wall_cv_heat_capacity": 900.0,
+      "unique_conductivities_in_grid": [
+        0.2119,
+        0.5362,
+        50.0
+      ],
+      "unique_densities_in_grid": [
+        1.2,
+        414.9743,
+        1967.2446
+      ]
+    },
+    "step_1_reward": 0.0,
+    "internal_gain_w_per_m2": 10.0,
+    "internal_gain_standby_fraction": 0.2,
+    "occupant_sensible_heat_w": 70.0
+  }
+}
