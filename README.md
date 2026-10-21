@@ -102,6 +102,8 @@ Stage gate: before proceeding, recover the original mathematical formulas and co
 
 ### Problem Research — Understanding the Challenge (R1–R5)
 
+https://github.com/muma005/smart-buildings-data-project-/blob/main/Smart_Buildings_Problem_Research_R1-R5.md
+
 The Smart Buildings Challenge requires a single HVAC control policy to operate effectively across previously unseen buildings and weather conditions while balancing occupant comfort, energy expenditure and carbon emissions. The central difficulty is that buildings differ physically and mechanically: the same operating decision can produce entirely different outcomes depending on the building and its environment.
 
 This research investigates the underlying mechanisms responsible for that difficulty through five connected areas:
