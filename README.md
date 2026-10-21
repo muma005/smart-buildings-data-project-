@@ -96,3 +96,28 @@ Building HVAC control requires balancing occupant thermal comfort, energy expend
 13 Oct 2026 — Start  |  13 Nov 2026 — Round-one paper  |  13 Dec 2026 — NeurIPS workshop  |  3 Jan 2027 — Entry and merger deadlines  |  15 Jan 2027 — Final submission. Listed deadlines are 11:59 PM UTC unless otherwise noted, subject to organizer updates. Paper prizes evaluate quality, novelty and writing clarity separately from leaderboard ranking.
 
 Stage gate: before proceeding, recover the original mathematical formulas and confirm the official competition specification. Do not infer missing details or select a modeling approach during problem establishment.
+
+
+
+
+### Problem Research — Understanding the Challenge (R1–R5)
+
+The Smart Buildings Challenge requires a single HVAC control policy to operate effectively across previously unseen buildings and weather conditions while balancing occupant comfort, energy expenditure and carbon emissions. The central difficulty is that buildings differ physically and mechanically: the same operating decision can produce entirely different outcomes depending on the building and its environment.
+
+This research investigates the underlying mechanisms responsible for that difficulty through five connected areas:
+
+- **R1 — Building Behaviour:** Establishes how buildings respond to heating, cooling and environmental conditions, examining heat transfer, construction materials, internal heat gains, thermal storage and the delayed effects of HVAC operation.
+- **R2 — Operating Objectives:** Examines how the competition measures success, including occupancy-weighted comfort, severe temperature-violation penalties, electricity and gas expenditure, carbon emissions, and the interactions between these objectives.
+- **R3 — Heterogeneity:** Investigates how differences in building size, layout, weather, materials and HVAC configurations change thermal behaviour, equipment requirements and operating outcomes.
+- **R4 — Control Problem:** Establishes what information a policy actually receives, what equipment it can control, the physical constraints governing those decisions, and how each action influences subsequent building conditions.
+- **R5 — Transferability:** Brings these findings together to explain why operating behaviour that succeeds in one building may fail elsewhere, supported by scientific evidence on cross-building generalization and documented transfer-failure mechanisms.
+
+**Its role in the project**
+
+The competition's underlying problem is achieving reliable control across changing physical systems, not merely obtaining a good score on the supplied development scenarios.
+
+This research establishes the causal understanding needed to investigate that problem intelligently. It identifies which building characteristics, physical responses, operating constraints and failure mechanisms matter, and translates them into specific questions for examining the competition simulator and data.
+
+It therefore provides the foundation for determining **what we need to measure, what differences we need to explain, and what evidence is required to establish genuine cross-building generalization**—before selecting a modeling approach or designing experiments.
+
+The accompanying document contains the detailed investigations, scientific evidence, equations, explanatory diagrams, competition-specific findings and unresolved questions.
