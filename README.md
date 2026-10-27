@@ -148,3 +148,28 @@ It therefore provides the empirical foundation for determining **what architectu
 
 The accompanying directory contains the complete reader-facing guide ([DATA_UNDERSTANDING_GUIDE.md](02_DATA_UNDERSTANDING/DATA_UNDERSTANDING_GUIDE.md)), publication figures, structured evidence registers, diagnostic scripts, and formal handoff sign-off.
 
+### Phase 03 — Source Truth, Engineering Contract & Execution Plan
+
+https://github.com/muma005/smart-buildings-data-project-/blob/main/Phase_03_Source_Truth.md
+
+The Source Truth & Engineering Contract phase audits the official competition starter-kit codebase, simulator mechanics, and scoring algorithms against all empirical claims made in earlier stages. It enforces engineering rigor by validating ground-truth source code (pinned to starter-kit commit `95cea5b`), establishing an immutable audit register of 20 core findings (`ST-01` to `ST-20`), executing a standalone verification test suite, and defining the strict gate conditions required before advancing to solution discovery.
+
+This investigation subjects the challenge's operational assumptions to direct code-level verification across five core areas:
+
+- **Information Access & Participant Interface:** Audits the runtime access boundaries, discovering that floor plans (`floor_plan.npy`) and zone layouts (`zone_map.npy`) are explicitly passed to participants via metadata rather than hidden, while strictly separating visible policy observations from internal simulator states.
+- **Scoring Formulas & Physical Normalization:** Corrects earlier mathematical formulations by establishing from source code that occupant productivity regret is normalized by actual dynamic occupancy ($\sum N_{\text{occ}}$) rather than a static constant, and proves that published reference energy rates ($80\text{ kW}$ electricity, $205\text{ kW}$ gas) serve as scoring normalizers rather than hard physical saturation limits.
+- **Physical Dynamics & Procedural Generator Distributions:** Verifies the true sampling mechanics in `materials.py`, confirming log-uniform parameter distributions for envelope conductivity ($0.15\text{--}0.55\text{ W}/(\text{m}\cdot\text{K})$) and density ($350\text{--}2400\text{ kg}/\text{m}^3$), while demonstrating schedule variation across building configurations (e.g., 06:00–19:00 in Fairbanks).
+- **Actuation Boundaries & Equipment Topology:** Identifies the precise controllable degrees of freedom—confirming participant control over AHU supply air and zone VAV terminal reheat, while establishing that chilled-water loop setpoints are governed internally rather than directly exposed as policy action channels.
+- **Engineering Discipline & Stage Gate Certification:** Executes a 20-test verification suite (13 synthetic passed, 7 environment-dependent skipped) and enforces a strict stage-gate decision (**Gate S0: OPEN / BLOCKED**), establishing an 8-package work plan (WP-01 to WP-08) and barring premature controller modeling until all static and runtime simulator checks achieve 100% verification.
+
+**Its role in the project**
+
+Problem Research established theoretical foundations, and Data Understanding analyzed simulated observations; Phase 03 establishes ground-truth code verification to eliminate false assumptions before a single controller line is written.
+
+It prevents costly engineering misdirection: designing architectures for nonexistent observation limits, assuming fixed occupancy denominators, hardcoding incorrect operating schedules, or treating modeling hypotheses (such as GNNs or online inertia estimators) as settled competition facts.
+
+It therefore provides the contract foundation for determining **what data participants can legally inspect at inference, how reward signals are calculated down to the bit, and what work packages must be completed to certify the experimental environment**—ensuring that all subsequent controller discovery and benchmarking rest on verifiable source truth.
+
+The accompanying document contains the complete source truth register (`ST-01`–`ST-20`), test suite results, work package breakdown (WP-01 to WP-08), and Gate S0 audit criteria.
+
+
