@@ -148,28 +148,32 @@ It therefore provides the empirical foundation for determining **what architectu
 
 The accompanying directory contains the complete reader-facing guide ([DATA_UNDERSTANDING_GUIDE.md](02_DATA_UNDERSTANDING/DATA_UNDERSTANDING_GUIDE.md)), publication figures, structured evidence registers, diagnostic scripts, and formal handoff sign-off.
 
-### Phase 03 — Source Truth, Engineering Contract & Execution Plan
+### Phase 03 — Source-Truth Verification & Gate S0 Certification (CLOSED — PASS)
 
-https://github.com/muma005/smart-buildings-data-project-/blob/main/Phase_03_Source_Truth.md
+- **Comprehensive Audit:** [SOURCE_TRUTH_AUDIT.md](SOURCE_TRUTH_AUDIT.md)
+- **Verified System Contract:** [VERIFIED_PROBLEM_AND_SYSTEM_CONTRACT.md](VERIFIED_PROBLEM_AND_SYSTEM_CONTRACT.md)
+- **Machine-Readable Contract:** [competition-spec.yaml](competition-spec.yaml)
+- **Executable Test Suite:** [SOURCE_TRUTH_TESTS/](SOURCE_TRUTH_TESTS/)
+- **Test Ledger (36/36 Passed):** [TEST_RESULTS.md](TEST_RESULTS.md)
+- **Gate S0 Certification Decision:** [S0_EXIT_REPORT.md](S0_EXIT_REPORT.md)
+- **Chronological Execution Log:** [PHASE_03_EXECUTION_LOG.md](PHASE_03_EXECUTION_LOG.md)
+- **Full Episode Run Manifest:** [results/s0_episode/run_manifest.json](results/s0_episode/run_manifest.json)
+- **Foundational Strategy:** [Phase_03_Source_Truth.md](Phase_03_Source_Truth.md)
 
-The Source Truth & Engineering Contract phase audits the official competition starter-kit codebase, simulator mechanics, and scoring algorithms against all empirical claims made in earlier stages. It enforces engineering rigor by validating ground-truth source code (pinned to starter-kit commit `95cea5b`), establishing an immutable audit register of 20 core findings (`ST-01` to `ST-20`), executing a standalone verification test suite, and defining the strict gate conditions required before advancing to solution discovery.
+The Source-Truth Verification phase establishes the exact competition contract that all future controllers must obey. Auditing the official competition starter kit (pinned and verified at commit `95cea5b1c57b5291f44baf0283e0a081d53f5b16`) and the Kaggle evaluation gateway (`kaggle_evaluation`), this phase closed Gate S0 from **BLOCKED** to **CERTIFIED: PASS** through executable code, standalone mathematical proofs, fault-injection tests, and a complete 8,640-step (30-day) simulation episode.
 
-This investigation subjects the challenge's operational assumptions to direct code-level verification across five core areas:
+This verification establishes authoritative ground truth across five core domains:
 
-- **Information Access & Participant Interface:** Audits the runtime access boundaries, discovering that floor plans (`floor_plan.npy`) and zone layouts (`zone_map.npy`) are explicitly passed to participants via metadata rather than hidden, while strictly separating visible policy observations from internal simulator states.
-- **Scoring Formulas & Physical Normalization:** Corrects earlier mathematical formulations by establishing from source code that occupant productivity regret is normalized by actual dynamic occupancy ($\sum N_{\text{occ}}$) rather than a static constant, and proves that published reference energy rates ($80\text{ kW}$ electricity, $205\text{ kW}$ gas) serve as scoring normalizers rather than hard physical saturation limits.
-- **Physical Dynamics & Procedural Generator Distributions:** Verifies the true sampling mechanics in `materials.py`, confirming log-uniform parameter distributions for envelope conductivity ($0.15\text{--}0.55\text{ W}/(\text{m}\cdot\text{K})$) and density ($350\text{--}2400\text{ kg}/\text{m}^3$), while demonstrating schedule variation across building configurations (e.g., 06:00–19:00 in Fairbanks).
-- **Actuation Boundaries & Equipment Topology:** Identifies the precise controllable degrees of freedom—confirming participant control over AHU supply air and zone VAV terminal reheat, while establishing that chilled-water loop setpoints are governed internally rather than directly exposed as policy action channels.
-- **Engineering Discipline & Stage Gate Certification:** Executes a 20-test verification suite (13 synthetic passed, 7 environment-dependent skipped) and enforces a strict stage-gate decision (**Gate S0: OPEN / BLOCKED**), establishing an 8-package work plan (WP-01 to WP-08) and barring premature controller modeling until all static and runtime simulator checks achieve 100% verification.
+- **Participant Access & Information Boundary:** Resolves that CAD floor plans (`floor_plan.npy`) and zone layouts (`zone_map.npy`) are explicitly delivered to participant metadata upon environment reset, eliminating the need to infer physical topology solely from thermal histories. Proves the strict isolation between visible policy observations ($6V + 15K + 58$ features) and internal simulator states.
+- **Reward Formulation & Dynamic Normalization:** Disproves earlier assumptions of a static `/125` comfort divisor; source verification proves that productivity regret is divided by actual dynamic occupancy $\sum N_{\text{occ}}$ (strictly yielding 0.0 when unoccupied). Proves that published reference energy rates ($80\text{ kW}$ electricity, $205\text{ kW}$ gas per AHU) are linear scoring denominators rather than physical saturation ceilings.
+- **Actuation Topology & Hybrid Control Semantics:** Confirms the exact hybrid action spaces: $K + 1$ discrete switches and $3K + 2 + 2V$ continuous setpoints. Proves that continuous 0.0 represents the actuator range midpoint (not OFF), that AHUs provide mixed-air cooling while VAV reheat coils provide zone heating, and that no participant-controlled chilled-water setpoint channel exists.
+- **Simulation Physics, Sampling & Schedules:** Verifies that envelope parameters are log-sampled via Latin hypercubes in `materials.py` (facade conductivity $0.15\text{--}0.55\text{ W}/(\text{m}\cdot\text{K})$, density $350\text{--}2400\text{ kg}/\text{m}^3$), that all 30 scenario configs enforce a 06:00–19:00 comfort schedule (13-hour working day), and that 52,560 hourly records exist across 6 weather stations (5 used in the 30 manifest pairings).
+- **Independent Evaluator & Complete Closed-Loop Rollout:** Implements a standalone auditor that reconstructs the official metric from first principles with zero dependence on official scoring code. Executes a full 8,640-step episode on `building_train_1 / atlanta_2`, matching official summary returns to `0.00e+00` error and reconstructing per-step reward components to $< 1.08 \times 10^{-7}$ precision. Demonstrates 100% test passing (36/36), fault rejection (malformed shapes, NaNs/Infs, out-of-bounds, bad arithmetic, missing scenarios), and bitwise fresh-process determinism.
 
 **Its role in the project**
 
-Problem Research established theoretical foundations, and Data Understanding analyzed simulated observations; Phase 03 establishes ground-truth code verification to eliminate false assumptions before a single controller line is written.
+Problem Research established the theoretical physics, and Data Understanding analyzed simulated observations; Phase 03 establishes ground-truth code verification and certifies the experimental environment.
 
-It prevents costly engineering misdirection: designing architectures for nonexistent observation limits, assuming fixed occupancy denominators, hardcoding incorrect operating schedules, or treating modeling hypotheses (such as GNNs or online inertia estimators) as settled competition facts.
+It ensures that no controller development occurs against false assumptions: assuming nonexistent observation limits, hardcoding incorrect operating hours, or optimizing against distorted reward formulas.
 
-It therefore provides the contract foundation for determining **what data participants can legally inspect at inference, how reward signals are calculated down to the bit, and what work packages must be completed to certify the experimental environment**—ensuring that all subsequent controller discovery and benchmarking rest on verifiable source truth.
-
-The accompanying document contains the complete source truth register (`ST-01`–`ST-20`), test suite results, work package breakdown (WP-01 to WP-08), and Gate S0 audit criteria.
-
-
+It provides the certified foundation for Phase 04 to construct the **immutable run registry, certified fallback baseline, and adaptive pre-conditioning harness**—guaranteeing that every subsequent controller improvement reflects genuine physical generalization rather than simulator artifacts.

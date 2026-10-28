@@ -1,0 +1,143 @@
+# Smart Buildings Foundation Model Challenge — Verified Competition Contract Specification
+# Generated at Gate S0.5: Source-Truth Verification & System Contract
+
+competition:
+  name: "NeurIPS 2026 Smart Buildings Foundation Model Challenge"
+  kaggle_id: 157303
+  kaggle_url: "https://www.kaggle.com/competitions/neurips-2026-smart-buildings"
+  official_repository: "https://github.com/smart-buildings-2026/starter-kit"
+  pinned_commit: "95cea5b1c57b5291f44baf0283e0a081d53f5b16"
+  verified_commit_status: "VERIFIED_HEAD_OF_MAIN"
+  submission_format: "Kaggle Code Competition (Notebook rerun on hidden test set)"
+  max_runtime_hours: 9.0
+  internet_access_during_eval: false
+  external_data_policy: "Freely and publicly available data and pre-trained models permitted"
+
+policy_interface:
+  class_name: "TransferPolicy"
+  interface_methods:
+    - name: "__init__"
+      parameters:
+        - name: "building_meta_data"
+          type: "Mapping[str, Any]"
+          description: "Static scenario description delivered once per building upon reset"
+        - name: "action_spec"
+          type: "gymnasium.spaces.Dict"
+          description: "Dictionary containing continuous_action and discrete_action Box specs"
+    - name: "get_action"
+      parameters:
+        - name: "obs"
+          type: "numpy.ndarray (float32, 1D)"
+          description: "Flat observation vector matching observation_field_names"
+      returns:
+        type: "dict[str, numpy.ndarray]"
+        keys:
+          continuous_action: "numpy.ndarray (float32, shape=(3K+2+2V,), bounds=[-1.0, 1.0])"
+          discrete_action: "numpy.ndarray (int32, shape=(K+1,), values={0, 1})"
+
+metadata_contents:
+  verified_keys:
+    - "n_discrete_action"
+    - "n_continuous_action"
+    - "temp_indices"
+    - "pressure_indices"
+    - "water_indices"
+    - "recirculation_indices"
+    - "zone_action_indices"
+    - "zone_temp_indices"
+    - "observation_field_names"
+    - "floor_plan"           # numpy array (H, W), available when present
+    - "zone_map"             # numpy array (H, W), available when present
+    - "ahu_zone_assignments" # mapping of ahu_id -> list[room_id]
+    - "num_floors"
+    - "morning_start_hour"   # default: 6
+    - "evening_start_hour"   # default: 19
+    - "comfort_temp_window"  # [21.0, 24.0] C
+    - "eco_temp_window"      # [16.0, 28.0] C
+    - "time_zone"
+    - "holidays"
+    - "observation_normalization_metadata"
+    - "action_normalization_metadata"
+
+action_space:
+  discrete:
+    dimension_formula: "K + 1"
+    dtype: "int32"
+    valid_values: [0, 1]
+    actuator_mapping:
+      0_to_K_minus_1: "AHU fan run command (0 = off, 1 = on)"
+      K: "Hot-water pump / boiler run command (0 = off, 1 = on)"
+  continuous:
+    dimension_formula: "3*K + 2 + 2*V"
+    dtype: "float32"
+    bounds: [-1.0, 1.0]
+    zero_meaning: "Midpoint of actuator native range (NOT off)"
+    interleaved_layout: true
+    indices_mapping:
+      temp_indices: "AHU supply-air temperature setpoint (positions in AHU order)"
+      pressure_indices: "AHU supply-air static pressure setpoint"
+      recirculation_indices: "AHU recirculation fraction setpoint (max 0.70 enforced by sim)"
+      water_indices: "Hot-water loop supply temperature and differential pressure"
+      zone_action_indices: "Dict[zone_id, Dict[setpoint_name, int]] for supply_air_damper and reheat_valve"
+  actuator_topology:
+    ahu_cooling: "AHU cools mixed air; no participant-facing chilled-water setpoint"
+    zone_heating: "VAV reheat coil uses central hot water"
+    simulator_enforced_floors:
+      damper_floor: 0.10
+      recirculation_ceiling: 0.70
+      minimum_static_pressure: true
+
+observation_space:
+  dimension_formula: "6*V + 15*K + 58"
+  dtype: "float32"
+  components:
+    per_zone: "Air temperature, heating/cooling setpoints, damper, reheat valve, airflow"
+    per_ahu: "Supply air temp, static pressure, airflow, recirculation, cooling requests, run status"
+    plant: "Supply water temperature (sensed + setpoint)"
+    building_level: "Total occupancy, comfort_mode_now flag, comfort_mode_soon flag, outdoor temp"
+    time_encodings: "Hour of day, day of week (cyclically encoded)"
+
+episode_and_scenarios:
+  step_duration_seconds: 300  # 5 minutes
+  steps_per_episode: 8640     # 30 days
+  total_evaluation_steps: 8640
+  warmup_window_excluded: false  # Every step is scored
+  shipped_training_manifest: "smart_buildings/training_set.yaml"
+  manifest_scenarios_count: 30
+  buildings_count: 6
+  buildings_list:
+    - "building_train_1"
+    - "building_train_2"
+    - "building_train_4"
+    - "building_train_5"
+    - "building_train_7"
+    - "building_train_8"
+  stations_represented:
+    - "atlanta"
+    - "denver"
+    - "fairbanks"
+    - "phoenix"
+    - "singapore"
+  weather_csv_records_per_station: 8760
+  total_weather_records_6_stations: 52560
+
+reward_and_scoring:
+  weights:
+    productivity_regret: 0.6
+    energy_cost: 0.2
+    carbon_emission: 0.2
+  shortfall_function:
+    comfort_band_w_kelvin: 5.0
+    formula: "f(d) = d/5.0 if d <= 5.0 else 1.0 + ((d-5.0)/5.0)^2"
+  occupancy_normalization:
+    method: "Actual dynamic total occupancy sum(N_occ)"
+    zero_occupancy_rule: "regret = 0.0 when sum(N_occ) == 0"
+    fixed_divisor_status: "REJECTED (no /125 divisor in reward calculation)"
+  reference_normalizers:
+    electricity_reference_rate: "80,000 W * K"
+    natural_gas_reference_rate: "205,000 W * K"
+    nature: "Linear scoring denominators; physical draw is uncapped"
+  step_reward_range: "[-1.0, 0.0]"
+  scenario_loss: "L_s = | (1/8640) * sum_{t=1}^{8640} r_{s,t} |"
+  leaderboard_metric: "L = (1/|S|) * sum_{s in S} L_s  (Equal scenario weighting; lower is better)"
+  missing_scenario_handling: "score_leaderboard.py warns unless --expect 30 is passed; independent scorer rejects"

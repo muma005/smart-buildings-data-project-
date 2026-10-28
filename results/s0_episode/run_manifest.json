@@ -1,0 +1,36 @@
+{
+  "run_id": "RUN-S0-EPISODE-001",
+  "scenario": "building_train_1/atlanta_2",
+  "provenance": {
+    "building": "building_train_1",
+    "weather": "atlanta_2",
+    "building_seed": 0,
+    "weather_csv": "smart_buildings/weather/csv/atlanta.csv",
+    "git_commit": "95cea5b1c57b5291f44baf0283e0a081d53f5b16"
+  },
+  "policy": {
+    "name": "TransferPolicy",
+    "path": "smart_buildings/baselines/transfer_policy.py",
+    "type": "reference_all_zero_continuous_all_one_discrete"
+  },
+  "episode_metrics": {
+    "total_steps": 8640,
+    "total_reward": -1174.1805287515745,
+    "mean_reward": -0.13590052416106185,
+    "scenario_loss": 0.13590052416106185,
+    "avg_occupancy": 15.479166666666666,
+    "avg_zone_temp": 297.4481146450166
+  },
+  "scoring_reconciliation": {
+    "official_total_reward": -1174.1805287515745,
+    "independent_total_reward": -1174.1805287515745,
+    "discrepancy_total": 0.0,
+    "max_per_step_component_discrepancy": 1.0805379169198659e-07,
+    "status": "RECONCILED_AND_VERIFIED"
+  },
+  "artifacts": {
+    "timeseries_csv": "results\\s0_episode\\building_train_1\\atlanta_2\\transfer\\timeseries.csv",
+    "reward_components_csv": "results\\s0_episode\\building_train_1\\atlanta_2\\transfer\\reward_components.csv",
+    "summary_json": "results\\s0_episode\\building_train_1\\atlanta_2\\transfer\\summary.json"
+  }
+}
