@@ -33,3 +33,4 @@ kaggle_evaluation/
 
 # Large Episode Trace CSVs (preserve summaries, manifests, comparison JSONs and charts)
 results/**/*.csv
+03_SOURCE_TRUTH/evidence/**/*.csv

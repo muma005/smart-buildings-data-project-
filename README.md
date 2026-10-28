@@ -150,15 +150,16 @@ The accompanying directory contains the complete reader-facing guide ([DATA_UNDE
 
 ### Phase 03 — Source-Truth Verification & Gate S0 Certification (CLOSED — PASS)
 
-- **Comprehensive Audit:** [SOURCE_TRUTH_AUDIT.md](SOURCE_TRUTH_AUDIT.md)
-- **Verified System Contract:** [VERIFIED_PROBLEM_AND_SYSTEM_CONTRACT.md](VERIFIED_PROBLEM_AND_SYSTEM_CONTRACT.md)
-- **Machine-Readable Contract:** [competition-spec.yaml](competition-spec.yaml)
-- **Executable Test Suite:** [SOURCE_TRUTH_TESTS/](SOURCE_TRUTH_TESTS/)
-- **Test Ledger (36/36 Passed):** [TEST_RESULTS.md](TEST_RESULTS.md)
-- **Gate S0 Certification Decision:** [S0_EXIT_REPORT.md](S0_EXIT_REPORT.md)
-- **Chronological Execution Log:** [PHASE_03_EXECUTION_LOG.md](PHASE_03_EXECUTION_LOG.md)
-- **Full Episode Run Manifest:** [results/s0_episode/run_manifest.json](results/s0_episode/run_manifest.json)
-- **Foundational Strategy:** [Phase_03_Source_Truth.md](Phase_03_Source_Truth.md)
+- **Phase 03 Directory & Guide:** [03_SOURCE_TRUTH/](03_SOURCE_TRUTH/)
+- **Comprehensive Audit:** [03_SOURCE_TRUTH/SOURCE_TRUTH_AUDIT.md](03_SOURCE_TRUTH/SOURCE_TRUTH_AUDIT.md)
+- **Verified System Contract:** [03_SOURCE_TRUTH/VERIFIED_PROBLEM_AND_SYSTEM_CONTRACT.md](03_SOURCE_TRUTH/VERIFIED_PROBLEM_AND_SYSTEM_CONTRACT.md)
+- **Machine-Readable Contract:** [03_SOURCE_TRUTH/competition-spec.yaml](03_SOURCE_TRUTH/competition-spec.yaml)
+- **Executable Test Suite:** [03_SOURCE_TRUTH/tests/](03_SOURCE_TRUTH/tests/)
+- **Test Ledger (36/36 Passed):** [03_SOURCE_TRUTH/TEST_RESULTS.md](03_SOURCE_TRUTH/TEST_RESULTS.md)
+- **Gate S0 Certification Decision:** [03_SOURCE_TRUTH/S0_EXIT_REPORT.md](03_SOURCE_TRUTH/S0_EXIT_REPORT.md)
+- **Chronological Execution Log:** [03_SOURCE_TRUTH/PHASE_03_EXECUTION_LOG.md](03_SOURCE_TRUTH/PHASE_03_EXECUTION_LOG.md)
+- **Full Episode Run Evidence:** [03_SOURCE_TRUTH/evidence/s0_episode/](03_SOURCE_TRUTH/evidence/s0_episode/)
+- **Foundational Strategy:** [03_SOURCE_TRUTH/Phase_03_Source_Truth.md](03_SOURCE_TRUTH/Phase_03_Source_Truth.md)
 
 The Source-Truth Verification phase establishes the exact competition contract that all future controllers must obey. Auditing the official competition starter kit (pinned and verified at commit `95cea5b1c57b5291f44baf0283e0a081d53f5b16`) and the Kaggle evaluation gateway (`kaggle_evaluation`), this phase closed Gate S0 from **BLOCKED** to **CERTIFIED: PASS** through executable code, standalone mathematical proofs, fault-injection tests, and a complete 8,640-step (30-day) simulation episode.
 
