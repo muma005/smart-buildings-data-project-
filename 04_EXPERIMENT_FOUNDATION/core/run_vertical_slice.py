@@ -75,14 +75,21 @@ def execute_vertical_slice_certification():
     steps = len(rc_df)
     assert steps == 8640, f"Expected 8640 steps, got {steps}"
 
-    # Build standardized trace CSV
+    # Copy policy snapshot into run directory for immutable reproducibility
+    policy_snapshot_path = run_dir / "policy_snapshot.py"
+    policy_snapshot_path.write_bytes(policy_source.read_bytes())
+
+    # Build standardized trace CSV using actual multi-zone temperatures
+    zone_cols = [c for c in ts_df.columns if c.startswith("zone_") and c.endswith("_temp")]
+    mean_zone_temp = ts_df[zone_cols].mean(axis=1) if len(zone_cols) > 0 else 295.15
+
     trace_df = pd.DataFrame({
         "step": np.arange(steps),
         "reward": rc_df["agent_reward"],
         "productivity_regret": rc_df["normalized_productivity_regret"],
         "energy_cost": rc_df["normalized_energy_cost"],
         "carbon_penalty": rc_df["normalized_carbon_emission"],
-        "mean_zone_temp": ts_df["zone_temp_mean"] if "zone_temp_mean" in ts_df else 22.0,
+        "mean_zone_temp": mean_zone_temp,
         "outdoor_temp": ts_df["outdoor_temp"] if "outdoor_temp" in ts_df else 15.0,
         "total_occupants": rc_df["total_occupancy"],
         "discrete_action_sum": np.ones(steps, dtype=int),
@@ -124,6 +131,7 @@ def execute_vertical_slice_certification():
         actual_steps=steps,
         trace_hash=trace_hash,
         artifacts_update={
+            "policy_snapshot": str(policy_snapshot_path),
             "trace_path": str(trace_file),
             "summary_path": str(run_dir / "summary.json"),
             "evaluation_path": str(run_dir / "evaluation.json"),

@@ -3,25 +3,26 @@
   "experiment_id": "EXP-000_vertical_slice",
   "policy_name": "TransferPolicy",
   "scenario_id": "building_train_1/atlanta_2",
-  "created_at_utc": "2026-10-29T09:41:19.040044+00:00",
+  "created_at_utc": "2026-10-29T09:56:04.049226+00:00",
   "status": "COMPLETE",
   "expected_steps": 8640,
   "actual_steps": 8640,
   "hashes": {
     "config_sha256": "702e6153c9d76cbd524143c6121ba2ef4837ea06518b20ff720dda675521c026",
     "policy_sha256": "a1331c97925f8f995519295e63995b1680d21a93425964f11df1d4a59fc46067",
-    "trace_sha256": "0f7244de61ad540ccb7533c0fa5869e3ceb85192ea33d7d4ee14aa4ad6a59710"
+    "trace_sha256": "bb24e5cc6a1999a8f0d09871b0fdd064ea160c0ecbb13527416b633db1eb47f4"
   },
   "artifacts": {
     "run_dir": "C:\\Users\\ADMIN\\Desktop\\smart building\\04_EXPERIMENT_FOUNDATION\\experiments\\runs\\RUN_EXP-000_vertical_slice_certified",
     "trace_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\04_EXPERIMENT_FOUNDATION\\experiments\\runs\\RUN_EXP-000_vertical_slice_certified\\trace.csv",
     "summary_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\04_EXPERIMENT_FOUNDATION\\experiments\\runs\\RUN_EXP-000_vertical_slice_certified\\summary.json",
-    "evaluation_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\04_EXPERIMENT_FOUNDATION\\experiments\\runs\\RUN_EXP-000_vertical_slice_certified\\evaluation.json"
+    "evaluation_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\04_EXPERIMENT_FOUNDATION\\experiments\\runs\\RUN_EXP-000_vertical_slice_certified\\evaluation.json",
+    "policy_snapshot": "C:\\Users\\ADMIN\\Desktop\\smart building\\04_EXPERIMENT_FOUNDATION\\experiments\\runs\\RUN_EXP-000_vertical_slice_certified\\policy_snapshot.py"
   },
   "metadata": {
     "suite_id": "dev_smoke_suite",
     "deterministic": true
   },
   "errors": [],
-  "updated_at_utc": "2026-10-29T09:41:19.657975+00:00"
+  "updated_at_utc": "2026-10-29T09:56:04.753835+00:00"
 }

@@ -17,6 +17,7 @@ This dedicated directory contains the complete infrastructure, core execution en
 ├── EVALUATION_GOVERNANCE.md                   # Scenario roles, comparison safeguards & contamination rules
 ├── PHASE_04_TEST_RESULTS.md                   # Test ledger for all 22 tests (100% PASS)
 ├── PHASE_04_EXIT_REPORT.md                    # Gate S1 certification decision & EXP-001 recommendation
+├── PHASE_04_POST_CERTIFICATION_AUDIT.md       # Audit resolving comfort diagnostics, replay, & safeguards
 │
 ├── core/                                      # Core execution and management engines
 │   ├── runner.py                              # Simulation runner executing policy episodes

@@ -12,13 +12,13 @@
     "episode_steps": 8640,
     "occupied_hours": 273.0,
     "thermal_comfort": {
-      "cold_degree_hours": 0.0,
-      "hot_degree_hours": 0.0,
-      "total_degree_hours": 0.0,
-      "comfort_compliance_pct": 100.0,
-      "min_zone_temp": 22.0,
-      "max_zone_temp": 22.0,
-      "mean_zone_temp": 22.0
+      "cold_degree_hours": 76.15223856943992,
+      "hot_degree_hours": 613.0330120184665,
+      "total_degree_hours": 689.1852505879064,
+      "comfort_compliance_pct": 15.598290598290598,
+      "min_zone_temp": 16.386213002801753,
+      "max_zone_temp": 32.66974017952589,
+      "mean_zone_temp": 24.298114645016614
     },
     "actuation": {
       "discrete_switch_count": 0,

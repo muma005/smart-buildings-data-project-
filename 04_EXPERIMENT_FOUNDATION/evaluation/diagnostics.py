@@ -26,7 +26,10 @@ class DiagnosticsEngine:
             return {"error": "Trace is empty"}
 
         # Thermal comfort analysis (assuming 20°C - 24°C nominal comfort band during occupied periods)
-        mean_temps = df["mean_zone_temp"].values
+        raw_temps = df["mean_zone_temp"].values
+        # Auto-convert from Kelvin to Celsius if necessary
+        mean_temps = (raw_temps - 273.15) if np.all(raw_temps > 100.0) else raw_temps
+
         occupants = df["total_occupants"].values
         occupied_mask = occupants > 0.0
         occupied_steps = int(np.sum(occupied_mask))
