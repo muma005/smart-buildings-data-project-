@@ -99,3 +99,40 @@ def test_diagnostics_engine_on_s0_episode():
         finally:
             if temp_csv.is_file():
                 temp_csv.unlink()
+
+
+def test_score_verifier_multi_scenario_aggregation_parity():
+    """Independent multi-scenario aggregation must equal official baseline sum within tolerance."""
+    assert BASELINE_JSON_PATH.is_file(), f"Missing {BASELINE_JSON_PATH}"
+    with open(BASELINE_JSON_PATH, "r", encoding="utf-8") as f:
+        baseline_data = json.load(f)
+
+    assert len(baseline_data) == 30, f"Expected 30 scenarios, got {len(baseline_data)}"
+
+    policies = ["bang_bang", "fixed_setpoint", "pid", "pid_water"]
+    for policy in policies:
+        scenario_returns = {sc: baseline_data[sc][policy] for sc in baseline_data}
+        expected_total = sum(scenario_returns.values())
+
+        # Verify via independent ScoreVerifier
+        res = ScoreVerifier.verify_multi_scenario_score(
+            scenario_returns=scenario_returns,
+            reported_suite_return=expected_total,
+        )
+        assert res["valid"], f"Multi-scenario verification failed for {policy}: {res.get('error')}"
+        assert res["scenario_count"] == 30
+        assert res["discrepancy"] <= ScoreVerifier.PARITY_TOLERANCE
+
+
+def test_score_verifier_reward_arithmetic_on_s0_episode():
+    """Validates step reward component arithmetic (0.6*regret - 0.2*energy - 0.2*carbon) on all 8640 steps."""
+    rc_path = S0_EPISODE_DIR / "reward_components.csv"
+    if not rc_path.is_file():
+        pytest.skip(f"S0 episode reward_components.csv not found at {rc_path}")
+
+    import pandas as pd
+    df = pd.read_csv(rc_path)
+    records = df.to_dict(orient="records")
+
+    res = ScoreVerifier.verify_reward_arithmetic(records)
+    assert res["valid"], f"Arithmetic verification failed: {res.get('error')}"
