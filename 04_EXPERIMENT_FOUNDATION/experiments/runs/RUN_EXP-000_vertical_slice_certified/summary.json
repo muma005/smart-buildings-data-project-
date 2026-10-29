@@ -1,0 +1,9 @@
+{
+  "run_id": "RUN_EXP-000_vertical_slice_certified",
+  "scenario_id": "building_train_1/atlanta_2",
+  "policy": "TransferPolicy",
+  "steps_completed": 8640,
+  "cumulative_reward": -1174.1805287515745,
+  "official_summary_return": -1174.1805287515745,
+  "trace_sha256": "0f7244de61ad540ccb7533c0fa5869e3ceb85192ea33d7d4ee14aa4ad6a59710"
+}

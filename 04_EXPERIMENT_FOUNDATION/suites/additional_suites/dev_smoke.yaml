@@ -1,0 +1,14 @@
+suite_name: "dev_smoke_suite"
+version: "1.0.0"
+role: "DEV"
+description: "Single-scenario suite for rapid unit and integration testing without full 30-scenario overhead."
+commit_pinned: "95cea5b1c57b5291f44baf0283e0a081d53f5b16"
+expected_scenario_count: 1
+steps_per_episode: 8640
+step_interval_seconds: 300
+
+scenarios:
+  - id: "building_train_1/atlanta_2"
+    building: "building_train_1"
+    weather: "atlanta_2"
+    climate_zone: "Humid Subtropical (Atlanta)"

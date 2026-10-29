@@ -1,0 +1,35 @@
+{
+  "run_dir": "C:\\Users\\ADMIN\\Desktop\\smart building\\04_EXPERIMENT_FOUNDATION\\experiments\\runs\\RUN_EXP-000_vertical_slice_certified",
+  "score_verification": {
+    "valid": true,
+    "actual_steps": 8640,
+    "reconstructed_return": -1174.1805287515745,
+    "discrepancy": 0.0,
+    "parity_passed": true,
+    "error": null
+  },
+  "diagnostics": {
+    "episode_steps": 8640,
+    "occupied_hours": 273.0,
+    "thermal_comfort": {
+      "cold_degree_hours": 0.0,
+      "hot_degree_hours": 0.0,
+      "total_degree_hours": 0.0,
+      "comfort_compliance_pct": 100.0,
+      "min_zone_temp": 22.0,
+      "max_zone_temp": 22.0,
+      "mean_zone_temp": 22.0
+    },
+    "actuation": {
+      "discrete_switch_count": 0,
+      "switch_frequency_per_day": 0.0
+    },
+    "reward_breakdown": {
+      "productivity_regret_total": -1955.9338881678414,
+      "energy_cost_total": 0.7900143240475385,
+      "carbon_penalty_total": 2.3109604372871604,
+      "total_return": -1174.1805287515745
+    }
+  },
+  "overall_valid": true
+}

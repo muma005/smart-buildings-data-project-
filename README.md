@@ -178,3 +178,33 @@ Problem Research established the theoretical physics, and Data Understanding ana
 It ensures that no controller development occurs against false assumptions: assuming nonexistent observation limits, hardcoding incorrect operating hours, or optimizing against distorted reward formulas.
 
 It provides the certified foundation for Phase 04 to construct the **immutable run registry, certified fallback baseline, and adaptive pre-conditioning harness**—guaranteeing that every subsequent controller improvement reflects genuine physical generalization rather than simulator artifacts.
+
+### Phase 04 — Minimum Trusted Experiment Foundation & Evaluation Governance (CLOSED — PASS)
+
+- **Phase 04 Directory & Guide:** [04_EXPERIMENT_FOUNDATION/](04_EXPERIMENT_FOUNDATION/)
+- **System Architecture Design:** [04_EXPERIMENT_FOUNDATION/EXPERIMENT_SYSTEM_DESIGN.md](04_EXPERIMENT_FOUNDATION/EXPERIMENT_SYSTEM_DESIGN.md)
+- **Evaluation Governance & Safeguards:** [04_EXPERIMENT_FOUNDATION/EVALUATION_GOVERNANCE.md](04_EXPERIMENT_FOUNDATION/EVALUATION_GOVERNANCE.md)
+- **Baseline Audit & Inventory:** [04_EXPERIMENT_FOUNDATION/PHASE_04_BASELINE_AUDIT.md](04_EXPERIMENT_FOUNDATION/PHASE_04_BASELINE_AUDIT.md)
+- **Official Suite Manifest (30 Scenarios):** [04_EXPERIMENT_FOUNDATION/suites/official_suite.yaml](04_EXPERIMENT_FOUNDATION/suites/official_suite.yaml)
+- **Executable Test Suite (22/22 Passed):** [04_EXPERIMENT_FOUNDATION/tests/](04_EXPERIMENT_FOUNDATION/tests/)
+- **Test Results Ledger:** [04_EXPERIMENT_FOUNDATION/PHASE_04_TEST_RESULTS.md](04_EXPERIMENT_FOUNDATION/PHASE_04_TEST_RESULTS.md)
+- **Gate S1 Exit Report:** [04_EXPERIMENT_FOUNDATION/PHASE_04_EXIT_REPORT.md](04_EXPERIMENT_FOUNDATION/PHASE_04_EXIT_REPORT.md)
+- **Certified Vertical Slice Evidence:** [04_EXPERIMENT_FOUNDATION/experiments/runs/RUN_EXP-000_vertical_slice_certified/](04_EXPERIMENT_FOUNDATION/experiments/runs/RUN_EXP-000_vertical_slice_certified/)
+
+The Minimum Trusted Experiment Foundation phase builds the software infrastructure and evaluation governance required to develop, test, compare, and improve control policies without suffering from broken execution, incorrect scoring, irreproducible runs, leakage, or unfair comparisons. This phase closed Gate S1 from **PLANNED** to **CERTIFIED: PASS** through modular component design, immutable artifact registration, independent score verification, comparison validation, and a comprehensive 22-test automated verification suite.
+
+This foundation establishes certified operational capabilities across five core pillars:
+
+- **Lifecycle Governance & State Machine:** Establishes the ExperimentRegistry with unique run IDs, cryptographic provenance hashing (SHA-256 of configs, policy code, and traces), and an immutable state machine (INITIALIZED, RUNNING, COMPLETE, FAILED, INCOMPLETE, INVALID, COMPLETE_NOT_ELIGIBLE) that prevents partial or failed runs from masquerading as successful experiments.
+- **Contract Enforcement & Policy Adapter:** Implements PolicyAdapter to isolate policy logic from the simulator environment, strictly validating discrete (+1$) and continuous (+2+2V$) action spaces, enforcing safe $[-1.0, 1.0]$ setpoint clipping, and trapping policy exceptions cleanly.
+- **Replay-Grade Trace Recording & Diagnostics:** Streams complete step transitions to disk via TraceRecorder with sequence monotonicity checks, and computes multi-dimensional engineering diagnostics (DiagnosticsEngine) covering thermal comfort degree-hours, compliance %, HVAC energy breakdowns, and actuator duty cycles.
+- **Suite Roles & Contamination Protection:** Formulates EVALUATION_GOVERNANCE.md and versioned YAML suite manifests, strictly classifying scenarios into functional roles (DEV, SELECT, GENERALIZATION, STRESS, SEALED RELEASE) to eliminate data leakage and prevent public training environments from being mislabeled as held-out benchmarks.
+- **Automated Candidate Comparison Safeguards:** Implements ComparisonValidator to enforce the Candidate Comparison Contract, programmatically rejecting comparisons with mismatched suite versions, unequal scenario counts, truncated episodes, or differing evaluation metrics.
+
+**Its role in the project**
+
+Phase 03 proved the physical and mathematical rules of the competition; Phase 04 provides the certified experimental laboratory to run scientific trials according to those rules.
+
+It ensures that no controller iteration occurs on shaky ground: eliminating the risk of accidental artifact overwrites, silent simulation halts, unnoticed score discrepancies, or biased candidate comparisons.
+
+With Gate S1 closed, the project is officially certified to launch its first controlled controller-discovery trials (starting with Experiment **EXP-001: Adaptive Thermal Pre-Conditioning Baseline**).

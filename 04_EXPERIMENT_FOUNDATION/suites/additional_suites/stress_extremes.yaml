@@ -1,0 +1,18 @@
+suite_name: "stress_extremes_suite"
+version: "1.0.0"
+role: "STRESS"
+description: "Two-scenario extreme climate stress suite (Fairbanks subarctic deep freeze vs Phoenix desert heatwave)."
+commit_pinned: "95cea5b1c57b5291f44baf0283e0a081d53f5b16"
+expected_scenario_count: 2
+steps_per_episode: 8640
+step_interval_seconds: 300
+
+scenarios:
+  - id: "building_train_1/fairbanks_1"
+    building: "building_train_1"
+    weather: "fairbanks_1"
+    climate_zone: "Subarctic Extreme Cold (Fairbanks)"
+  - id: "building_train_1/phoenix_5"
+    building: "building_train_1"
+    weather: "phoenix_5"
+    climate_zone: "Hot Desert Extreme (Phoenix)"

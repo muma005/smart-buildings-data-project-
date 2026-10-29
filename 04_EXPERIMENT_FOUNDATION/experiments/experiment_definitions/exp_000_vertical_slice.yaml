@@ -1,0 +1,12 @@
+experiment_id: "EXP-000_vertical_slice"
+hypothesis: "The minimum trusted vertical slice executes policy-in-the-loop simulation, records traces with cryptographic hashes, reconstructs scores independently with zero discrepancy, and enforces state machine transitions."
+experiment_type: "BENCHMARK"
+policy:
+  name: "TransferPolicy"
+  module: "smart_buildings.baselines.transfer_policy"
+  class_name: "TransferPolicy"
+suite_id: "dev_smoke_suite"
+scenario: "building_train_1/atlanta_2"
+expected_steps: 8640
+deterministic: true
+created_at_utc: "2026-10-29T12:00:00Z"
