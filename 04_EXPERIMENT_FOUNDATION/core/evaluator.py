@@ -40,11 +40,45 @@ class RunEvaluator:
         # 2. Engineering diagnostics
         diagnostics = DiagnosticsEngine.analyze_trace(trace_path=trace_path)
 
+        # 3. Independent run integrity audit
+        manifest_path = dir_path / "run_manifest.json"
+        if manifest_path.is_file():
+            integrity_res = ScoreVerifier.verify_run_integrity(
+                run_dir=dir_path,
+                expected_steps=expected_steps,
+            )
+            overall_valid = score_res.get("valid", False) and integrity_res.get("valid", False)
+            try:
+                from core.registry import ExperimentRegistry, EvidenceValidity
+                registry = ExperimentRegistry()
+                manifest = registry.load_manifest(dir_path)
+                curr_validity = manifest.get("evidence_validity", EvidenceValidity.UNVERIFIED.value)
+                if curr_validity == EvidenceValidity.UNVERIFIED.value:
+                    new_val = EvidenceValidity.VALID if overall_valid else EvidenceValidity.INVALID
+                    registry.update_evidence_validity(
+                        run_dir=dir_path,
+                        new_validity=new_val,
+                        reason="Independent post-run verification audit",
+                    )
+                elif curr_validity == EvidenceValidity.VALID.value and not overall_valid:
+                    registry.update_evidence_validity(
+                        run_dir=dir_path,
+                        new_validity=EvidenceValidity.INVALID,
+                        reason="Failed independent post-run verification audit",
+                    )
+            except Exception:
+                pass
+        else:
+            integrity_res = {"valid": score_res.get("valid", False), "note": "Legacy run without run_manifest.json"}
+            overall_valid = score_res.get("valid", False)
+
         eval_result = {
             "run_dir": str(dir_path),
             "score_verification": score_res,
             "diagnostics": diagnostics,
-            "overall_valid": score_res.get("valid", False),
+            "run_integrity": integrity_res,
+            "overall_valid": overall_valid,
+            "evidence_validity": "VALID" if overall_valid else "INVALID",
         }
 
         # Write evaluation.json

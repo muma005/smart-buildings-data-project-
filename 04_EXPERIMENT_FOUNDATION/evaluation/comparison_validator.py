@@ -5,6 +5,7 @@ Automates evaluation governance:
 """
 
 from __future__ import annotations
+import json
 from pathlib import Path
 from typing import Any, Mapping, Sequence
 import yaml
@@ -450,6 +451,38 @@ class ComparisonValidator:
             rejection_reasons.append("Candidate evaluation contains invalid or truncated episodes")
         if not baseline_eval.get("all_episodes_valid", True):
             rejection_reasons.append("Baseline evaluation contains invalid or truncated episodes")
+
+        # 9b. Check evidence validity and quarantine status
+        cand_validity = candidate_eval.get("evidence_validity")
+        base_validity = baseline_eval.get("evidence_validity")
+
+        if not cand_validity and candidate_eval.get("run_dir"):
+            try:
+                c_mf = Path(candidate_eval["run_dir"]) / "run_manifest.json"
+                if c_mf.is_file():
+                    with open(c_mf, "r", encoding="utf-8") as f:
+                        cand_validity = json.load(f).get("evidence_validity")
+            except Exception:
+                pass
+
+        if not base_validity and baseline_eval.get("run_dir"):
+            try:
+                b_mf = Path(baseline_eval["run_dir"]) / "run_manifest.json"
+                if b_mf.is_file():
+                    with open(b_mf, "r", encoding="utf-8") as f:
+                        base_validity = json.load(f).get("evidence_validity")
+            except Exception:
+                pass
+
+        if cand_validity == "QUARANTINED" or candidate_eval.get("is_quarantined") or candidate_eval.get("quarantined"):
+            rejection_reasons.append("Candidate evidence validity is QUARANTINED: cannot be used in comparison")
+        elif cand_validity == "INVALID":
+            rejection_reasons.append("Candidate evidence validity is INVALID: cannot be used in comparison")
+
+        if base_validity == "QUARANTINED" or baseline_eval.get("is_quarantined") or baseline_eval.get("quarantined"):
+            rejection_reasons.append("Baseline evidence validity is QUARANTINED: cannot be used in comparison")
+        elif base_validity == "INVALID":
+            rejection_reasons.append("Baseline evidence validity is INVALID: cannot be used in comparison")
 
         # 10. Multi-scenario score sum consistency
         cand_returns = candidate_eval.get("scenario_returns", {})
