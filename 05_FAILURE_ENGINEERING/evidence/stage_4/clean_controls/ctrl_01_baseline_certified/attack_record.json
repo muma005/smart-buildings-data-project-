@@ -1,0 +1,24 @@
+{
+  "attack_id": "CTRL-01",
+  "category": "Clean Control",
+  "description": "Certified reference run audit (8,640 steps, return -1174.1805)",
+  "entry_point": "ScoreVerifier.verify_trace_and_score()",
+  "injection_method": "None (Unperturbed clean run)",
+  "system_response": "All score and trace parity audits passed with 0 discrepancies",
+  "dimensions": {
+    "detection": true,
+    "evidence_preservation": true,
+    "containment": true,
+    "lineage_handling": true,
+    "clean_controls": true
+  },
+  "verdict": "PASS",
+  "details": {
+    "valid": true,
+    "actual_steps": 8640,
+    "reconstructed_return": -1174.1805287515745,
+    "discrepancy": 0.0,
+    "parity_passed": true,
+    "error": null
+  }
+}

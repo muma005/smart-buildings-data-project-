@@ -1,0 +1,1247 @@
+{
+  "schema_version": "v1.0",
+  "created_at_utc": "2026-11-01T23:04:02.418035+00:00",
+  "project_git_commit": "5d9a9075268a3491c3ac050c0d0b3e31e4dee70b",
+  "starter_kit_commit": "95cea5b1c57b5291f44baf0283e0a081d53f5b16",
+  "campaign_test_suite": {
+    "path": "05_FAILURE_ENGINEERING/tests/test_stage_4_campaign.py",
+    "sha256": "7133ff035f639c49d2a2a2d1838dcef31ad0658de4420af1422fc5ab17e04061"
+  },
+  "report": {
+    "path": "05_FAILURE_ENGINEERING/evidence/stage_4/PHASE_05_STAGE_4_ATTACK_AND_EVIDENCE.md",
+    "sha256": "0c8d7772b4f9ef25c5fa4248f36d3fb28b31b46cd71168cfbb0c6f79b54f0597"
+  },
+  "total_evidence_files": 246,
+  "evidence_inventory": [
+    {
+      "path": "attack_runs/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "attack_runs/atk_01_actuator_swap/attack_record.json",
+      "sha256": "36f59a29ba048992151be66e19b8088876897cc12d59ecc4d74357342b398207",
+      "bytes": 1331
+    },
+    {
+      "path": "attack_runs/atk_01_actuator_swap/semantic_probe_report.json",
+      "sha256": "f29fa9e6c472000bbdafc15c92571f9d018de23e3072a3d26af51dc02097c8ae",
+      "bytes": 689
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/attack_record.json",
+      "sha256": "2286fa17dc76682202e50eeb5304972243b5ec7c632c9ce1b13a80a81cc44334",
+      "bytes": 1247
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifact_manifest.json",
+      "sha256": "e93d51e5929b0051a3b511f4dca8149d10231da57cff51b7834d026d06385304",
+      "bytes": 40946
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/config.gin",
+      "sha256": "c518dd350d7be46bc16372e260ba4d30308c5f417e8892410b7f41ee199844c5",
+      "bytes": 10
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/04_EXPERIMENT_FOUNDATION/core/__init__.py",
+      "sha256": "4eaf2dc9992a81cb5518feb8e78b0c8599d50469d2ba15d70a815cbbcbd97a30",
+      "bytes": 42
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/04_EXPERIMENT_FOUNDATION/core/evaluator.py",
+      "sha256": "918a41c19c9311c13abb35f9c480203d32a4324e705c80e7b7b2849bec9f07f4",
+      "bytes": 3502
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/04_EXPERIMENT_FOUNDATION/core/policy_adapter.py",
+      "sha256": "ecdd1feaf4a96feb5a549f8c91b6e8d62ef86e36525ae16cf6bd9636bdde544f",
+      "bytes": 12834
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/04_EXPERIMENT_FOUNDATION/core/registry.py",
+      "sha256": "4cdb86368d1128a1b29e5fcb0a96a0f1e7b75bc11a7453b20fd9e2558545ed5b",
+      "bytes": 24526
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/04_EXPERIMENT_FOUNDATION/core/runner.py",
+      "sha256": "b8c0c8be937c7f9a29af0c3ed31c1f434f8c668b9f39473694853353942eeb76",
+      "bytes": 16991
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/04_EXPERIMENT_FOUNDATION/core/trace_recorder.py",
+      "sha256": "2af737e8eb5e53890d786056eca26949a86c174de38ab9852548bd7a26c7a327",
+      "bytes": 13129
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/04_EXPERIMENT_FOUNDATION/evaluation/__init__.py",
+      "sha256": "4742b78afa92623ab4de23865a5382ecede7544d6527bcb122706710cccad3e4",
+      "bytes": 41
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/04_EXPERIMENT_FOUNDATION/evaluation/comparison_validator.py",
+      "sha256": "e3e00efcee67e3aec7a95240e6e107ab357a02009d79f338932d39eac2bd01d7",
+      "bytes": 24111
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/04_EXPERIMENT_FOUNDATION/evaluation/diagnostics.py",
+      "sha256": "e34c18004a119e6286d9cda409c1a177deed6eb31b4223e380db08e84ad4ceef",
+      "bytes": 3796
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/04_EXPERIMENT_FOUNDATION/evaluation/score_verification.py",
+      "sha256": "f7d351c43e226ae83a5c2fdd2d569e79f8698f342ba5809b7c7603cd06611df6",
+      "bytes": 27662
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/04_EXPERIMENT_FOUNDATION/evaluation/semantic_probe.py",
+      "sha256": "ce33ccd4bf0464555c500d9ec44049791a020352f580d2f50246a4448f86037c",
+      "bytes": 6455
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/04_EXPERIMENT_FOUNDATION/evaluation/standalone_audit.py",
+      "sha256": "2c652024e8d9fdbef922ab1b0513dc8fad7a866150049ce9577711738630523b",
+      "bytes": 5223
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/05_FAILURE_ENGINEERING/tests/test_gate_01_reward_and_schema.py",
+      "sha256": "c5cb21e1cc0d98819de880521671eeb0114d351e7e23d233ca8a2cdc8c02c8cb",
+      "bytes": 10622
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/05_FAILURE_ENGINEERING/tests/test_gate_02_crash_resilience.py",
+      "sha256": "09aaa27d11d1d97eaa1b6d10c896c714bbbae2841aa827bef63c9e08dabdfa1d",
+      "bytes": 14305
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/05_FAILURE_ENGINEERING/tests/test_gate_03_independent_verification.py",
+      "sha256": "2988b2fe40fc6809e539377520de6e92503fd29b920afd058fd2815d95bd1b62",
+      "bytes": 12796
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/05_FAILURE_ENGINEERING/tests/test_gate_04_artifact_preservation.py",
+      "sha256": "a07bd51b78126c2cc6cefc29163b32aab205ccc1288767f74cb173249b6fb683",
+      "bytes": 7685
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/05_FAILURE_ENGINEERING/tests/test_gate_05_state_and_lineage.py",
+      "sha256": "51c54e2b95579787a9c45f058848cea8550842cb393ab8ce4f4e0c65de63a57b",
+      "bytes": 15705
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/05_FAILURE_ENGINEERING/tests/test_gate_06_leakage_and_semantics.py",
+      "sha256": "55f821a9d57d12300642246b1161063fb1116f7228f264c93155ee0865713f64",
+      "bytes": 10874
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/05_FAILURE_ENGINEERING/tests/test_gate_07_end_to_end_acceptance.py",
+      "sha256": "859e403b46e67b795fce573df4e718e104f5db3b56d238c22b9d0dac4fbf9271",
+      "bytes": 25287
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/05_FAILURE_ENGINEERING/tests/test_stage_4_campaign.py",
+      "sha256": "7133ff035f639c49d2a2a2d1838dcef31ad0658de4420af1422fc5ab17e04061",
+      "bytes": 41508
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/baselines/all_off.py",
+      "sha256": "50521df5b36540d06c3193d077210029ef8fc35db42484e2cb90deb202d40b7d",
+      "bytes": 2703
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/baselines/bang_bang.py",
+      "sha256": "067776d0f3e09913f1519972c675fee7591d130a21ce76a73cd746fb85fb2e87",
+      "bytes": 8135
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/baselines/fixed_setpoint.py",
+      "sha256": "6e07e9484f3835ed888a65ed0b5a0471e8a6888677bdfcfd7bc7336eca4b532b",
+      "bytes": 1909
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/baselines/pid.py",
+      "sha256": "c276046e85a147b8a1c3b02d5f609992eb2b2256b87fc27d3750ff802c14412e",
+      "bytes": 12505
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/baselines/pid_plus.py",
+      "sha256": "55079d5edb908be5cfc78770eca4051ca04bf5cb2b9aa4f845a425813425dc34",
+      "bytes": 27386
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/baselines/transfer_policy.py",
+      "sha256": "a1331c97925f8f995519295e63995b1680d21a93425964f11df1d4a59fc46067",
+      "bytes": 9363
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/evaluate.py",
+      "sha256": "947c968ce3a891da8334b7504ac0e7b45bd14fe13400f0136df49825d5247792",
+      "bytes": 31874
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/environment/environment.py",
+      "sha256": "703addb6e3d489bef98552a14792a5853201c0673c0f7db0c535372818758021",
+      "bytes": 65187
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/environment/hybrid_action_environment.py",
+      "sha256": "8e783272d58a821721712d894e2160e13ac94378db9908c285392d0e31a4b9c5",
+      "bytes": 9374
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/models/base_building.py",
+      "sha256": "139461dd1461dc8db81622c7b06bab039ac0d26599d14f48cf7a10c6713bdcb2",
+      "bytes": 4925
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/models/base_energy_cost.py",
+      "sha256": "5984934e27a35349d12579d895c773051eb368a91fe73d07c957846df3bec570",
+      "bytes": 1831
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/models/base_normalizer.py",
+      "sha256": "27c5997f9f9481e5253704d0ba6962884660e8325ef46c12d69cbfe38c9f0db4",
+      "bytes": 1915
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/models/base_occupancy.py",
+      "sha256": "bc32e233aaa895c0240e28fa1206d258cf1b931ef7a3819dd17681b61980ee6a",
+      "bytes": 1342
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/models/base_reward_function.py",
+      "sha256": "7d3cc4463cf18a3a4821f196024c62536f231f567dc152f6e4833ac2020e80ca",
+      "bytes": 700
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/proto/smart_control_building_pb2.py",
+      "sha256": "549ecc4385ec906cfdc41cb70a186fdde5a3c4b4f3737705eacf8bc2d5005af4",
+      "bytes": 8987
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/proto/smart_control_normalization_pb2.py",
+      "sha256": "33bc9e1d1a2e8d82cc9757cc2e196abc929e650294c990e759e811766ce67d86",
+      "bytes": 2141
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/proto/smart_control_reward_pb2.py",
+      "sha256": "b99dec253929bd2a5b73b2e69e395bd8fcafe54c163bae46e32c0eab03f7de26",
+      "bytes": 6918
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/reward/base_setpoint_energy_carbon_reward.py",
+      "sha256": "8d478fd4effb7d948049048c8e9c7c61dcb2cbbc465e0ca306f9af247336a437",
+      "bytes": 7081
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/reward/electricity_energy_cost.py",
+      "sha256": "16dcc3e50f36842b4b99710e10b2567f31d9ec114c700ea55af15a09ce8a5788",
+      "bytes": 5091
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/reward/energy_scale.py",
+      "sha256": "48af823ebfad22c95a88815e42f64015e4df8deedab96557a59ef41df9708859",
+      "bytes": 3855
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/reward/natural_gas_energy_cost.py",
+      "sha256": "070ff5cd4aaf8d230e0e1ba2a2c061f5fb0ce606c3f1a62d0e63ac1051d5a9ae",
+      "bytes": 3298
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/reward/setpoint_energy_carbon_regret.py",
+      "sha256": "0758a00c838b58778f7845f1cd8ed7f0ba389699426151f40cb43861a4ea6b1e",
+      "bytes": 13934
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/simulator/air_handler.py",
+      "sha256": "4bc14cc945b3169cc893018a7e87130ee5d8ff5e0c5a23172977553567c53eee",
+      "bytes": 20052
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/simulator/air_source_heat_pump.py",
+      "sha256": "9f361a8ad6560b5cf7570e9d06078d15de7dbf1085b0aa738e4a5678ecf47706",
+      "bytes": 8783
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/simulator/base_convection_simulator.py",
+      "sha256": "7cd07cffd3f6d86e34a9decfbff258b472f5f6171123db94b3d2a29c151ad769",
+      "bytes": 698
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/simulator/boiler.py",
+      "sha256": "fb9e8bb7131217a7b0f9b8d0fa6771d4be0a5a6fafe8aef87272ef7f8f44df1d",
+      "bytes": 10505
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/simulator/building.py",
+      "sha256": "edaeb81da733941f55a2927d3fd07d0d23b72a57f1ef83182dd5a86c7102166d",
+      "bytes": 45726
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/simulator/building_utils.py",
+      "sha256": "177333747cff7316e7994f84a34966a8e0af5a64ba8af90233129920e1dd98ef",
+      "bytes": 19881
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/simulator/constants.py",
+      "sha256": "95fb66dcdbd0996de4ed46ca885a44ee468edc9b63dc050702be6cdfee6e0c56",
+      "bytes": 5788
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/simulator/finite_difference_solver.py",
+      "sha256": "5a687a8bff05b5a1e7ca5c20ec3014cf5e48d6801cbe88f552d6fd5c60ec19c9",
+      "bytes": 42433
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/simulator/hot_water_heat_source.py",
+      "sha256": "a8f600d086cdab5e4bdd9f5f2b4ed93b6b99fd78d82acd3ce00b9ee1b5097391",
+      "bytes": 3646
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/simulator/hot_water_system.py",
+      "sha256": "6373f4a5e33f7f0bf6e2cc23ebd50f779b0450997a215cf480eb4bf2586c84eb",
+      "bytes": 16770
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/simulator/hvac.py",
+      "sha256": "d14c25e046c2a7f971ac10344f140dcd6be750ef1989f7810ec02f0b9e57b8ee",
+      "bytes": 5343
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/simulator/hvac_floorplan_based.py",
+      "sha256": "30b507bb758da9bc9e5a693f3b09d7ebeccda5cef149507d0d7e7cf519f2665c",
+      "bytes": 7786
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/simulator/pump.py",
+      "sha256": "052af71d7aa61c1afc01d9179f2ad5c6f0b2815a58c124030637c748d6eb1366",
+      "bytes": 5369
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/simulator/randomized_arrival_departure_occupancy.py",
+      "sha256": "4c9fa871636681da638e7c90f18e2c0212dbc533d350a39c5e2a807cf27a13ca",
+      "bytes": 12516
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/simulator/setpoint_schedule.py",
+      "sha256": "43781fb89d17f3fa901ac6fa514688fcb1501339fc08b07931a2254fb642c5d8",
+      "bytes": 9959
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/simulator/simulator.py",
+      "sha256": "8c9f378b30f2b02ad0acb2656a62e154e6c6c0c66a35c79f79c5683c63b4670f",
+      "bytes": 15066
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/simulator/simulator_building.py",
+      "sha256": "af722c3d9ed73e0c598aae1f8c055fc855b992109ebcdfbd9a430236db71dab7",
+      "bytes": 11664
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/simulator/simulator_flexible_floor_plan.py",
+      "sha256": "689ada7fd7af368dd03c95b33bc819f5c3e6998355304677da4e59f51a14eb8f",
+      "bytes": 36246
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/simulator/smart_device.py",
+      "sha256": "f887a193f01f81870b13cb88ba5205e37a979d991f80d27e867c3edda8d56b4f",
+      "bytes": 8001
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/simulator/stochastic_convection_simulator.py",
+      "sha256": "930f5a6df1b7ef7473aa6f8571662465df370b5c78012d54e258b95db5bc1f25",
+      "bytes": 7638
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/simulator/thermal_diffuser_utils.py",
+      "sha256": "7a3ff8c3bd77451955d1e1fe71a0b651f3a59fa97357968b5348e909d541021a",
+      "bytes": 8902
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/simulator/thermostat.py",
+      "sha256": "ed4fd3fc1221520f407e31a369a427870ec37b16b4f4d8db2e720a13e069f8bd",
+      "bytes": 5157
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/simulator/vav.py",
+      "sha256": "8c80a101049ab09cfee6b99a928865415acc3b5feb7456a410c07da608c75378",
+      "bytes": 21617
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/simulator/weather_controller.py",
+      "sha256": "5f38b01aee7e7cf4b5d9d66c5f2927a6a30e98f6c09e1d9ff551bd67ddf2bca1",
+      "bytes": 11364
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/utils/bidict.py",
+      "sha256": "53a7c08635d480bdb60092b12fa3f454f87a170058945a4449c08737fb80000a",
+      "bytes": 1415
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/utils/bounded_action_normalizer.py",
+      "sha256": "5dca1377c45d069a6667d708081fe3a8357b6029e81f01c002295b6ecb4e4885",
+      "bytes": 4754
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/utils/building_image_generator.py",
+      "sha256": "42a4303e42ba89d50e836df023512bd83aa123193fb7745f5c1ac2e2e4f9dd82",
+      "bytes": 3899
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/utils/building_renderer.py",
+      "sha256": "322d96482414753da83f2f7a908b248a1c09e661124f39e30c29b5503fabf4f1",
+      "bytes": 9169
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/utils/constants.py",
+      "sha256": "5716f4eeceed32c22464a1f3eb9fc194774f944008218a70bc5e3360228900c0",
+      "bytes": 2757
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/utils/conversion_utils.py",
+      "sha256": "b0cf32419e740e925afb8486d36df75fd0b6f4ad517d7ffc5207f481c1cc8155",
+      "bytes": 6176
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/utils/environment_utils.py",
+      "sha256": "50436680896067d40973f53551f93fd2557e6a1fa38d06cbb758821ffeaddd5b",
+      "bytes": 1419
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/utils/floor_generator.py",
+      "sha256": "dcc1893b948db580943d5f07704a6515afa1f7deb6b4a1a413308869f85dfaba",
+      "bytes": 72680
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/utils/histogram_reducer.py",
+      "sha256": "fd74bed566c2f37e64aa15985fc7400b3646bed20f7bfc15ed457a2dd63e6de5",
+      "bytes": 17326
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/utils/observation_normalizer.py",
+      "sha256": "e6cd97256532c8f472c77b1dcbefffbfa092843caab1ab87e66c6120fadf3756",
+      "bytes": 4755
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/utils/plot_utils.py",
+      "sha256": "3eafe55ebe25e650cf3b0567bcd596527ba93599572a50ffebf7f9a52d35f669",
+      "bytes": 14807
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/utils/proto_parsers/device_info_parser.py",
+      "sha256": "d6531ec40cecbf091bc147c305c27907d0bd5506696047a2e75e4f0e83b2d6f8",
+      "bytes": 6182
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/utils/proto_parsers/reward_info_parser.py",
+      "sha256": "c17ed7ac1cbe66fb37202161e160fd4cbce156039b09a3c21140684524fc10ed",
+      "bytes": 24601
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/utils/proto_parsers/zone_info_parser.py",
+      "sha256": "770fa606ddda34b84d3684d6f2099a303f6f68f402a5730e3329a10833360905",
+      "bytes": 2383
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/utils/reader_lib.py",
+      "sha256": "4ea08afe2d3939e63a2ee582620a5ef42a624f6615361d541666ed3d7802a637",
+      "bytes": 2366
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/utils/real_building_temperature_array_generator.py",
+      "sha256": "0ea19f4692f27afe2dd30519f7ba2166488b5235c51a88b08c8b9a4e433259b4",
+      "bytes": 2290
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/utils/reducer.py",
+      "sha256": "4ba6bb056bc26d1d88b45311144f75366b4a2da984f48b7f1b7235e586c0263f",
+      "bytes": 6095
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/utils/regression_building_utils.py",
+      "sha256": "2cf2cb86f87d4baadec76d847f6f7018d0ca6a42287d4c209b906fc985dd6f9f",
+      "bytes": 28364
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/utils/rl_types.py",
+      "sha256": "f6be87f084e6018bc590f6ae4253aa419e3c510c48bf4bfd742ac2a1d8d31445",
+      "bytes": 1338
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/utils/run_command_predictor.py",
+      "sha256": "d033ac6056987dca9aab8dda2e3546863189d61be3d34420d197a7a2f1ec62d1",
+      "bytes": 8043
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/utils/scenario_generator.py",
+      "sha256": "87f69478712b0eb0a72d1a65e4d9acdbadd1192b706f13e4525b0788c537912c",
+      "bytes": 86447
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/utils/temperature_conversion.py",
+      "sha256": "9c21cbad6c30429c0a556e383ff84072906c3ddf27595e75ecf2fd871bbdae9b",
+      "bytes": 5206
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/utils/visual_logger.py",
+      "sha256": "ba6daa3f59689b394185bc4488e83057b114463a85c7c3c766d329e975a345c0",
+      "bytes": 2923
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/local_deps/smart_buildings/smart_control/utils/writer_lib.py",
+      "sha256": "9a27b45bba5aeacc30dd320ad75c8f717db5ea7e1a39e16b36f93f2cda0ff6b4",
+      "bytes": 4699
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/artifacts/test_stage_4_campaign.py",
+      "sha256": "7133ff035f639c49d2a2a2d1838dcef31ad0658de4420af1422fc5ab17e04061",
+      "bytes": 41508
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/run_manifest.json",
+      "sha256": "3dc38e97d64c2a07afded3bc5a64551fbecb8a0824ed26a8241282bfd81da355",
+      "bytes": 2054
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/runs/RUN_EXP_ATK02_atk_02_reward_drift_scenario_20261101_224106_6a967fc8/trace.csv",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "attack_runs/atk_02_reward_drift/scenario/config.gin",
+      "sha256": "c518dd350d7be46bc16372e260ba4d30308c5f417e8892410b7f41ee199844c5",
+      "bytes": 10
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/attack_record.json",
+      "sha256": "2a5264af9dfe9094e91847eb4a22248429009ca317b247fce4611a9cb9944db2",
+      "bytes": 641
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifact_manifest.json",
+      "sha256": "75d8e2802b83b236552b02e64ae2e12b829462ec2ccc414114aa412c19cb976f",
+      "bytes": 40952
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/config.gin",
+      "sha256": "c518dd350d7be46bc16372e260ba4d30308c5f417e8892410b7f41ee199844c5",
+      "bytes": 10
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/04_EXPERIMENT_FOUNDATION/core/__init__.py",
+      "sha256": "4eaf2dc9992a81cb5518feb8e78b0c8599d50469d2ba15d70a815cbbcbd97a30",
+      "bytes": 42
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/04_EXPERIMENT_FOUNDATION/core/evaluator.py",
+      "sha256": "918a41c19c9311c13abb35f9c480203d32a4324e705c80e7b7b2849bec9f07f4",
+      "bytes": 3502
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/04_EXPERIMENT_FOUNDATION/core/policy_adapter.py",
+      "sha256": "ecdd1feaf4a96feb5a549f8c91b6e8d62ef86e36525ae16cf6bd9636bdde544f",
+      "bytes": 12834
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/04_EXPERIMENT_FOUNDATION/core/registry.py",
+      "sha256": "4cdb86368d1128a1b29e5fcb0a96a0f1e7b75bc11a7453b20fd9e2558545ed5b",
+      "bytes": 24526
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/04_EXPERIMENT_FOUNDATION/core/runner.py",
+      "sha256": "b8c0c8be937c7f9a29af0c3ed31c1f434f8c668b9f39473694853353942eeb76",
+      "bytes": 16991
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/04_EXPERIMENT_FOUNDATION/core/trace_recorder.py",
+      "sha256": "2af737e8eb5e53890d786056eca26949a86c174de38ab9852548bd7a26c7a327",
+      "bytes": 13129
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/04_EXPERIMENT_FOUNDATION/evaluation/__init__.py",
+      "sha256": "4742b78afa92623ab4de23865a5382ecede7544d6527bcb122706710cccad3e4",
+      "bytes": 41
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/04_EXPERIMENT_FOUNDATION/evaluation/comparison_validator.py",
+      "sha256": "e3e00efcee67e3aec7a95240e6e107ab357a02009d79f338932d39eac2bd01d7",
+      "bytes": 24111
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/04_EXPERIMENT_FOUNDATION/evaluation/diagnostics.py",
+      "sha256": "e34c18004a119e6286d9cda409c1a177deed6eb31b4223e380db08e84ad4ceef",
+      "bytes": 3796
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/04_EXPERIMENT_FOUNDATION/evaluation/score_verification.py",
+      "sha256": "f7d351c43e226ae83a5c2fdd2d569e79f8698f342ba5809b7c7603cd06611df6",
+      "bytes": 27662
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/04_EXPERIMENT_FOUNDATION/evaluation/semantic_probe.py",
+      "sha256": "ce33ccd4bf0464555c500d9ec44049791a020352f580d2f50246a4448f86037c",
+      "bytes": 6455
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/04_EXPERIMENT_FOUNDATION/evaluation/standalone_audit.py",
+      "sha256": "2c652024e8d9fdbef922ab1b0513dc8fad7a866150049ce9577711738630523b",
+      "bytes": 5223
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/05_FAILURE_ENGINEERING/tests/test_gate_01_reward_and_schema.py",
+      "sha256": "c5cb21e1cc0d98819de880521671eeb0114d351e7e23d233ca8a2cdc8c02c8cb",
+      "bytes": 10622
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/05_FAILURE_ENGINEERING/tests/test_gate_02_crash_resilience.py",
+      "sha256": "09aaa27d11d1d97eaa1b6d10c896c714bbbae2841aa827bef63c9e08dabdfa1d",
+      "bytes": 14305
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/05_FAILURE_ENGINEERING/tests/test_gate_03_independent_verification.py",
+      "sha256": "2988b2fe40fc6809e539377520de6e92503fd29b920afd058fd2815d95bd1b62",
+      "bytes": 12796
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/05_FAILURE_ENGINEERING/tests/test_gate_04_artifact_preservation.py",
+      "sha256": "a07bd51b78126c2cc6cefc29163b32aab205ccc1288767f74cb173249b6fb683",
+      "bytes": 7685
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/05_FAILURE_ENGINEERING/tests/test_gate_05_state_and_lineage.py",
+      "sha256": "51c54e2b95579787a9c45f058848cea8550842cb393ab8ce4f4e0c65de63a57b",
+      "bytes": 15705
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/05_FAILURE_ENGINEERING/tests/test_gate_06_leakage_and_semantics.py",
+      "sha256": "55f821a9d57d12300642246b1161063fb1116f7228f264c93155ee0865713f64",
+      "bytes": 10874
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/05_FAILURE_ENGINEERING/tests/test_gate_07_end_to_end_acceptance.py",
+      "sha256": "859e403b46e67b795fce573df4e718e104f5db3b56d238c22b9d0dac4fbf9271",
+      "bytes": 25287
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/05_FAILURE_ENGINEERING/tests/test_stage_4_campaign.py",
+      "sha256": "7133ff035f639c49d2a2a2d1838dcef31ad0658de4420af1422fc5ab17e04061",
+      "bytes": 41508
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/baselines/all_off.py",
+      "sha256": "50521df5b36540d06c3193d077210029ef8fc35db42484e2cb90deb202d40b7d",
+      "bytes": 2703
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/baselines/bang_bang.py",
+      "sha256": "067776d0f3e09913f1519972c675fee7591d130a21ce76a73cd746fb85fb2e87",
+      "bytes": 8135
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/baselines/fixed_setpoint.py",
+      "sha256": "6e07e9484f3835ed888a65ed0b5a0471e8a6888677bdfcfd7bc7336eca4b532b",
+      "bytes": 1909
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/baselines/pid.py",
+      "sha256": "c276046e85a147b8a1c3b02d5f609992eb2b2256b87fc27d3750ff802c14412e",
+      "bytes": 12505
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/baselines/pid_plus.py",
+      "sha256": "55079d5edb908be5cfc78770eca4051ca04bf5cb2b9aa4f845a425813425dc34",
+      "bytes": 27386
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/baselines/transfer_policy.py",
+      "sha256": "a1331c97925f8f995519295e63995b1680d21a93425964f11df1d4a59fc46067",
+      "bytes": 9363
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/evaluate.py",
+      "sha256": "947c968ce3a891da8334b7504ac0e7b45bd14fe13400f0136df49825d5247792",
+      "bytes": 31874
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/environment/environment.py",
+      "sha256": "703addb6e3d489bef98552a14792a5853201c0673c0f7db0c535372818758021",
+      "bytes": 65187
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/environment/hybrid_action_environment.py",
+      "sha256": "8e783272d58a821721712d894e2160e13ac94378db9908c285392d0e31a4b9c5",
+      "bytes": 9374
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/models/base_building.py",
+      "sha256": "139461dd1461dc8db81622c7b06bab039ac0d26599d14f48cf7a10c6713bdcb2",
+      "bytes": 4925
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/models/base_energy_cost.py",
+      "sha256": "5984934e27a35349d12579d895c773051eb368a91fe73d07c957846df3bec570",
+      "bytes": 1831
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/models/base_normalizer.py",
+      "sha256": "27c5997f9f9481e5253704d0ba6962884660e8325ef46c12d69cbfe38c9f0db4",
+      "bytes": 1915
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/models/base_occupancy.py",
+      "sha256": "bc32e233aaa895c0240e28fa1206d258cf1b931ef7a3819dd17681b61980ee6a",
+      "bytes": 1342
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/models/base_reward_function.py",
+      "sha256": "7d3cc4463cf18a3a4821f196024c62536f231f567dc152f6e4833ac2020e80ca",
+      "bytes": 700
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/proto/smart_control_building_pb2.py",
+      "sha256": "549ecc4385ec906cfdc41cb70a186fdde5a3c4b4f3737705eacf8bc2d5005af4",
+      "bytes": 8987
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/proto/smart_control_normalization_pb2.py",
+      "sha256": "33bc9e1d1a2e8d82cc9757cc2e196abc929e650294c990e759e811766ce67d86",
+      "bytes": 2141
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/proto/smart_control_reward_pb2.py",
+      "sha256": "b99dec253929bd2a5b73b2e69e395bd8fcafe54c163bae46e32c0eab03f7de26",
+      "bytes": 6918
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/reward/base_setpoint_energy_carbon_reward.py",
+      "sha256": "8d478fd4effb7d948049048c8e9c7c61dcb2cbbc465e0ca306f9af247336a437",
+      "bytes": 7081
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/reward/electricity_energy_cost.py",
+      "sha256": "16dcc3e50f36842b4b99710e10b2567f31d9ec114c700ea55af15a09ce8a5788",
+      "bytes": 5091
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/reward/energy_scale.py",
+      "sha256": "48af823ebfad22c95a88815e42f64015e4df8deedab96557a59ef41df9708859",
+      "bytes": 3855
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/reward/natural_gas_energy_cost.py",
+      "sha256": "070ff5cd4aaf8d230e0e1ba2a2c061f5fb0ce606c3f1a62d0e63ac1051d5a9ae",
+      "bytes": 3298
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/reward/setpoint_energy_carbon_regret.py",
+      "sha256": "0758a00c838b58778f7845f1cd8ed7f0ba389699426151f40cb43861a4ea6b1e",
+      "bytes": 13934
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/simulator/air_handler.py",
+      "sha256": "4bc14cc945b3169cc893018a7e87130ee5d8ff5e0c5a23172977553567c53eee",
+      "bytes": 20052
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/simulator/air_source_heat_pump.py",
+      "sha256": "9f361a8ad6560b5cf7570e9d06078d15de7dbf1085b0aa738e4a5678ecf47706",
+      "bytes": 8783
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/simulator/base_convection_simulator.py",
+      "sha256": "7cd07cffd3f6d86e34a9decfbff258b472f5f6171123db94b3d2a29c151ad769",
+      "bytes": 698
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/simulator/boiler.py",
+      "sha256": "fb9e8bb7131217a7b0f9b8d0fa6771d4be0a5a6fafe8aef87272ef7f8f44df1d",
+      "bytes": 10505
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/simulator/building.py",
+      "sha256": "edaeb81da733941f55a2927d3fd07d0d23b72a57f1ef83182dd5a86c7102166d",
+      "bytes": 45726
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/simulator/building_utils.py",
+      "sha256": "177333747cff7316e7994f84a34966a8e0af5a64ba8af90233129920e1dd98ef",
+      "bytes": 19881
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/simulator/constants.py",
+      "sha256": "95fb66dcdbd0996de4ed46ca885a44ee468edc9b63dc050702be6cdfee6e0c56",
+      "bytes": 5788
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/simulator/finite_difference_solver.py",
+      "sha256": "5a687a8bff05b5a1e7ca5c20ec3014cf5e48d6801cbe88f552d6fd5c60ec19c9",
+      "bytes": 42433
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/simulator/hot_water_heat_source.py",
+      "sha256": "a8f600d086cdab5e4bdd9f5f2b4ed93b6b99fd78d82acd3ce00b9ee1b5097391",
+      "bytes": 3646
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/simulator/hot_water_system.py",
+      "sha256": "6373f4a5e33f7f0bf6e2cc23ebd50f779b0450997a215cf480eb4bf2586c84eb",
+      "bytes": 16770
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/simulator/hvac.py",
+      "sha256": "d14c25e046c2a7f971ac10344f140dcd6be750ef1989f7810ec02f0b9e57b8ee",
+      "bytes": 5343
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/simulator/hvac_floorplan_based.py",
+      "sha256": "30b507bb758da9bc9e5a693f3b09d7ebeccda5cef149507d0d7e7cf519f2665c",
+      "bytes": 7786
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/simulator/pump.py",
+      "sha256": "052af71d7aa61c1afc01d9179f2ad5c6f0b2815a58c124030637c748d6eb1366",
+      "bytes": 5369
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/simulator/randomized_arrival_departure_occupancy.py",
+      "sha256": "4c9fa871636681da638e7c90f18e2c0212dbc533d350a39c5e2a807cf27a13ca",
+      "bytes": 12516
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/simulator/setpoint_schedule.py",
+      "sha256": "43781fb89d17f3fa901ac6fa514688fcb1501339fc08b07931a2254fb642c5d8",
+      "bytes": 9959
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/simulator/simulator.py",
+      "sha256": "8c9f378b30f2b02ad0acb2656a62e154e6c6c0c66a35c79f79c5683c63b4670f",
+      "bytes": 15066
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/simulator/simulator_building.py",
+      "sha256": "af722c3d9ed73e0c598aae1f8c055fc855b992109ebcdfbd9a430236db71dab7",
+      "bytes": 11664
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/simulator/simulator_flexible_floor_plan.py",
+      "sha256": "689ada7fd7af368dd03c95b33bc819f5c3e6998355304677da4e59f51a14eb8f",
+      "bytes": 36246
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/simulator/smart_device.py",
+      "sha256": "f887a193f01f81870b13cb88ba5205e37a979d991f80d27e867c3edda8d56b4f",
+      "bytes": 8001
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/simulator/stochastic_convection_simulator.py",
+      "sha256": "930f5a6df1b7ef7473aa6f8571662465df370b5c78012d54e258b95db5bc1f25",
+      "bytes": 7638
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/simulator/thermal_diffuser_utils.py",
+      "sha256": "7a3ff8c3bd77451955d1e1fe71a0b651f3a59fa97357968b5348e909d541021a",
+      "bytes": 8902
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/simulator/thermostat.py",
+      "sha256": "ed4fd3fc1221520f407e31a369a427870ec37b16b4f4d8db2e720a13e069f8bd",
+      "bytes": 5157
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/simulator/vav.py",
+      "sha256": "8c80a101049ab09cfee6b99a928865415acc3b5feb7456a410c07da608c75378",
+      "bytes": 21617
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/simulator/weather_controller.py",
+      "sha256": "5f38b01aee7e7cf4b5d9d66c5f2927a6a30e98f6c09e1d9ff551bd67ddf2bca1",
+      "bytes": 11364
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/utils/bidict.py",
+      "sha256": "53a7c08635d480bdb60092b12fa3f454f87a170058945a4449c08737fb80000a",
+      "bytes": 1415
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/utils/bounded_action_normalizer.py",
+      "sha256": "5dca1377c45d069a6667d708081fe3a8357b6029e81f01c002295b6ecb4e4885",
+      "bytes": 4754
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/utils/building_image_generator.py",
+      "sha256": "42a4303e42ba89d50e836df023512bd83aa123193fb7745f5c1ac2e2e4f9dd82",
+      "bytes": 3899
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/utils/building_renderer.py",
+      "sha256": "322d96482414753da83f2f7a908b248a1c09e661124f39e30c29b5503fabf4f1",
+      "bytes": 9169
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/utils/constants.py",
+      "sha256": "5716f4eeceed32c22464a1f3eb9fc194774f944008218a70bc5e3360228900c0",
+      "bytes": 2757
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/utils/conversion_utils.py",
+      "sha256": "b0cf32419e740e925afb8486d36df75fd0b6f4ad517d7ffc5207f481c1cc8155",
+      "bytes": 6176
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/utils/environment_utils.py",
+      "sha256": "50436680896067d40973f53551f93fd2557e6a1fa38d06cbb758821ffeaddd5b",
+      "bytes": 1419
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/utils/floor_generator.py",
+      "sha256": "dcc1893b948db580943d5f07704a6515afa1f7deb6b4a1a413308869f85dfaba",
+      "bytes": 72680
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/utils/histogram_reducer.py",
+      "sha256": "fd74bed566c2f37e64aa15985fc7400b3646bed20f7bfc15ed457a2dd63e6de5",
+      "bytes": 17326
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/utils/observation_normalizer.py",
+      "sha256": "e6cd97256532c8f472c77b1dcbefffbfa092843caab1ab87e66c6120fadf3756",
+      "bytes": 4755
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/utils/plot_utils.py",
+      "sha256": "3eafe55ebe25e650cf3b0567bcd596527ba93599572a50ffebf7f9a52d35f669",
+      "bytes": 14807
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/utils/proto_parsers/device_info_parser.py",
+      "sha256": "d6531ec40cecbf091bc147c305c27907d0bd5506696047a2e75e4f0e83b2d6f8",
+      "bytes": 6182
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/utils/proto_parsers/reward_info_parser.py",
+      "sha256": "c17ed7ac1cbe66fb37202161e160fd4cbce156039b09a3c21140684524fc10ed",
+      "bytes": 24601
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/utils/proto_parsers/zone_info_parser.py",
+      "sha256": "770fa606ddda34b84d3684d6f2099a303f6f68f402a5730e3329a10833360905",
+      "bytes": 2383
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/utils/reader_lib.py",
+      "sha256": "4ea08afe2d3939e63a2ee582620a5ef42a624f6615361d541666ed3d7802a637",
+      "bytes": 2366
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/utils/real_building_temperature_array_generator.py",
+      "sha256": "0ea19f4692f27afe2dd30519f7ba2166488b5235c51a88b08c8b9a4e433259b4",
+      "bytes": 2290
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/utils/reducer.py",
+      "sha256": "4ba6bb056bc26d1d88b45311144f75366b4a2da984f48b7f1b7235e586c0263f",
+      "bytes": 6095
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/utils/regression_building_utils.py",
+      "sha256": "2cf2cb86f87d4baadec76d847f6f7018d0ca6a42287d4c209b906fc985dd6f9f",
+      "bytes": 28364
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/utils/rl_types.py",
+      "sha256": "f6be87f084e6018bc590f6ae4253aa419e3c510c48bf4bfd742ac2a1d8d31445",
+      "bytes": 1338
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/utils/run_command_predictor.py",
+      "sha256": "d033ac6056987dca9aab8dda2e3546863189d61be3d34420d197a7a2f1ec62d1",
+      "bytes": 8043
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/utils/scenario_generator.py",
+      "sha256": "87f69478712b0eb0a72d1a65e4d9acdbadd1192b706f13e4525b0788c537912c",
+      "bytes": 86447
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/utils/temperature_conversion.py",
+      "sha256": "9c21cbad6c30429c0a556e383ff84072906c3ddf27595e75ecf2fd871bbdae9b",
+      "bytes": 5206
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/utils/visual_logger.py",
+      "sha256": "ba6daa3f59689b394185bc4488e83057b114463a85c7c3c766d329e975a345c0",
+      "bytes": 2923
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/local_deps/smart_buildings/smart_control/utils/writer_lib.py",
+      "sha256": "9a27b45bba5aeacc30dd320ad75c8f717db5ea7e1a39e16b36f93f2cda0ff6b4",
+      "bytes": 4699
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/artifacts/test_stage_4_campaign.py",
+      "sha256": "7133ff035f639c49d2a2a2d1838dcef31ad0658de4420af1422fc5ab17e04061",
+      "bytes": 41508
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/runs/RUN_EXP_ATK03_atk_03_leakage_import_scenario_20261101_224111_1f9ba586/run_manifest.json",
+      "sha256": "68882f6d9319cce9e9e8953a6101284566f724d202bd85a89730804c49efb4d0",
+      "bytes": 2417
+    },
+    {
+      "path": "attack_runs/atk_03_leakage_import/scenario/config.gin",
+      "sha256": "c518dd350d7be46bc16372e260ba4d30308c5f417e8892410b7f41ee199844c5",
+      "bytes": 10
+    },
+    {
+      "path": "attack_runs/atk_04_crash_rollout/atk04_run/run_manifest.json",
+      "sha256": "b43a6a4517f7142d5b7aae4cc88d90b70221ba8bf51c74b3564d887619716446",
+      "bytes": 1362
+    },
+    {
+      "path": "attack_runs/atk_04_crash_rollout/atk04_run/summary.json",
+      "sha256": "a629aa1159896882fdd8f339ed38b578c7c773e903f289bcc74584bdbfd80007",
+      "bytes": 97
+    },
+    {
+      "path": "attack_runs/atk_04_crash_rollout/atk04_run/trace.csv",
+      "sha256": "21ebe449058787907a90cb09e3ca86b112bdc29f9d00cfcfd2164445281e963c",
+      "bytes": 1100
+    },
+    {
+      "path": "attack_runs/atk_04_crash_rollout/attack_record.json",
+      "sha256": "8a332b95e550e89a40a6e4bb9c7a76431f3203221035b63a965ffc26bf711721",
+      "bytes": 644
+    },
+    {
+      "path": "attack_runs/atk_05_tmp_chunk/atk05_run/chunks/chunk_0000.npz",
+      "sha256": "d5796cbb0d69113ff64311e6ef50cb144ec22ac98788bac2602d20b927143a1a",
+      "bytes": 25878
+    },
+    {
+      "path": "attack_runs/atk_05_tmp_chunk/atk05_run/chunks_manifest.json",
+      "sha256": "d27a6142e8126b0cecb0f33bb1936240f7adb579665797ba4d07014b3f4bcacf",
+      "bytes": 387
+    },
+    {
+      "path": "attack_runs/atk_05_tmp_chunk/atk05_run/run_manifest.json",
+      "sha256": "3258f773001330043ca0b00db791204cb5a007cdd559dfaa170e71c9d514176f",
+      "bytes": 1792
+    },
+    {
+      "path": "attack_runs/atk_05_tmp_chunk/attack_record.json",
+      "sha256": "13574274ff899d4eb0299f065b22694e63e6b0e56224d388c725ae8a1bacd90a",
+      "bytes": 638
+    },
+    {
+      "path": "attack_runs/atk_06_chunk_tamper/atk06_run/chunks/chunk_0000.npz",
+      "sha256": "dca65b8fca98fdbebad14c164dc892387b5751218ac92c89e8a2674b3723cefe",
+      "bytes": 40795
+    },
+    {
+      "path": "attack_runs/atk_06_chunk_tamper/atk06_run/chunks_manifest.json",
+      "sha256": "ac36752ea6e3f40b497565262ec4f1b3201033f85745e1f07461d43fabc404bc",
+      "bytes": 213
+    },
+    {
+      "path": "attack_runs/atk_06_chunk_tamper/attack_record.json",
+      "sha256": "8fc26773573835e5f94276b4d6014dc16fb542b632b0db423bd650ddbe2ec008",
+      "bytes": 1497
+    },
+    {
+      "path": "attack_runs/atk_07_missing_artifact/atk07_run/artifact_manifest.json",
+      "sha256": "9970b7c033b1efbbf1a26580dbb27a5e09bfa7f599638916e79b6e54eff1ebb7",
+      "bytes": 266
+    },
+    {
+      "path": "attack_runs/atk_07_missing_artifact/atk07_run/artifacts/policy.py",
+      "sha256": "80cffce01a3a9ceda5b7dcd901fa1f78d5f329f4fa48f347651269c4c81d1e7f",
+      "bytes": 12
+    },
+    {
+      "path": "attack_runs/atk_07_missing_artifact/atk07_run/chunks/chunk_0000.npz",
+      "sha256": "5fc07f8423342d166be33efd75d4b83378920687a87e5cf7f62f24976dadb17d",
+      "bytes": 1762
+    },
+    {
+      "path": "attack_runs/atk_07_missing_artifact/atk07_run/chunks_manifest.json",
+      "sha256": "fdfd68183812cf8c66909e7b1dcb547a62d1de4b4d8dc6ddc853fc47145870f6",
+      "bytes": 211
+    },
+    {
+      "path": "attack_runs/atk_07_missing_artifact/atk07_run/run_manifest.json",
+      "sha256": "caf5bcfa6cebeec877887d8a0ac8f338cb6faa68869d27a868c145b5f092ece8",
+      "bytes": 1224
+    },
+    {
+      "path": "attack_runs/atk_07_missing_artifact/atk07_run/summary.json",
+      "sha256": "6c7375df8fd3640820b8ec75a8387311d64e08dc33c880f8c68e07d26e5aacd9",
+      "bytes": 156
+    },
+    {
+      "path": "attack_runs/atk_07_missing_artifact/atk07_run/trace.csv",
+      "sha256": "433b3306bcee81d6b7dfb17bf487163a306067b825e2569b3978740bba90f9fa",
+      "bytes": 80
+    },
+    {
+      "path": "attack_runs/atk_07_missing_artifact/attack_record.json",
+      "sha256": "4eadfc67c9040818860073d33aade0abdc848fd4c534e38f3fbbefce233ed45f",
+      "bytes": 1013
+    },
+    {
+      "path": "attack_runs/atk_08_reward_drift/atk08_run/trace.csv",
+      "sha256": "4710cc8c9fe32ba22ffd87b021ef90a2606eef14c8f4f289a58275abe7cee3ef",
+      "bytes": 80
+    },
+    {
+      "path": "attack_runs/atk_08_reward_drift/attack_record.json",
+      "sha256": "dd657dd8340fe8f06dd81379680be0bf823225d7652e9f6ce477135070a48e46",
+      "bytes": 754
+    },
+    {
+      "path": "attack_runs/atk_09_false_completion/atk09_run/run_manifest.json",
+      "sha256": "44889d9fe7ba63cf8588471aa49dd4c29eb293af6e4d2a975fa981300828ae5a",
+      "bytes": 133
+    },
+    {
+      "path": "attack_runs/atk_09_false_completion/atk09_run/trace.csv",
+      "sha256": "21ebe449058787907a90cb09e3ca86b112bdc29f9d00cfcfd2164445281e963c",
+      "bytes": 1100
+    },
+    {
+      "path": "attack_runs/atk_09_false_completion/attack_record.json",
+      "sha256": "f64719c5f9e19c6f19ea26c515710b488803b0b2963f906242397f0fac50d561",
+      "bytes": 712
+    },
+    {
+      "path": "attack_runs/atk_10_ineligible_comparison/attack_record.json",
+      "sha256": "1e96114a74a9129ddfc3a10651bd56b30d455ad0b36d4d7fb7b72deff1431ea2",
+      "bytes": 739
+    },
+    {
+      "path": "attack_runs/atk_11_upstream_cascade/attack_record.json",
+      "sha256": "b6c8bf650fa4166b4478bc8a8548409d9467e8c5db3a187493845170b3614a2b",
+      "bytes": 754
+    },
+    {
+      "path": "attack_runs/atk_11_upstream_cascade/Baseline_A/run_manifest.json",
+      "sha256": "dbf7486ac2507292456915387c63b3279158b6b1daa159972b300a5fbb30d6cc",
+      "bytes": 1463
+    },
+    {
+      "path": "attack_runs/atk_11_upstream_cascade/Candidate_B/run_manifest.json",
+      "sha256": "c1b089ac7e8e735ad6dafb433dad6181be9128fe769c8b41b34a8e94db86a3dd",
+      "bytes": 1659
+    },
+    {
+      "path": "attack_runs/atk_11_upstream_cascade/Comparison_D/run_manifest.json",
+      "sha256": "da576cf9425f78c3a6f25bc7972f6405f188d321e3f0dd59fc51774b4820d471",
+      "bytes": 1660
+    },
+    {
+      "path": "attack_runs/atk_12_lineage_isolation/attack_record.json",
+      "sha256": "7cd2723e9cbb898a68bdb103caa05359f1858850c1690d3e8b3b0bb3fb95b141",
+      "bytes": 652
+    },
+    {
+      "path": "attack_runs/atk_12_lineage_isolation/Baseline_A/run_manifest.json",
+      "sha256": "73ffaf48f2a5e371286d1c31ad88de9c93c6738400053e8a535098a7a7d60144",
+      "bytes": 1451
+    },
+    {
+      "path": "attack_runs/atk_12_lineage_isolation/Candidate_F/run_manifest.json",
+      "sha256": "9d618af2378410fecbc0cae95774bf6babb083610eec45959075827b67a58e36",
+      "bytes": 1363
+    },
+    {
+      "path": "attack_runs/atk_13_ineligible_promotion/atk13_run/run_manifest.json",
+      "sha256": "e278d9cf56ee54d5ed765c059fd58d864033f54d0d74bd0185b9e8c7c4266199",
+      "bytes": 1240
+    },
+    {
+      "path": "attack_runs/atk_13_ineligible_promotion/attack_record.json",
+      "sha256": "45714623f8cbb18f0c84ba620023e23c698c4c95997d1b9240d7356982f0d85a",
+      "bytes": 686
+    },
+    {
+      "path": "attack_runs/atk_14_sealed_suite/attack_record.json",
+      "sha256": "2c448eddee3b5db584e2251210ad31cf3231aba4ba7644c1fc788331aae7c1ef",
+      "bytes": 984
+    },
+    {
+      "path": "attack_runs/atk_15_tampered_replay/atk15_run/artifact_manifest.json",
+      "sha256": "8da806f6131f179ffaffa00bcc494fa69ab83bd4c747829bd0c5ae4ae275b0ac",
+      "bytes": 338
+    },
+    {
+      "path": "attack_runs/atk_15_tampered_replay/atk15_run/artifacts/local_deps/helper.py",
+      "sha256": "1cfeb13a2258c8d861adde18b4e105565bc270e77e710d9c26e8d55da7df5b9c",
+      "bytes": 12
+    },
+    {
+      "path": "attack_runs/atk_15_tampered_replay/atk15_run/artifacts/policy.py",
+      "sha256": "9b96c8ec59b46e5c4302a28dcfa261fe165b8674543b91a14d1b1c9addc28bd3",
+      "bytes": 31
+    },
+    {
+      "path": "attack_runs/atk_15_tampered_replay/atk15_run/chunks/chunk_0000.npz",
+      "sha256": "5fc07f8423342d166be33efd75d4b83378920687a87e5cf7f62f24976dadb17d",
+      "bytes": 1762
+    },
+    {
+      "path": "attack_runs/atk_15_tampered_replay/atk15_run/chunks_manifest.json",
+      "sha256": "fdfd68183812cf8c66909e7b1dcb547a62d1de4b4d8dc6ddc853fc47145870f6",
+      "bytes": 211
+    },
+    {
+      "path": "attack_runs/atk_15_tampered_replay/atk15_run/summary.json",
+      "sha256": "a4b5c6aad4cddd11d12cf1485e3c16e3e3c08860626cdd8747475b2d6a22091a",
+      "bytes": 156
+    },
+    {
+      "path": "attack_runs/atk_15_tampered_replay/atk15_run/trace.csv",
+      "sha256": "433b3306bcee81d6b7dfb17bf487163a306067b825e2569b3978740bba90f9fa",
+      "bytes": 80
+    },
+    {
+      "path": "attack_runs/atk_15_tampered_replay/attack_record.json",
+      "sha256": "40d64ed85f282eb5d7a42c7607020ed643aea79226eee9744de1e4c9cb7f1e17",
+      "bytes": 1177
+    },
+    {
+      "path": "clean_controls/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "clean_controls/ctrl_01_baseline_certified/attack_record.json",
+      "sha256": "5d6ede10e1ca4b5bd87278ce2c0b2f561b41e89864be93bc919460ac43990e39",
+      "bytes": 731
+    },
+    {
+      "path": "clean_controls/ctrl_02_clean_comparison/attack_record.json",
+      "sha256": "a5b8c5b5d48b163e7e631f5e066944b937e7e99e0904209594dcc0195aa5a7e8",
+      "bytes": 819
+    },
+    {
+      "path": "clean_controls/ctrl_03_clean_probe/attack_record.json",
+      "sha256": "52e15d18a50c92a6d5ff82b3fa2e823b1437f28a068a3cf0b8de32292e0eff6f",
+      "bytes": 1026
+    },
+    {
+      "path": "PHASE_05_STAGE_4_ATTACK_AND_EVIDENCE.md",
+      "sha256": "0c8d7772b4f9ef25c5fa4248f36d3fb28b31b46cd71168cfbb0c6f79b54f0597",
+      "bytes": 17755
+    }
+  ]
+}

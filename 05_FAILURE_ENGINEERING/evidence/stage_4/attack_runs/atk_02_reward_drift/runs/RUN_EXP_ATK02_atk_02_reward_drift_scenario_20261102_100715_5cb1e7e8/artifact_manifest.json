@@ -1,0 +1,603 @@
+{
+  "project_git_commit": "5d9a9075268a3491c3ac050c0d0b3e31e4dee70b",
+  "starter_kit_commit": "95cea5b1c57b5291f44baf0283e0a081d53f5b16",
+  "python_version": "3.12.13",
+  "platform": "win32",
+  "runtime_packages": {
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "scipy": "1.18.1",
+    "gymnasium": "1.4.0",
+    "gin": "unknown"
+  },
+  "artifacts": [
+    {
+      "role": "scenario_config",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\05_FAILURE_ENGINEERING\\evidence\\stage_4\\attack_runs\\atk_02_reward_drift\\scenario\\config.gin",
+      "stored_path": "artifacts/config.gin",
+      "sha256": "c518dd350d7be46bc16372e260ba4d30308c5f417e8892410b7f41ee199844c5"
+    },
+    {
+      "role": "policy_entrypoint",
+      "entrypoint_class": "DummyPolicy",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\05_FAILURE_ENGINEERING\\tests\\test_stage_4_campaign.py",
+      "stored_path": "artifacts/test_stage_4_campaign.py",
+      "sha256": "7133ff035f639c49d2a2a2d1838dcef31ad0658de4420af1422fc5ab17e04061"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "core",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\04_EXPERIMENT_FOUNDATION\\core\\__init__.py",
+      "stored_path": "artifacts/local_deps/04_EXPERIMENT_FOUNDATION/core/__init__.py",
+      "sha256": "4eaf2dc9992a81cb5518feb8e78b0c8599d50469d2ba15d70a815cbbcbd97a30"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "core.registry",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\04_EXPERIMENT_FOUNDATION\\core\\registry.py",
+      "stored_path": "artifacts/local_deps/04_EXPERIMENT_FOUNDATION/core/registry.py",
+      "sha256": "739530927fa7eb9fc83e62843463a73e06f9fbf5693d546693eac359699d4231"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\__init__.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.baselines.all_off",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\baselines\\all_off.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/baselines/all_off.py",
+      "sha256": "50521df5b36540d06c3193d077210029ef8fc35db42484e2cb90deb202d40b7d"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.baselines.bang_bang",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\baselines\\bang_bang.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/baselines/bang_bang.py",
+      "sha256": "067776d0f3e09913f1519972c675fee7591d130a21ce76a73cd746fb85fb2e87"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.baselines.pid",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\baselines\\pid.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/baselines/pid.py",
+      "sha256": "c276046e85a147b8a1c3b02d5f609992eb2b2256b87fc27d3750ff802c14412e"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.baselines.fixed_setpoint",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\baselines\\fixed_setpoint.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/baselines/fixed_setpoint.py",
+      "sha256": "6e07e9484f3835ed888a65ed0b5a0471e8a6888677bdfcfd7bc7336eca4b532b"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.baselines.pid_plus",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\baselines\\pid_plus.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/baselines/pid_plus.py",
+      "sha256": "55079d5edb908be5cfc78770eca4051ca04bf5cb2b9aa4f845a425813425dc34"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.baselines.transfer_policy",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\baselines\\transfer_policy.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/baselines/transfer_policy.py",
+      "sha256": "a1331c97925f8f995519295e63995b1680d21a93425964f11df1d4a59fc46067"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.models.base_energy_cost",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\models\\base_energy_cost.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/models/base_energy_cost.py",
+      "sha256": "5984934e27a35349d12579d895c773051eb368a91fe73d07c957846df3bec570"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.proto.smart_control_reward_pb2",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\proto\\smart_control_reward_pb2.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/proto/smart_control_reward_pb2.py",
+      "sha256": "b99dec253929bd2a5b73b2e69e395bd8fcafe54c163bae46e32c0eab03f7de26"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.utils.temperature_conversion",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\utils\\temperature_conversion.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/utils/temperature_conversion.py",
+      "sha256": "9c21cbad6c30429c0a556e383ff84072906c3ddf27595e75ecf2fd871bbdae9b"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.utils.conversion_utils",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\utils\\conversion_utils.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/utils/conversion_utils.py",
+      "sha256": "b0cf32419e740e925afb8486d36df75fd0b6f4ad517d7ffc5207f481c1cc8155"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.reward.electricity_energy_cost",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\reward\\electricity_energy_cost.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/reward/electricity_energy_cost.py",
+      "sha256": "16dcc3e50f36842b4b99710e10b2567f31d9ec114c700ea55af15a09ce8a5788"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.utils.constants",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\utils\\constants.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/utils/constants.py",
+      "sha256": "5716f4eeceed32c22464a1f3eb9fc194774f944008218a70bc5e3360228900c0"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.reward.natural_gas_energy_cost",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\reward\\natural_gas_energy_cost.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/reward/natural_gas_energy_cost.py",
+      "sha256": "070ff5cd4aaf8d230e0e1ba2a2c061f5fb0ce606c3f1a62d0e63ac1051d5a9ae"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.models.base_reward_function",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\models\\base_reward_function.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/models/base_reward_function.py",
+      "sha256": "7d3cc4463cf18a3a4821f196024c62536f231f567dc152f6e4833ac2020e80ca"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.reward.base_setpoint_energy_carbon_reward",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\reward\\base_setpoint_energy_carbon_reward.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/reward/base_setpoint_energy_carbon_reward.py",
+      "sha256": "8d478fd4effb7d948049048c8e9c7c61dcb2cbbc465e0ca306f9af247336a437"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.reward.setpoint_energy_carbon_regret",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\reward\\setpoint_energy_carbon_regret.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/reward/setpoint_energy_carbon_regret.py",
+      "sha256": "0758a00c838b58778f7845f1cd8ed7f0ba389699426151f40cb43861a4ea6b1e"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.proto.smart_control_building_pb2",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\proto\\smart_control_building_pb2.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/proto/smart_control_building_pb2.py",
+      "sha256": "549ecc4385ec906cfdc41cb70a186fdde5a3c4b4f3737705eacf8bc2d5005af4"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.simulator.constants",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\simulator\\constants.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/simulator/constants.py",
+      "sha256": "95fb66dcdbd0996de4ed46ca885a44ee468edc9b63dc050702be6cdfee6e0c56"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.simulator.smart_device",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\simulator\\smart_device.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/simulator/smart_device.py",
+      "sha256": "f887a193f01f81870b13cb88ba5205e37a979d991f80d27e867c3edda8d56b4f"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.simulator.weather_controller",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\simulator\\weather_controller.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/simulator/weather_controller.py",
+      "sha256": "5f38b01aee7e7cf4b5d9d66c5f2927a6a30e98f6c09e1d9ff551bd67ddf2bca1"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.simulator.air_handler",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\simulator\\air_handler.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/simulator/air_handler.py",
+      "sha256": "4bc14cc945b3169cc893018a7e87130ee5d8ff5e0c5a23172977553567c53eee"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.simulator.hot_water_heat_source",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\simulator\\hot_water_heat_source.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/simulator/hot_water_heat_source.py",
+      "sha256": "a8f600d086cdab5e4bdd9f5f2b4ed93b6b99fd78d82acd3ce00b9ee1b5097391"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.simulator.boiler",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\simulator\\boiler.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/simulator/boiler.py",
+      "sha256": "fb9e8bb7131217a7b0f9b8d0fa6771d4be0a5a6fafe8aef87272ef7f8f44df1d"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.simulator.base_convection_simulator",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\simulator\\base_convection_simulator.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/simulator/base_convection_simulator.py",
+      "sha256": "7cd07cffd3f6d86e34a9decfbff258b472f5f6171123db94b3d2a29c151ad769"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.simulator.building_utils",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\simulator\\building_utils.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/simulator/building_utils.py",
+      "sha256": "177333747cff7316e7994f84a34966a8e0af5a64ba8af90233129920e1dd98ef"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.simulator.thermal_diffuser_utils",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\simulator\\thermal_diffuser_utils.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/simulator/thermal_diffuser_utils.py",
+      "sha256": "7a3ff8c3bd77451955d1e1fe71a0b651f3a59fa97357968b5348e909d541021a"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.simulator.building",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\simulator\\building.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/simulator/building.py",
+      "sha256": "edaeb81da733941f55a2927d3fd07d0d23b72a57f1ef83182dd5a86c7102166d"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.simulator.air_source_heat_pump",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\simulator\\air_source_heat_pump.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/simulator/air_source_heat_pump.py",
+      "sha256": "9f361a8ad6560b5cf7570e9d06078d15de7dbf1085b0aa738e4a5678ecf47706"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.simulator.pump",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\simulator\\pump.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/simulator/pump.py",
+      "sha256": "052af71d7aa61c1afc01d9179f2ad5c6f0b2815a58c124030637c748d6eb1366"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.simulator.hot_water_system",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\simulator\\hot_water_system.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/simulator/hot_water_system.py",
+      "sha256": "6373f4a5e33f7f0bf6e2cc23ebd50f779b0450997a215cf480eb4bf2586c84eb"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.simulator.setpoint_schedule",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\simulator\\setpoint_schedule.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/simulator/setpoint_schedule.py",
+      "sha256": "43781fb89d17f3fa901ac6fa514688fcb1501339fc08b07931a2254fb642c5d8"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.simulator.thermostat",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\simulator\\thermostat.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/simulator/thermostat.py",
+      "sha256": "ed4fd3fc1221520f407e31a369a427870ec37b16b4f4d8db2e720a13e069f8bd"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.simulator.vav",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\simulator\\vav.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/simulator/vav.py",
+      "sha256": "8c80a101049ab09cfee6b99a928865415acc3b5feb7456a410c07da608c75378"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.simulator.hvac",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\simulator\\hvac.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/simulator/hvac.py",
+      "sha256": "d14c25e046c2a7f971ac10344f140dcd6be750ef1989f7810ec02f0b9e57b8ee"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.simulator.hvac_floorplan_based",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\simulator\\hvac_floorplan_based.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/simulator/hvac_floorplan_based.py",
+      "sha256": "30b507bb758da9bc9e5a693f3b09d7ebeccda5cef149507d0d7e7cf519f2665c"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.models.base_occupancy",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\models\\base_occupancy.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/models/base_occupancy.py",
+      "sha256": "bc32e233aaa895c0240e28fa1206d258cf1b931ef7a3819dd17681b61980ee6a"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.simulator.randomized_arrival_departure_occupancy",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\simulator\\randomized_arrival_departure_occupancy.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/simulator/randomized_arrival_departure_occupancy.py",
+      "sha256": "4c9fa871636681da638e7c90f18e2c0212dbc533d350a39c5e2a807cf27a13ca"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.utils.proto_parsers.device_info_parser",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\utils\\proto_parsers\\device_info_parser.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/utils/proto_parsers/device_info_parser.py",
+      "sha256": "d6531ec40cecbf091bc147c305c27907d0bd5506696047a2e75e4f0e83b2d6f8"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.utils.proto_parsers.zone_info_parser",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\utils\\proto_parsers\\zone_info_parser.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/utils/proto_parsers/zone_info_parser.py",
+      "sha256": "770fa606ddda34b84d3684d6f2099a303f6f68f402a5730e3329a10833360905"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.models.base_building",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\models\\base_building.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/models/base_building.py",
+      "sha256": "139461dd1461dc8db81622c7b06bab039ac0d26599d14f48cf7a10c6713bdcb2"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.simulator.finite_difference_solver",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\simulator\\finite_difference_solver.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/simulator/finite_difference_solver.py",
+      "sha256": "5a687a8bff05b5a1e7ca5c20ec3014cf5e48d6801cbe88f552d6fd5c60ec19c9"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.simulator.simulator",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\simulator\\simulator.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/simulator/simulator.py",
+      "sha256": "8c9f378b30f2b02ad0acb2656a62e154e6c6c0c66a35c79f79c5683c63b4670f"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.simulator.simulator_building",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\simulator\\simulator_building.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/simulator/simulator_building.py",
+      "sha256": "af722c3d9ed73e0c598aae1f8c055fc855b992109ebcdfbd9a430236db71dab7"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.utils.building_renderer",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\utils\\building_renderer.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/utils/building_renderer.py",
+      "sha256": "322d96482414753da83f2f7a908b248a1c09e661124f39e30c29b5503fabf4f1"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.utils.visual_logger",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\utils\\visual_logger.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/utils/visual_logger.py",
+      "sha256": "ba6daa3f59689b394185bc4488e83057b114463a85c7c3c766d329e975a345c0"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.simulator.simulator_flexible_floor_plan",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\simulator\\simulator_flexible_floor_plan.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/simulator/simulator_flexible_floor_plan.py",
+      "sha256": "689ada7fd7af368dd03c95b33bc819f5c3e6998355304677da4e59f51a14eb8f"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.simulator.stochastic_convection_simulator",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\simulator\\stochastic_convection_simulator.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/simulator/stochastic_convection_simulator.py",
+      "sha256": "930f5a6df1b7ef7473aa6f8571662465df370b5c78012d54e258b95db5bc1f25"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.utils.rl_types",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\utils\\rl_types.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/utils/rl_types.py",
+      "sha256": "f6be87f084e6018bc590f6ae4253aa419e3c510c48bf4bfd742ac2a1d8d31445"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.models.base_normalizer",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\models\\base_normalizer.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/models/base_normalizer.py",
+      "sha256": "27c5997f9f9481e5253704d0ba6962884660e8325ef46c12d69cbfe38c9f0db4"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.utils.bounded_action_normalizer",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\utils\\bounded_action_normalizer.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/utils/bounded_action_normalizer.py",
+      "sha256": "5dca1377c45d069a6667d708081fe3a8357b6029e81f01c002295b6ecb4e4885"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.proto.smart_control_normalization_pb2",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\proto\\smart_control_normalization_pb2.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/proto/smart_control_normalization_pb2.py",
+      "sha256": "33bc9e1d1a2e8d82cc9757cc2e196abc929e650294c990e759e811766ce67d86"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.utils.environment_utils",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\utils\\environment_utils.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/utils/environment_utils.py",
+      "sha256": "50436680896067d40973f53551f93fd2557e6a1fa38d06cbb758821ffeaddd5b"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.utils.observation_normalizer",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\utils\\observation_normalizer.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/utils/observation_normalizer.py",
+      "sha256": "e6cd97256532c8f472c77b1dcbefffbfa092843caab1ab87e66c6120fadf3756"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.utils.bidict",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\utils\\bidict.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/utils/bidict.py",
+      "sha256": "53a7c08635d480bdb60092b12fa3f454f87a170058945a4449c08737fb80000a"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.utils.real_building_temperature_array_generator",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\utils\\real_building_temperature_array_generator.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/utils/real_building_temperature_array_generator.py",
+      "sha256": "0ea19f4692f27afe2dd30519f7ba2166488b5235c51a88b08c8b9a4e433259b4"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.utils.building_image_generator",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\utils\\building_image_generator.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/utils/building_image_generator.py",
+      "sha256": "42a4303e42ba89d50e836df023512bd83aa123193fb7745f5c1ac2e2e4f9dd82"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.utils.reader_lib",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\utils\\reader_lib.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/utils/reader_lib.py",
+      "sha256": "4ea08afe2d3939e63a2ee582620a5ef42a624f6615361d541666ed3d7802a637"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.utils.reducer",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\utils\\reducer.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/utils/reducer.py",
+      "sha256": "4ba6bb056bc26d1d88b45311144f75366b4a2da984f48b7f1b7235e586c0263f"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.utils.histogram_reducer",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\utils\\histogram_reducer.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/utils/histogram_reducer.py",
+      "sha256": "fd74bed566c2f37e64aa15985fc7400b3646bed20f7bfc15ed457a2dd63e6de5"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.utils.plot_utils",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\utils\\plot_utils.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/utils/plot_utils.py",
+      "sha256": "3eafe55ebe25e650cf3b0567bcd596527ba93599572a50ffebf7f9a52d35f669"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.utils.regression_building_utils",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\utils\\regression_building_utils.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/utils/regression_building_utils.py",
+      "sha256": "2cf2cb86f87d4baadec76d847f6f7018d0ca6a42287d4c209b906fc985dd6f9f"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.utils.run_command_predictor",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\utils\\run_command_predictor.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/utils/run_command_predictor.py",
+      "sha256": "d033ac6056987dca9aab8dda2e3546863189d61be3d34420d197a7a2f1ec62d1"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.utils.writer_lib",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\utils\\writer_lib.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/utils/writer_lib.py",
+      "sha256": "9a27b45bba5aeacc30dd320ad75c8f717db5ea7e1a39e16b36f93f2cda0ff6b4"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.utils.proto_parsers.reward_info_parser",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\utils\\proto_parsers\\reward_info_parser.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/utils/proto_parsers/reward_info_parser.py",
+      "sha256": "c17ed7ac1cbe66fb37202161e160fd4cbce156039b09a3c21140684524fc10ed"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.environment.environment",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\environment\\environment.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/environment/environment.py",
+      "sha256": "703addb6e3d489bef98552a14792a5853201c0673c0f7db0c535372818758021"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.environment.hybrid_action_environment",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\environment\\hybrid_action_environment.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/environment/hybrid_action_environment.py",
+      "sha256": "8e783272d58a821721712d894e2160e13ac94378db9908c285392d0e31a4b9c5"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.reward.energy_scale",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\reward\\energy_scale.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/reward/energy_scale.py",
+      "sha256": "48af823ebfad22c95a88815e42f64015e4df8deedab96557a59ef41df9708859"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.utils.floor_generator",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\utils\\floor_generator.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/utils/floor_generator.py",
+      "sha256": "dcc1893b948db580943d5f07704a6515afa1f7deb6b4a1a413308869f85dfaba"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.smart_control.utils.scenario_generator",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\smart_control\\utils\\scenario_generator.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/smart_control/utils/scenario_generator.py",
+      "sha256": "87f69478712b0eb0a72d1a65e4d9acdbadd1192b706f13e4525b0788c537912c"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "smart_buildings.evaluate",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\smart_buildings\\evaluate.py",
+      "stored_path": "artifacts/local_deps/smart_buildings/evaluate.py",
+      "sha256": "947c968ce3a891da8334b7504ac0e7b45bd14fe13400f0136df49825d5247792"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "core.policy_adapter",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\04_EXPERIMENT_FOUNDATION\\core\\policy_adapter.py",
+      "stored_path": "artifacts/local_deps/04_EXPERIMENT_FOUNDATION/core/policy_adapter.py",
+      "sha256": "f6c9c188f2352d62fe74f1f15536f579023b89b0549687ff6a0be2375cd4febd"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "core.trace_recorder",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\04_EXPERIMENT_FOUNDATION\\core\\trace_recorder.py",
+      "stored_path": "artifacts/local_deps/04_EXPERIMENT_FOUNDATION/core/trace_recorder.py",
+      "sha256": "54a83615d651d8fc34c2197c5bd0eb8333e94e2a90f3ced8613e1d0cba3a3cd1"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "core.runner",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\04_EXPERIMENT_FOUNDATION\\core\\runner.py",
+      "stored_path": "artifacts/local_deps/04_EXPERIMENT_FOUNDATION/core/runner.py",
+      "sha256": "1ce5e0ffa8f3376c2971dc24773f6432e2728037b897067a2bc5e0ea9b660c1a"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "evaluation",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\04_EXPERIMENT_FOUNDATION\\evaluation\\__init__.py",
+      "stored_path": "artifacts/local_deps/04_EXPERIMENT_FOUNDATION/evaluation/__init__.py",
+      "sha256": "4742b78afa92623ab4de23865a5382ecede7544d6527bcb122706710cccad3e4"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "evaluation.score_verification",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\04_EXPERIMENT_FOUNDATION\\evaluation\\score_verification.py",
+      "stored_path": "artifacts/local_deps/04_EXPERIMENT_FOUNDATION/evaluation/score_verification.py",
+      "sha256": "f7d351c43e226ae83a5c2fdd2d569e79f8698f342ba5809b7c7603cd06611df6"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "evaluation.diagnostics",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\04_EXPERIMENT_FOUNDATION\\evaluation\\diagnostics.py",
+      "stored_path": "artifacts/local_deps/04_EXPERIMENT_FOUNDATION/evaluation/diagnostics.py",
+      "sha256": "e34c18004a119e6286d9cda409c1a177deed6eb31b4223e380db08e84ad4ceef"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "core.evaluator",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\04_EXPERIMENT_FOUNDATION\\core\\evaluator.py",
+      "stored_path": "artifacts/local_deps/04_EXPERIMENT_FOUNDATION/core/evaluator.py",
+      "sha256": "918a41c19c9311c13abb35f9c480203d32a4324e705c80e7b7b2849bec9f07f4"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "evaluation.comparison_validator",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\04_EXPERIMENT_FOUNDATION\\evaluation\\comparison_validator.py",
+      "stored_path": "artifacts/local_deps/04_EXPERIMENT_FOUNDATION/evaluation/comparison_validator.py",
+      "sha256": "e3e00efcee67e3aec7a95240e6e107ab357a02009d79f338932d39eac2bd01d7"
+    },
+    {
+      "role": "local_dependency",
+      "module_name": "evaluation.semantic_probe",
+      "source_path": "C:\\Users\\ADMIN\\Desktop\\smart building\\04_EXPERIMENT_FOUNDATION\\evaluation\\semantic_probe.py",
+      "stored_path": "artifacts/local_deps/04_EXPERIMENT_FOUNDATION/evaluation/semantic_probe.py",
+      "sha256": "f18cd1e3707652cada9c1fff48498cf913c2bb3084bf69789d714697a7cd25e1"
+    }
+  ],
+  "created_at_utc": "2026-11-02T10:07:19.246789+00:00"
+}

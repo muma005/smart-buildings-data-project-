@@ -1,0 +1,20 @@
+{
+  "attack_id": "ATK-13",
+  "category": "E: Promotion & Release",
+  "description": "Attempt to promote run with execution_status = INCOMPLETE and evidence_validity = INVALID",
+  "entry_point": "Governance promotion rule boundary",
+  "injection_method": "Ineligible status in run_manifest.json",
+  "system_response": "Governance rule blocked promotion; run strictly marked non-promotable",
+  "dimensions": {
+    "detection": true,
+    "evidence_preservation": true,
+    "containment": true,
+    "lineage_handling": true,
+    "clean_controls": true
+  },
+  "verdict": "PASS",
+  "details": {
+    "execution_status": "INCOMPLETE",
+    "evidence_validity": "INVALID"
+  }
+}

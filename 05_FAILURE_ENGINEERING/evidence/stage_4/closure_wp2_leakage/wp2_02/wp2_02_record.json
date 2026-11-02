@@ -1,0 +1,12 @@
+{
+  "work_package": "WP2_LEAKAGE_HARDENING",
+  "test_id": "WP2_02",
+  "title": "Pathlib Direct File Access to Weather Data",
+  "attack_description": "Policy uses Path(...weather...).read_text() to inspect ground truth weather series",
+  "detection_mechanism": "Static AST Attribute Call analysis for Path.read_text targeting sensitive pattern",
+  "system_response": "SecurityViolationError raised, execution aborted",
+  "verdict": "PASS",
+  "details": {
+    "error_message": "Security sandbox violation detected in policy:\n - Prohibited direct file access to sensitive path 'smart_buildings/weather/phoenix.csv' in policy_entrypoint (line 6)"
+  }
+}

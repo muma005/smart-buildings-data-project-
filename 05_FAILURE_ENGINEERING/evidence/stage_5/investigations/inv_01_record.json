@@ -1,0 +1,30 @@
+{
+  "$schema": "https://smart-buildings.neurips/schemas/v1/investigation_record.json",
+  "schema_version": "v1.0",
+  "investigation_id": "INV-01",
+  "target_attack_id": "ATK-01",
+  "title": "Multi-Building Actuator Permutation Isolation & Auto-Diagnosis",
+  "status": "ROOT_CAUSE_CONFIRMED",
+  "evidence_sources": [
+    "evidence/stage_4/attack_runs/atk_01_actuator_swap/attack_record.json",
+    "evidence/stage_4/closure_wp1_actuator/wp1_summary.json"
+  ],
+  "timeline_analysis": {
+    "first_detected_symptom": "SemanticActuatorProbe failure: target zone 'VAV_1' thermal rise (0.050 K) below required threshold (0.200 K).",
+    "earliest_verified_deviation": "Action dispatch phase: Continuous action assigned to 'VAV_1' actuator index was physically routed to 'VAV_2'.",
+    "confirmed_root_cause": {
+      "type": "CHANNEL_INDEX_PERMUTATION",
+      "description": "Actuator channel permutation: pulse commanded to 'VAV_1' actuated heating in 'VAV_2' (delta 0.900 K) while target 'VAV_1' remained unheated (delta 0.050 K).",
+      "reproducible": true
+    },
+    "downstream_consequences": [
+      "Zone 'VAV_1' will suffer severe under-heating / thermal comfort shortfall.",
+      "Zone 'VAV_2' will suffer accidental overheating and wasted heating energy.",
+      "Run marked EvidenceValidity.INVALID; prohibited from entering score comparisons or promotions."
+    ]
+  },
+  "uncertainty_assessment": {
+    "confidence_level": "HIGH",
+    "unverified_hypotheses": []
+  }
+}

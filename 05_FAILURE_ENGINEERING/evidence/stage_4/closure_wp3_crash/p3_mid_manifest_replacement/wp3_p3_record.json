@@ -1,0 +1,17 @@
+{
+  "work_package": "WP3_GENUINE_CRASH_RECOVERY",
+  "point_id": "P3",
+  "name": "Mid-manifest replacement interruption",
+  "kill_description": "Subprocess killed while writing chunks_manifest.json.tmp",
+  "pre_crash_state": {
+    "tmp_manifest_exists": true
+  },
+  "post_recovery_state": {
+    "status": "INCOMPLETE",
+    "tmp_manifest_purged": true,
+    "chunks_manifest_valid": true,
+    "total_chunks": 2
+  },
+  "verdict": "PASS",
+  "timestamp_utc": "2026-11-02T10:08:42Z"
+}

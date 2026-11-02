@@ -1,0 +1,13 @@
+{
+  "work_package": "WP2_LEAKAGE_HARDENING",
+  "test_id": "WP2_03",
+  "title": "Prohibited Module Imports (weather, simulator)",
+  "attack_description": "Policy attempts to import smart_buildings.weather and smart_buildings.simulator",
+  "detection_mechanism": "Static AST Import and ImportFrom analysis against PROHIBITED_MODULES",
+  "system_response": "SecurityViolationError raised for both direct and from-import variants",
+  "verdict": "PASS",
+  "details": {
+    "weather_err": "Security sandbox violation detected in policy:\n - Prohibited module import: 'smart_buildings.weather' in policy_entrypoint (line 4)",
+    "sim_err": "Security sandbox violation detected in policy:\n - Prohibited module import: 'smart_buildings.simulator' in policy_entrypoint (line 2)"
+  }
+}

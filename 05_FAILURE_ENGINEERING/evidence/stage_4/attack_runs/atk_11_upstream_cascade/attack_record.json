@@ -1,0 +1,23 @@
+{
+  "attack_id": "ATK-11",
+  "category": "D: Comparison & Lineage",
+  "description": "Quarantining upstream baseline cascades across DAG to candidate and comparison",
+  "entry_point": "ExperimentRegistry.quarantine_run(cascade=True)",
+  "injection_method": "quarantine_run invocation on upstream node",
+  "system_response": "Transitive DAG cascade marked Candidate_B and Comparison_D as QUARANTINED while preserving COMPLETE status",
+  "dimensions": {
+    "detection": true,
+    "evidence_preservation": true,
+    "containment": true,
+    "lineage_handling": true,
+    "clean_controls": true
+  },
+  "verdict": "PASS",
+  "details": {
+    "quarantined_runs": [
+      "Baseline_A",
+      "Candidate_B",
+      "Comparison_D"
+    ]
+  }
+}

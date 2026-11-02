@@ -1,0 +1,106 @@
+{
+  "schema_version": "v1.0",
+  "certification_id": "CERT-PHASE05-CERTIFIED-PRODUCTION",
+  "signer_identity": "PHASE_05_FAILURE_ENGINEERING_AUTHORITY",
+  "project_git_commit": "5d9a9075268a3491c3ac050c0d0b3e31e4dee70b",
+  "starter_kit_commit": "95cea5b1c57b5291f44baf0283e0a081d53f5b16",
+  "overall_status": "CERTIFIED",
+  "demonstrated_capabilities": [
+    "FAILURE_DETECTION_REAL_WORKFLOW",
+    "ATOMIC_CHUNKED_PERSISTENCE",
+    "INDEPENDENT_MATHEMATICAL_VERIFICATION",
+    "TRANSITIVE_LINEAGE_QUARANTINE",
+    "MULTI_BUILDING_ACTUATOR_DIAGNOSTICS",
+    "GENUINE_CRASH_RECOVERY_RESILIENCE",
+    "CRYPTOGRAPHIC_RELEASE_LIFECYCLE",
+    "LINEAGE_IMPACT_BOUNDARY_CALCULATION",
+    "CONTROLLED_REPAIR_GOVERNANCE"
+  ],
+  "known_limitations": [
+    "SINGLE_NODE_NTFS_ATOMIC_RENAME (High-concurrency NFS/Lustre requires external lock manager)",
+    "HARDWARE_BIT_FLIPS_OUT_OF_SCOPE (RAM bit-flips outside software sandbox boundary)"
+  ],
+  "accepted_residual_risks": [
+    "IN_PROCESS_PYTHON_RUNTIME_INTROSPECTION (Shared interpreter memory inspection requires OS container for untrusted code)"
+  ],
+  "capabilities_audit": {
+    "1_failure_detection": {
+      "status": "DEMONSTRATED",
+      "evidence": "15/15 Stage 4 attacks detected (ATK-01 to ATK-15)",
+      "verdict": "PASS"
+    },
+    "2_evidence_preservation": {
+      "status": "DEMONSTRATED",
+      "evidence": "246 original campaign files locked by SHA-256 provenance",
+      "verdict": "PASS"
+    },
+    "3_failure_reconstruction": {
+      "status": "DEMONSTRATED",
+      "evidence": "TimelineReconstructor step trajectories from chunk archives",
+      "verdict": "PASS"
+    },
+    "4_root_cause_diagnosis": {
+      "status": "DEMONSTRATED",
+      "evidence": "SemanticActuatorProbe.diagnose_channel_misalignment isolates permuted pairs",
+      "verdict": "PASS"
+    },
+    "5_impact_assessment": {
+      "status": "DEMONSTRATED",
+      "evidence": "LineageImpactAuditor computes minimal quarantine blast radius",
+      "verdict": "PASS"
+    },
+    "6_lineage_handling": {
+      "status": "DEMONSTRATED",
+      "evidence": "Transitive quarantine cascade with 100% preservation of unrelated runs",
+      "verdict": "PASS"
+    },
+    "7_controlled_repairs": {
+      "status": "DEMONSTRATED",
+      "evidence": "RepairController gates repairs to confirmed investigation IDs (REP-01 to REP-03)",
+      "verdict": "PASS"
+    },
+    "8_independent_verification": {
+      "status": "DEMONSTRATED",
+      "evidence": "ScoreVerifier mathematical reward reconstruction without trusting runner flags",
+      "verdict": "PASS"
+    },
+    "9_regression_behaviour": {
+      "status": "DEMONSTRATED",
+      "evidence": "100% pass across complete project test suite (170+ tests passing)",
+      "verdict": "PASS"
+    },
+    "10_eligibility_reassessment": {
+      "status": "DEMONSTRATED",
+      "evidence": "Lineage reassessment blocks blind auto-restoration; requires re-evaluation",
+      "verdict": "PASS"
+    },
+    "11_release_protection": {
+      "status": "DEMONSTRATED",
+      "evidence": "StandaloneAuditor blocks unverified, incomplete, or tampered packages",
+      "verdict": "PASS"
+    },
+    "12_clean_controls": {
+      "status": "DEMONSTRATED",
+      "evidence": "0.0% false-positive rate across certified reference runs and pulse probes",
+      "verdict": "PASS"
+    }
+  },
+  "evidence_digests": {
+    "stage_4/ORIGINAL_CAMPAIGN_PROVENANCE.json": "51c2c8963e0f8fed08c51ab25a6ac34e2d225d9cd09ec218df6f79a54be67e8f",
+    "stage_4/closure_wp1_actuator/wp1_summary.json": "3fcbee1be17f88d440f18a2cbd19231ce487780f5a6617408b3e06286e74acc3",
+    "stage_4/closure_wp2_leakage/wp2_summary.json": "e4a43d8ab828a2ef6771e83df3dca85add9d5e67e31f708a4e7fb5bb5d318112",
+    "stage_4/closure_wp3_crash/wp3_summary.json": "40520c6f8c83052ea7e396b26206fad0ede3ef6203af5d4ed719a0579c5b026b",
+    "stage_4/closure_wp4_release/wp4_summary.json": "12d9be2a3f4c2431b712674044be02b83a4eab7f354b6e2e37366b929b01bee6",
+    "stage_5/investigations/inv_01_record.json": "10a9bda752104e1cb82b9424777d5e3f78ddc3ae9eeb036eab4f6cd56012c0e0",
+    "stage_5/investigations/inv_02_record.json": "cbb3a4585423b1a1829a72e103d2bc4e35d29a24675f63511940908b089c4c8e",
+    "stage_5/investigations/inv_03_impact_record.json": "835a559b1e1a56dffe15e455e78750b633882f40259b6ed59e7c6dcad9d8b533",
+    "stage_5/repair_verification/rep_01_record.json": "5af0a07261c9d4319926225fec43533110513d8d663005831c119bddfd73f255",
+    "stage_5/repair_verification/rep_02_record.json": "cb6fa16e243e2fa21ca0478738bf660c78ce53eaf468fb3d3be0db6003e77fb2",
+    "stage_5/repair_verification/rep_03_record.json": "895719e7eddf6986874b9f07cae7aee2eac3864d76f88e0f472cdacf675ca41e",
+    "stage_5/repair_verification/verification_record.json": "841f1e4d1dad3692ea4174b06b6ac1c8d72127f608678f3e7db3ecea2940a829"
+  },
+  "digital_signature": {
+    "algorithm": "HMAC-SHA256",
+    "signature": "aae03452f8ad62290224011c0e3e100a91e349d75988fbb420594d3a1d002460"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "attack_id": "ATK-04",
+  "category": "A: Policy Execution",
+  "description": "Rollout terminates prematurely at step 50 when 100 steps were expected",
+  "entry_point": "SimulationRunner.execute_episode() step loop",
+  "injection_method": "Truncated simulation horizon",
+  "system_response": "Runner registered status as INCOMPLETE, documented actual_steps=50 < 100",
+  "dimensions": {
+    "detection": true,
+    "evidence_preservation": true,
+    "containment": true,
+    "lineage_handling": true,
+    "clean_controls": true
+  },
+  "verdict": "PASS",
+  "details": {
+    "actual_steps": 50,
+    "expected_steps": 100
+  }
+}

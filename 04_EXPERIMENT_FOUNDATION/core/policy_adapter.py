@@ -30,6 +30,8 @@ class PolicyAdapter:
         "smart_buildings.smart_control",
         "smart_control",
         "smart_buildings.evaluate",
+        "smart_buildings.weather",
+        "smart_buildings.simulator",
         "ctypes",
         "subprocess",
         "multiprocessing",
@@ -56,15 +58,120 @@ class PolicyAdapter:
         "__import__",
     }
 
+    SENSITIVE_PATH_PATTERNS = {
+        "config.gin",
+        ".gin",
+        "weather",
+        "ground_truth",
+        "smart_buildings",
+    }
+
     @classmethod
-    def audit_policy_ast(cls, policy_source: str | Path | Type[Any]) -> list[str]:
-        """Parses AST and validates against information-leakage and sandbox boundary violations (Ring 2)."""
+    def _audit_ast_tree(cls, tree: ast.AST, label: str) -> list[str]:
+        """Walks an AST tree and collects all sandbox and leakage violations."""
+        violations: list[str] = []
+        for node in ast.walk(tree):
+            # Check static imports: import x
+            if isinstance(node, ast.Import):
+                for alias in node.names:
+                    name = alias.name
+                    for p in cls.PROHIBITED_MODULES:
+                        if name == p or name.startswith(p + "."):
+                            violations.append(
+                                f"Prohibited module import: '{name}' in {label} (line {node.lineno})"
+                            )
+
+            # Check from-imports: from x import y
+            elif isinstance(node, ast.ImportFrom):
+                mod = node.module or ""
+                for p in cls.PROHIBITED_MODULES:
+                    if mod == p or mod.startswith(p + "."):
+                        violations.append(
+                            f"Prohibited module import: '{mod}' in {label} (line {node.lineno})"
+                        )
+                for alias in node.names:
+                    name = alias.name
+                    for p in cls.PROHIBITED_MODULES:
+                        if name == p or name.startswith(p + "."):
+                            violations.append(
+                                f"Prohibited module symbol import: '{name}' in {label} (line {node.lineno})"
+                            )
+
+            # Check attribute access: obj.attr
+            elif isinstance(node, ast.Attribute):
+                if node.attr in cls.PROHIBITED_ATTRIBUTES:
+                    violations.append(
+                        f"Prohibited attribute access: '{node.attr}' in {label} (line {node.lineno})"
+                    )
+
+            # Check bare function / symbol names
+            elif isinstance(node, ast.Name):
+                if node.id in cls.PROHIBITED_ATTRIBUTES:
+                    violations.append(
+                        f"Prohibited symbol usage: '{node.id}' in {label} (line {node.lineno})"
+                    )
+
+            # Check dynamic execution calls and direct ground-truth file reads
+            elif isinstance(node, ast.Call):
+                if isinstance(node.func, ast.Name):
+                    if node.func.id in cls.PROHIBITED_CALLS:
+                        violations.append(
+                            f"Prohibited dynamic call: '{node.func.id}()' in {label} (line {node.lineno})"
+                        )
+                    elif node.func.id == "open":
+                        for arg in node.args:
+                            if isinstance(arg, ast.Constant) and isinstance(arg.value, str):
+                                val = arg.value.lower()
+                                if any(p in val for p in cls.SENSITIVE_PATH_PATTERNS):
+                                    violations.append(
+                                        f"Prohibited direct file access to sensitive path '{arg.value}' in {label} (line {node.lineno})"
+                                    )
+                elif isinstance(node.func, ast.Attribute):
+                    if node.func.attr == "getattr" and len(node.args) >= 2:
+                        second_arg = node.args[1]
+                        if isinstance(second_arg, ast.Constant) and str(second_arg.value) in cls.PROHIBITED_ATTRIBUTES:
+                            violations.append(
+                                f"Prohibited getattr access: '{second_arg.value}' in {label} (line {node.lineno})"
+                            )
+                    elif node.func.attr in {"read_text", "read_bytes", "open"}:
+                        for arg in node.args:
+                            if isinstance(arg, ast.Constant) and isinstance(arg.value, str):
+                                val = arg.value.lower()
+                                if any(p in val for p in cls.SENSITIVE_PATH_PATTERNS):
+                                    violations.append(
+                                        f"Prohibited direct file access to sensitive path '{arg.value}' in {label} (line {node.lineno})"
+                                    )
+                        if isinstance(node.func.value, ast.Call):
+                            for call_arg in node.func.value.args:
+                                if isinstance(call_arg, ast.Constant) and isinstance(call_arg.value, str):
+                                    val = call_arg.value.lower()
+                                    if any(p in val for p in cls.SENSITIVE_PATH_PATTERNS):
+                                        violations.append(
+                                            f"Prohibited direct file access to sensitive path '{call_arg.value}' in {label} (line {node.lineno})"
+                                        )
+
+        return violations
+
+    @classmethod
+    def audit_policy_ast(
+        cls,
+        policy_source: str | Path | Type[Any],
+        local_deps_dir: Path | str | None = None,
+    ) -> list[str]:
+        """Parses AST and validates against information-leakage and sandbox boundary violations (Ring 2).
+
+        Performs recursive static AST audits across the entrypoint policy and all local dependencies.
+        """
         source_code: str
+        label = "policy_entrypoint"
         if isinstance(policy_source, str) and not Path(policy_source).is_file():
             source_code = policy_source
         elif isinstance(policy_source, (str, Path)) and Path(policy_source).is_file():
-            source_code = Path(policy_source).read_text(encoding="utf-8")
+            p = Path(policy_source)
+            label = p.name
+            source_code = p.read_text(encoding="utf-8")
         elif isinstance(policy_source, type):
+            label = policy_source.__name__
             try:
                 source_code = inspect.getsource(policy_source)
             except Exception:
@@ -78,49 +185,23 @@ class PolicyAdapter:
         except SyntaxError as e:
             raise SecurityViolationError(f"Policy syntax error during security audit: {e}")
 
-        violations: list[str] = []
+        violations: list[str] = cls._audit_ast_tree(tree, label)
 
-        for node in ast.walk(tree):
-            # Check static imports: import x
-            if isinstance(node, ast.Import):
-                for alias in node.names:
-                    name = alias.name
-                    for p in cls.PROHIBITED_MODULES:
-                        if name == p or name.startswith(p + "."):
-                            violations.append(f"Prohibited module import: '{name}' (line {node.lineno})")
-
-            # Check from-imports: from x import y
-            elif isinstance(node, ast.ImportFrom):
-                mod = node.module or ""
-                for p in cls.PROHIBITED_MODULES:
-                    if mod == p or mod.startswith(p + "."):
-                        violations.append(f"Prohibited module import: '{mod}' (line {node.lineno})")
-                for alias in node.names:
-                    name = alias.name
-                    for p in cls.PROHIBITED_MODULES:
-                        if name == p or name.startswith(p + "."):
-                            violations.append(f"Prohibited module symbol import: '{name}' (line {node.lineno})")
-
-            # Check attribute access: obj.attr
-            elif isinstance(node, ast.Attribute):
-                if node.attr in cls.PROHIBITED_ATTRIBUTES:
-                    violations.append(f"Prohibited attribute access: '{node.attr}' (line {node.lineno})")
-
-            # Check bare function / symbol names
-            elif isinstance(node, ast.Name):
-                if node.id in cls.PROHIBITED_ATTRIBUTES:
-                    violations.append(f"Prohibited symbol usage: '{node.id}' (line {node.lineno})")
-
-            # Check dynamic execution calls
-            elif isinstance(node, ast.Call):
-                if isinstance(node.func, ast.Name):
-                    if node.func.id in cls.PROHIBITED_CALLS:
-                        violations.append(f"Prohibited dynamic call: '{node.func.id}()' (line {node.lineno})")
-                elif isinstance(node.func, ast.Attribute):
-                    if node.func.attr == "getattr" and len(node.args) >= 2:
-                        second_arg = node.args[1]
-                        if isinstance(second_arg, ast.Constant) and str(second_arg.value) in cls.PROHIBITED_ATTRIBUTES:
-                            violations.append(f"Prohibited getattr access: '{second_arg.value}' (line {node.lineno})")
+        # Recursive audit of local dependencies in local_deps_dir (excluding simulator/foundation system files)
+        if local_deps_dir:
+            ld_path = Path(local_deps_dir)
+            if ld_path.is_dir():
+                for dep_file in sorted(ld_path.rglob("*.py")):
+                    try:
+                        rel = dep_file.relative_to(ld_path)
+                        # Skip underlying simulator and framework/test modules frozen from sys.modules
+                        if rel.parts and (rel.parts[0] in {"smart_buildings", "04_EXPERIMENT_FOUNDATION", "05_FAILURE_ENGINEERING"} or any(p in {"tests", "test"} for p in rel.parts)):
+                            continue
+                        dep_text = dep_file.read_text(encoding="utf-8")
+                        dep_tree = ast.parse(textwrap.dedent(dep_text))
+                        violations.extend(cls._audit_ast_tree(dep_tree, f"local_dep:{dep_file.name}"))
+                    except SyntaxError as e:
+                        violations.append(f"Syntax error in local dependency '{dep_file.name}': {e}")
 
         if violations:
             raise SecurityViolationError(
@@ -135,9 +216,10 @@ class PolicyAdapter:
         action_spec: Mapping[str, Any],
         metadata: Mapping[str, Any],
         policy_params: Mapping[str, Any] | None = None,
+        local_deps_dir: Path | str | None = None,
     ):
         # Ring 2: Static AST audit before instantiating policy
-        self.audit_policy_ast(policy_class)
+        self.audit_policy_ast(policy_class, local_deps_dir=local_deps_dir)
 
         self.policy_class = policy_class
         self.action_spec = action_spec

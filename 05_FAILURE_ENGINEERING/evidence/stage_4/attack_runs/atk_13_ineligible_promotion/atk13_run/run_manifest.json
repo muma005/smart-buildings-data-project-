@@ -1,0 +1,38 @@
+{
+  "run_id": "atk13_run",
+  "experiment_id": "EXP",
+  "policy_name": "IneligiblePolicy",
+  "scenario_id": "sc_1",
+  "project_git_commit": "5d9a9075268a3491c3ac050c0d0b3e31e4dee70b",
+  "starter_kit_commit": "95cea5b1c57b5291f44baf0283e0a081d53f5b16",
+  "python_version": "3.12.13",
+  "platform": "win32",
+  "created_at_utc": "2026-11-02T10:07:25.374708+00:00",
+  "status": "INCOMPLETE",
+  "execution_status": "INCOMPLETE",
+  "evidence_validity": "INVALID",
+  "expected_steps": 8640,
+  "actual_steps": 100,
+  "dependencies": [],
+  "quarantine_history": [],
+  "hashes": {
+    "config_sha256": "cfg",
+    "policy_sha256": "pol",
+    "trace_sha256": null,
+    "chunks_manifest_sha256": null,
+    "artifact_manifest_sha256": null
+  },
+  "artifacts": {
+    "run_dir": "C:\\Users\\ADMIN\\Desktop\\smart building\\05_FAILURE_ENGINEERING\\evidence\\stage_4\\attack_runs\\atk_13_ineligible_promotion\\atk13_run",
+    "trace_path": null,
+    "summary_path": null,
+    "evaluation_path": null,
+    "chunks_dir": null,
+    "chunks_manifest_path": null,
+    "artifacts_vault_dir": null,
+    "artifact_manifest_path": null
+  },
+  "metadata": {},
+  "errors": [],
+  "updated_at_utc": "2026-11-02T10:07:25.415705+00:00"
+}

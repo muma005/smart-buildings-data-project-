@@ -1,0 +1,21 @@
+{
+  "attack_id": "ATK-10",
+  "category": "D: Comparison & Lineage",
+  "description": "Candidate policy with QUARANTINED evidence submitted for comparison",
+  "entry_point": "ComparisonValidator.validate_comparison()",
+  "injection_method": "QUARANTINED candidate evaluation dict",
+  "system_response": "ComparisonValidator rejected comparison, logged explicit quarantine reason, blocked score delta",
+  "dimensions": {
+    "detection": true,
+    "evidence_preservation": true,
+    "containment": true,
+    "lineage_handling": true,
+    "clean_controls": true
+  },
+  "verdict": "PASS",
+  "details": {
+    "rejection_reasons": [
+      "Candidate evidence validity is QUARANTINED: cannot be used in comparison"
+    ]
+  }
+}

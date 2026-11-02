@@ -1,0 +1,12 @@
+{
+  "work_package": "WP2_LEAKAGE_HARDENING",
+  "test_id": "WP2_04",
+  "title": "Recursive Local Dependencies AST Audit",
+  "attack_description": "Clean entrypoint policy imports helper modules that contain ctypes and open('config.gin')",
+  "detection_mechanism": "Recursive walk across local_deps_dir auditing every .py file AST",
+  "system_response": "All violations in nested dependencies aggregated and raised in SecurityViolationError",
+  "verdict": "PASS",
+  "details": {
+    "error_message": "Security sandbox violation detected in policy:\n - Prohibited module import: 'ctypes' in local_dep:stealth_helper.py (line 1)\n - Prohibited direct file access to sensitive path 'scenario/config.gin' in local_dep:io_helper.py (line 2)"
+  }
+}

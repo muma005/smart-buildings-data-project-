@@ -1,0 +1,24 @@
+{
+  "attack_id": "ATK-14",
+  "category": "E: Promotion & Release",
+  "description": "Suite containing public training buildings claims role SEALED RELEASE",
+  "entry_point": "SuiteValidator.validate_suite_manifest()",
+  "injection_method": "SEALED RELEASE role on building_train_1",
+  "system_response": "SuiteValidator rejected manifest: local public scenarios cannot declare SEALED RELEASE",
+  "dimensions": {
+    "detection": true,
+    "evidence_preservation": true,
+    "containment": true,
+    "lineage_handling": true,
+    "clean_controls": true
+  },
+  "verdict": "PASS",
+  "details": {
+    "rejection_reasons": [
+      "Missing required suite attribute: 'version'",
+      "Missing required suite attribute: 'expected_scenario_count'",
+      "Missing required suite attribute: 'steps_per_episode'",
+      "Public benchmark falsely declared sealed: suite claims role 'SEALED RELEASE' but contains public training buildings ['building_train_1']"
+    ]
+  }
+}

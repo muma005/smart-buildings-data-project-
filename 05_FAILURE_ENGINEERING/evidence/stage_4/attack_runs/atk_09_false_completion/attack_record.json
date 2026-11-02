@@ -1,0 +1,20 @@
+{
+  "attack_id": "ATK-09",
+  "category": "C: Evaluation & Verification",
+  "description": "Run manifest asserts COMPLETE with 100 steps, but trace only has 50 steps",
+  "entry_point": "ScoreVerifier.verify_trace_and_score()",
+  "injection_method": "Fraudulent actual_steps metadata in run_manifest.json",
+  "system_response": "ScoreVerifier detected step count mismatch (50 vs 100), returned valid = False",
+  "dimensions": {
+    "detection": true,
+    "evidence_preservation": true,
+    "containment": true,
+    "lineage_handling": true,
+    "clean_controls": true
+  },
+  "verdict": "PASS",
+  "details": {
+    "actual_steps": 50,
+    "error": "Step count mismatch: got 50, expected 100"
+  }
+}

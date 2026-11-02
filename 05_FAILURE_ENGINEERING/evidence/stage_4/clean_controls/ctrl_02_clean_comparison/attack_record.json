@@ -1,0 +1,27 @@
+{
+  "attack_id": "CTRL-02",
+  "category": "Clean Control",
+  "description": "Matched comparison between valid candidate and valid baseline",
+  "entry_point": "ComparisonValidator.validate_comparison()",
+  "injection_method": "None (Unperturbed valid comparison)",
+  "system_response": "ComparisonValidator approved comparison, computed delta = +200.0",
+  "dimensions": {
+    "detection": true,
+    "evidence_preservation": true,
+    "containment": true,
+    "lineage_handling": true,
+    "clean_controls": true
+  },
+  "verdict": "PASS",
+  "details": {
+    "valid_comparison": true,
+    "rejection_reasons": [],
+    "candidate_score": -800.0,
+    "baseline_score": -1000.0,
+    "score_delta": 200.0,
+    "candidate_is_improvement": true,
+    "scenario_deltas": {
+      "sc_1": 200.0
+    }
+  }
+}

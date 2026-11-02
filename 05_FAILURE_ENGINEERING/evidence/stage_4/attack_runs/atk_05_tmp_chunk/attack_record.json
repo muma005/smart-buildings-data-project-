@@ -1,0 +1,19 @@
+{
+  "attack_id": "ATK-05",
+  "category": "B: Evidence Persistence",
+  "description": "Process crashed during chunk commit, leaving unfinalized .tmp file",
+  "entry_point": "ExperimentRegistry.recover_interrupted_run()",
+  "injection_method": "Orphaned chunk_0001.npz.tmp on disk",
+  "system_response": "Recovery purged uncommitted .tmp chunk, reconciled manifest, preserved chunk 0",
+  "dimensions": {
+    "detection": true,
+    "evidence_preservation": true,
+    "containment": true,
+    "lineage_handling": true,
+    "clean_controls": true
+  },
+  "verdict": "PASS",
+  "details": {
+    "total_committed_chunks": 1
+  }
+}

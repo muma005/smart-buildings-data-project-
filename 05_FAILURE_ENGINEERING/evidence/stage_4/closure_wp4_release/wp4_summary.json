@@ -1,0 +1,27 @@
+{
+  "work_package": "WP4",
+  "title": "Complete Release Lifecycle & Package Audit Campaign",
+  "total_tests": 5,
+  "records": [
+    {
+      "test_name": "Valid Release Export & Trusted Audit",
+      "valid": true,
+      "rejection_reasons": []
+    },
+    {
+      "test_name": "Cryptographic Tampering Detection",
+      "valid": false,
+      "rejection_reasons": [
+        "Cryptographic checksum mismatch for 'trace.csv': expected c5317b5c54e68a4e36b4c40f87531d8cd42a055eb7335fac85e6a19fbfe62718, got d5307c281a88c5cbce3301e9c90da182cd53d4505b9ce92a09a0d3a98de13b8e (tampering detected)"
+      ]
+    },
+    {
+      "test_name": "Unauthorized Signature Rejection",
+      "valid": false,
+      "rejection_reasons": [
+        "Signer identity mismatch: expected 'official_release_authority', got 'attacker_identity'",
+        "Authentic digital signature verification failed against trusted root key"
+      ]
+    }
+  ]
+}

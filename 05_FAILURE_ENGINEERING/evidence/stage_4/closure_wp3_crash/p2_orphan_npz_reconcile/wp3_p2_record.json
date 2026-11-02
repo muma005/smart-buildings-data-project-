@@ -1,0 +1,19 @@
+{
+  "work_package": "WP3_GENUINE_CRASH_RECOVERY",
+  "point_id": "P2",
+  "name": "Post-rename pre-manifest interruption",
+  "kill_description": "Subprocess killed after chunk_0001.npz rename, before chunks_manifest.json update",
+  "pre_crash_state": {
+    "chunk_0_exists": true,
+    "chunk_1_exists": true,
+    "pre_crash_manifest_total_chunks": 1
+  },
+  "post_recovery_state": {
+    "status": "INCOMPLETE",
+    "evidence_validity": "INVALID",
+    "reconciled_chunks": 2,
+    "actual_steps": 576
+  },
+  "verdict": "PASS",
+  "timestamp_utc": "2026-11-02T10:08:41Z"
+}

@@ -1,0 +1,45 @@
+{
+  "work_package": "WP1",
+  "title": "Multi-Building Actuator Semantic Verification Campaign",
+  "total_tests": 4,
+  "results": [
+    {
+      "test_name": "building_train_1 Clean Pulse Control",
+      "target_zone": "VAV_1",
+      "passed": true,
+      "delta_t_target_k": 0.5487671047449112,
+      "margin_k": 0.0784912109375,
+      "rejection_reasons": []
+    },
+    {
+      "test_name": "building_train_1 Swapped Channel Detection",
+      "target_zone": "VAV_1",
+      "passed": false,
+      "delta_t_target_k": 0.05000000000001137,
+      "margin_k": -0.8500000000000227,
+      "rejection_reasons": [
+        "Target zone 'VAV_1' thermal rise (0.050 K) below minimum threshold (0.200 K)",
+        "Target zone 'VAV_1' (0.050 K) did not exceed other zones by 0.050 K; culprit zone 'VAV_2' experienced delta 0.900 K (indicative of swapped actuator channel)"
+      ]
+    },
+    {
+      "test_name": "building_train_2 Clean Pulse Control",
+      "target_zone": "VAV_1",
+      "passed": true,
+      "delta_t_target_k": 1.1750121861696243,
+      "margin_k": 0.18714594841003418,
+      "rejection_reasons": []
+    },
+    {
+      "test_name": "building_train_2 Swapped Channel Detection",
+      "target_zone": "VAV_1",
+      "passed": false,
+      "delta_t_target_k": 0.03000000000002956,
+      "margin_k": -1.170000000000016,
+      "rejection_reasons": [
+        "Target zone 'VAV_1' thermal rise (0.030 K) below minimum threshold (0.200 K)",
+        "Target zone 'VAV_1' (0.030 K) did not exceed other zones by 0.050 K; culprit zone 'VAV_10' experienced delta 1.200 K (indicative of swapped actuator channel)"
+      ]
+    }
+  ]
+}

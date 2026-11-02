@@ -1,0 +1,31 @@
+{
+  "$schema": "https://smart-buildings.neurips/schemas/v1/repair_record.json",
+  "schema_version": "v1.0",
+  "repair_id": "REP-01",
+  "investigation_id": "INV-01",
+  "target_attack_id": "ATK-01",
+  "confirmed_root_cause": {
+    "type": "CHANNEL_INDEX_PERMUTATION",
+    "description": "Actuator channel permutation: pulse commanded to 'VAV_1' actuated heating in 'VAV_2' (delta 0.900 K) while target 'VAV_1' remained unheated (delta 0.050 K).",
+    "reproducible": true
+  },
+  "authorized_by": "LEAD_SYSTEM_ARCHITECT",
+  "affected_files": [
+    "04_EXPERIMENT_FOUNDATION/evaluation/semantic_probe.py"
+  ],
+  "patch_description": "Added SemanticActuatorProbe.diagnose_channel_misalignment() to isolate swapped channel indices.",
+  "pre_repair_reproduction": {
+    "description": "Probe evaluation on swapped channels yielded binary failure without identifying culprit pair.",
+    "command": "pytest tests/test_wp1_actuator_verification.py::test_wp1_bldg1_swapped_actuator_detection",
+    "observed_pre_repair": "Binary failure, target delta 0.050 K < threshold 0.200 K"
+  },
+  "post_repair_invariants": {
+    "isolated_permutation_pair": [
+      "VAV_1",
+      "VAV_2"
+    ],
+    "diagnostic_confidence": "HIGH",
+    "clean_controls_unaffected": true
+  },
+  "governance_status": "REPAIR_IMPLEMENTED_PENDING_VERIFICATION"
+}

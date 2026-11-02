@@ -1,0 +1,22 @@
+{
+  "work_package": "WP3_GENUINE_CRASH_RECOVERY",
+  "point_id": "P4",
+  "name": "Uncommitted memory buffer interruption",
+  "kill_description": "Subprocess killed with 62 uncommitted steps in RAM buffer",
+  "pre_crash_state": {
+    "trace_csv_steps": 350,
+    "durable_chunks_count": 1
+  },
+  "post_recovery_state": {
+    "status": "INCOMPLETE",
+    "data_loss_window": {
+      "durable_chunk_steps": 288,
+      "streaming_csv_steps": 350,
+      "data_loss_start_step": 288,
+      "expected_steps": 576,
+      "uncommitted_steps": 62
+    }
+  },
+  "verdict": "PASS",
+  "timestamp_utc": "2026-11-02T10:08:43Z"
+}

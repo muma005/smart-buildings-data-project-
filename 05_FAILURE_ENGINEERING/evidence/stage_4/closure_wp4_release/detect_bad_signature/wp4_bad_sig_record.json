@@ -1,0 +1,46 @@
+{
+  "valid": false,
+  "rejection_reasons": [
+    "Signer identity mismatch: expected 'official_release_authority', got 'attacker_identity'",
+    "Authentic digital signature verification failed against trusted root key"
+  ],
+  "release_metadata": {
+    "schema_version": "v1.0",
+    "package_type": "CERTIFIED_RELEASE_PACKAGE",
+    "run_id": "RUN_WP4_BAD_SIG",
+    "experiment_id": "EXP_WP4",
+    "policy_name": "CertifiedReleasePolicy",
+    "status": "COMPLETE",
+    "evidence_validity": "VALID",
+    "packaged_at_utc": "2026-11-02T10:08:46.160790+00:00",
+    "root_digest_sha256": "35ee8b7eeb0f5474ddc6b30ec23cec23d8ce83ca317f6fd03a34ba80ca7194fb",
+    "signing": {
+      "algorithm": "hmac_sha256",
+      "signer_identity": "attacker_identity",
+      "signature": "e9da5f22c5a256930792f69122a91b7dc3d89c0dd4dbd8c34a46d3b3f1922323",
+      "trust_root": "trusted_authority_hmac_root"
+    },
+    "files": {
+      "artifacts/config.gin": {
+        "sha256": "60cef32efe6c2cc133402b2972885e62b6ff9ef13d8acc05d208b3fef6542ee5",
+        "size_bytes": 26
+      },
+      "artifacts/policy.py": {
+        "sha256": "68c074ef5438e6260a633eb60d904b844037eeac51534349839e799a7af83e97",
+        "size_bytes": 25
+      },
+      "run_manifest.json": {
+        "sha256": "f3271cead5fd0894f51e22041dd1576fce35e2a09d5910703fba02db3c360bba",
+        "size_bytes": 1314
+      },
+      "summary.json": {
+        "sha256": "816843ae1a93dd65abde26206c2576df55a198645c2513fc6327d553b5f61a90",
+        "size_bytes": 57
+      },
+      "trace.csv": {
+        "sha256": "c5317b5c54e68a4e36b4c40f87531d8cd42a055eb7335fac85e6a19fbfe62718",
+        "size_bytes": 18973
+      }
+    }
+  }
+}

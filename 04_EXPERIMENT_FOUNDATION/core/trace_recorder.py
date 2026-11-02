@@ -189,8 +189,16 @@ class TraceRecorder:
                 f.flush()
                 os.fsync(f.fileno())
 
-            # 3. Atomic rename
-            tmp_path.replace(final_path)
+            # 3. Atomic rename with retry for transient file locks (Windows WinError 32)
+            for attempt in range(5):
+                try:
+                    tmp_path.replace(final_path)
+                    break
+                except PermissionError:
+                    import time
+                    time.sleep(0.05)
+            else:
+                tmp_path.replace(final_path)
 
             # 4. SHA-256 hash
             file_bytes = final_path.read_bytes()
@@ -234,7 +242,15 @@ class TraceRecorder:
                 json.dump(manifest_data, f, indent=2)
                 f.flush()
                 os.fsync(f.fileno())
-            tmp_manifest.replace(self.chunks_manifest_file)
+            for attempt in range(5):
+                try:
+                    tmp_manifest.replace(self.chunks_manifest_file)
+                    break
+                except PermissionError:
+                    import time
+                    time.sleep(0.05)
+            else:
+                tmp_manifest.replace(self.chunks_manifest_file)
             manifest_bytes = self.chunks_manifest_file.read_bytes()
             return hashlib.sha256(manifest_bytes).hexdigest()
         except Exception as e:

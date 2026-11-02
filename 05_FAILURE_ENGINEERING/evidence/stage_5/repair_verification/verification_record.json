@@ -1,0 +1,25 @@
+{
+  "$schema": "https://smart-buildings.neurips/schemas/v1/verification_record.json",
+  "schema_version": "v1.0",
+  "verification_id": "VERIF-STAGE5-WP4",
+  "status": "ALL_REPAIRS_VERIFIED",
+  "evaluated_repairs": [
+    "REP-01",
+    "REP-02",
+    "REP-03"
+  ],
+  "testing_hierarchy_results": {
+    "layer_1_unit_tests": "PASSED (8/8)",
+    "layer_2_pre_post_deltas": "PASSED (3/3 confirmed)",
+    "layer_3_independent_evidence_audit": "PASSED (ScoreVerifier certified)",
+    "layer_4_regression_suite": "PASSED (149 baseline tests)",
+    "layer_5_clean_controls": "PASSED (0.0% false-positive rate)"
+  },
+  "clean_controls_summary": {
+    "RUN_EXP-000_certified": "VALID (30/30 chunks intact)",
+    "ctrl_01_certified_audit": "PASS",
+    "ctrl_02_clean_comparison": "PASS",
+    "ctrl_03_clean_pulse_probe": "PASS",
+    "false_positive_rejections": 0
+  }
+}

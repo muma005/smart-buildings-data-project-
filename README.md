@@ -208,3 +208,33 @@ Phase 03 proved the physical and mathematical rules of the competition; Phase 04
 It ensures that no controller iteration occurs on shaky ground: eliminating the risk of accidental artifact overwrites, silent simulation halts, unnoticed score discrepancies, or biased candidate comparisons.
 
 With Gate S1 closed, the project is officially certified to launch its first controlled controller-discovery trials (starting with Experiment **EXP-001: Adaptive Thermal Pre-Conditioning Baseline**).
+
+### Phase 05 — Black Box and Failure Engineering (CLOSED — CERTIFIED PASS)
+
+- **Phase 05 Directory & Architecture:** [05_FAILURE_ENGINEERING/](05_FAILURE_ENGINEERING/)
+- **Phase 05 Implementation Plan:** [05_FAILURE_ENGINEERING/PHASE_05_IMPLEMENTATION_PLAN.md](05_FAILURE_ENGINEERING/PHASE_05_IMPLEMENTATION_PLAN.md)
+- **Phase 05 Architectural Overview:** [05_FAILURE_ENGINEERING/README.md](05_FAILURE_ENGINEERING/README.md)
+- **Executable Test Suite (185/185 Tests Passed):** [05_FAILURE_ENGINEERING/tests/](05_FAILURE_ENGINEERING/tests/)
+- **Stage 4 Attack Provenance & Evidence (246 Files):** [05_FAILURE_ENGINEERING/evidence/stage_4/](05_FAILURE_ENGINEERING/evidence/stage_4/)
+- **Stage 5 Forensic Investigations:** [05_FAILURE_ENGINEERING/evidence/stage_5/investigations/](05_FAILURE_ENGINEERING/evidence/stage_5/investigations/)
+- **Stage 5 Repair Verification & Controls:** [05_FAILURE_ENGINEERING/evidence/stage_5/repair_verification/](05_FAILURE_ENGINEERING/evidence/stage_5/repair_verification/)
+- **System Certification Manifest:** [05_FAILURE_ENGINEERING/evidence/stage_5/PHASE_05_SYSTEM_CERTIFICATION.json](05_FAILURE_ENGINEERING/evidence/stage_5/PHASE_05_SYSTEM_CERTIFICATION.json)
+- **Stage 5 Final System Certification:** [05_FAILURE_ENGINEERING/evidence/stage_5/PHASE_05_STAGE_5_CERTIFICATION.md](05_FAILURE_ENGINEERING/evidence/stage_5/PHASE_05_STAGE_5_CERTIFICATION.md)
+
+The Black Box and Failure Engineering phase hardens the experiment execution, persistence, evaluation, and certification systems against adversarial corruption, process crashes, actuator misalignments, policy data leakage, and invalid candidate promotions. Rather than assuming components function under nominal conditions, Phase 05 executed extensive red-team attack campaigns (Stage 4, 15 attack vectors across Gates 1–7), established forensic diagnosis and blast-radius quantification (Stage 5, WP1–WP5), and completed rigorous post-audit remediations, closing the entire failure engineering lifecycle with a definitive **CERTIFIED: PASS** verdict.
+
+This phase establishes verified operational resilience across five core pillars:
+
+- **Adversarial Failure Detection & Ring Defense:** Implements four rings of defense protecting against runtime exploitation: AST static analysis rejecting prohibited imports (`subprocess`, `ctypes`) and stack-frame introspection, read-only NumPy observation memory wrapping preventing in-place state corruption, deep-copied metadata isolation, and fail-closed simulation containment transitioning rogue policies directly to `FAILED` and `INVALID`.
+- **Atomic Chunked Persistence & Crash Recovery:** Replaces monolithic, vulnerable end-of-episode writes with atomic 288-step chunk commits using temporary-file swaps and sequence checksums. Validates genuine crash resilience across 5 destructive kill points (P1 mid-chunk, P2 orphan files, P3 manifest swap, P4 uncommitted volatile buffers, P5 recovery idempotence), rigorously quantifying data-loss windows while preventing partial runs from entering leaderboards.
+- **Multi-Building, Multi-Channel Semantic Actuator Verification:** Validates physical causality between policy actuator channels and thermal observations using interventional single-variable pulse probing (`SemanticActuatorProbe`). Extended across diverse facility scales (`building_train_1` 39 zones and `building_train_2` 85 zones across 9 AHUs) and multiple channels (`reheat_valve_percentage_command` thermal rise and `supply_air_damper_percentage_command` cooling flow). Achieves a 0.0% false-positive rate on clean controls and 100% detection of inter-zone swaps and cross-channel wiring errors, with strict enforcement of non-remapping governance.
+- **DAG Lineage & Minimal Blast-Radius Quarantine:** Implements `LineageImpactAuditor` to trace multi-generational experiment dependencies across a directed acyclic graph. When an upstream run is invalidated, the system computes the exact minimal blast-radius quarantine set, isolating tainted downstream comparisons while preserving 100% of unrelated runs. Enforces three-dimensional status decoupling (`execution_status`, `evidence_validity`, `comparison_eligibility`) and blocks unverified auto-restorations.
+- **Hardened Cryptographic Certification & Clean Suite Discovery:** Establishes `SystemCertificationEngine` with secure external key governance (`PHASE05_CERTIFICATION_KEY`), failing safely when required signing keys are absent and rejecting unauthorized or tampered manifests. Root-level `pytest.ini` cleanly isolates executable tests from archived historical evidence (246 provenance-locked files), delivering 185 passing tests executed cleanly from repository root.
+
+**Its role in the project**
+
+Phase 04 built the experimental foundation under nominal assumptions; Phase 05 subjected that foundation to hostile attack, sudden failure, and rigorous forensic verification.
+
+It guarantees that when full-scale control-policy research begins, experimental results are trustworthy, uncorrupted, and mathematically defensible. A policy cannot inflate its leaderboard standing through reward manipulation, uncommitted steps cannot leak into comparisons, and physical actuator misalignments will be intercepted before wasting simulation compute.
+
+With Phase 05 closed and certified, the project returns to Smart Buildings control-policy research on a verified, resilient foundation.

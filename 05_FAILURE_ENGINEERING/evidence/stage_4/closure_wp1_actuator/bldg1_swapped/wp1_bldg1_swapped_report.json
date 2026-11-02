@@ -1,0 +1,21 @@
+{
+  "schema_version": "v1.0",
+  "target_zone": "VAV_1",
+  "passed": false,
+  "delta_t_target_k": 0.05000000000001137,
+  "max_delta_others_k": 0.9000000000000341,
+  "margin_k": -0.8500000000000227,
+  "criteria": {
+    "min_delta_t_k": 0.2,
+    "min_margin_k": 0.05
+  },
+  "rejection_reasons": [
+    "Target zone 'VAV_1' thermal rise (0.050 K) below minimum threshold (0.200 K)",
+    "Target zone 'VAV_1' (0.050 K) did not exceed other zones by 0.050 K; culprit zone 'VAV_2' experienced delta 0.900 K (indicative of swapped actuator channel)"
+  ],
+  "zone_deltas": {
+    "VAV_1": 0.05000000000001137,
+    "VAV_2": 0.9000000000000341,
+    "VAV_3": 0.03000000000002956
+  }
+}

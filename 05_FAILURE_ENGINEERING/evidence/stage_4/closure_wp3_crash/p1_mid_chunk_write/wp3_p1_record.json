@@ -1,0 +1,20 @@
+{
+  "work_package": "WP3_GENUINE_CRASH_RECOVERY",
+  "point_id": "P1",
+  "name": "Mid-chunk write interruption",
+  "kill_description": "Subprocess killed while writing chunk_0001.npz.tmp",
+  "pre_crash_state": {
+    "chunk_0_exists": true,
+    "tmp_chunk_1_exists": true,
+    "chunk_1_final_exists": false
+  },
+  "post_recovery_state": {
+    "status": "INCOMPLETE",
+    "evidence_validity": "INVALID",
+    "total_chunks_retained": 1,
+    "tmp_chunk_cleaned": true,
+    "integrity_verified_valid": false
+  },
+  "verdict": "PASS",
+  "timestamp_utc": "2026-11-02T10:08:39Z"
+}

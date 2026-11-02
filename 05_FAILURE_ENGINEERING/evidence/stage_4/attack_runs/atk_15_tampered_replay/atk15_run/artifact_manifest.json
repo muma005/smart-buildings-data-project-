@@ -1,0 +1,1 @@
+{"manifest_version": "v1.0", "created_at_utc": "2026-11-01T00:00:00Z", "artifacts": [{"stored_path": "artifacts/policy.py", "role": "entrypoint", "sha256": "9b96c8ec59b46e5c4302a28dcfa261fe165b8674543b91a14d1b1c9addc28bd3"}, {"stored_path": "artifacts/local_deps/helper.py", "role": "local_dependency", "sha256": "EXPECTED_CORRECT_SHA"}]}

@@ -1,0 +1,43 @@
+{
+  "valid": true,
+  "rejection_reasons": [],
+  "release_metadata": {
+    "schema_version": "v1.0",
+    "package_type": "CERTIFIED_RELEASE_PACKAGE",
+    "run_id": "RUN_WP4_CERTIFIED",
+    "experiment_id": "EXP_WP4",
+    "policy_name": "CertifiedReleasePolicy",
+    "status": "COMPLETE",
+    "evidence_validity": "VALID",
+    "packaged_at_utc": "2026-11-02T10:08:44.642587+00:00",
+    "root_digest_sha256": "57db07b3c21f1835d5604f02930199d75de0a772f14c2cebea80fc8d148c2a93",
+    "signing": {
+      "algorithm": "hmac_sha256",
+      "signer_identity": "official_release_authority",
+      "signature": "fb78d28033e00e3f8999d56678fcedc45f7c06c5f54a73d54504b0aeee881492",
+      "trust_root": "trusted_authority_hmac_root"
+    },
+    "files": {
+      "artifacts/config.gin": {
+        "sha256": "60cef32efe6c2cc133402b2972885e62b6ff9ef13d8acc05d208b3fef6542ee5",
+        "size_bytes": 26
+      },
+      "artifacts/policy.py": {
+        "sha256": "68c074ef5438e6260a633eb60d904b844037eeac51534349839e799a7af83e97",
+        "size_bytes": 25
+      },
+      "run_manifest.json": {
+        "sha256": "71af92526822d6e1978e19ccc161add6d96f93624ecff8578153b4f785146660",
+        "size_bytes": 1311
+      },
+      "summary.json": {
+        "sha256": "816843ae1a93dd65abde26206c2576df55a198645c2513fc6327d553b5f61a90",
+        "size_bytes": 57
+      },
+      "trace.csv": {
+        "sha256": "c5317b5c54e68a4e36b4c40f87531d8cd42a055eb7335fac85e6a19fbfe62718",
+        "size_bytes": 18973
+      }
+    }
+  }
+}

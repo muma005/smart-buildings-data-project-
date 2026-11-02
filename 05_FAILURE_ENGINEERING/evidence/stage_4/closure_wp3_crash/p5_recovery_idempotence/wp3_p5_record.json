@@ -1,0 +1,23 @@
+{
+  "work_package": "WP3_GENUINE_CRASH_RECOVERY",
+  "point_id": "P5",
+  "name": "Recovery interruption and idempotence",
+  "kill_description": "Subprocess killed mid-recovery; parent recovered and verified idempotence and eligibility rejection",
+  "pre_crash_state": {
+    "interrupted_mid_recovery": true
+  },
+  "post_recovery_state": {
+    "status": "INCOMPLETE",
+    "evidence_validity": "INVALID",
+    "idempotence_verified": true,
+    "first_status": "INCOMPLETE",
+    "second_status": "INCOMPLETE",
+    "comparison_valid": false,
+    "rejection_reasons": [
+      "Candidate missing scenarios: ['scen_1']",
+      "Candidate evidence validity is INVALID: cannot be used in comparison"
+    ]
+  },
+  "verdict": "PASS",
+  "timestamp_utc": "2026-11-02T10:08:44Z"
+}

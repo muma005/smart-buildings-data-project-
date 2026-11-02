@@ -1,0 +1,27 @@
+{
+  "$schema": "https://smart-buildings.neurips/schemas/v1/repair_record.json",
+  "schema_version": "v1.0",
+  "repair_id": "REP-03",
+  "investigation_id": "INV-03",
+  "target_attack_id": "ATK-11_DAG",
+  "confirmed_root_cause": {
+    "type": "UPSTREAM_BASELINE_DATA_CORRUPTION",
+    "description": "Upstream baseline invalidation requires precise DAG quarantine and controlled reassessment."
+  },
+  "authorized_by": "LEAD_SYSTEM_ARCHITECT",
+  "affected_files": [
+    "04_EXPERIMENT_FOUNDATION/evaluation/lineage_auditor.py"
+  ],
+  "patch_description": "Added LineageImpactAuditor for minimal quarantine boundary calculation and reassessment governance.",
+  "pre_repair_reproduction": {
+    "description": "Quarantine cascaded via registry, but lacked pre-quarantine blast radius audit and reassessment governance.",
+    "command": "pytest tests/test_stage_4_campaign.py::test_atk11_upstream_quarantine_cascade",
+    "observed_pre_repair": "Cascaded quarantine without formal reassessment protocol"
+  },
+  "post_repair_invariants": {
+    "exact_blast_radius_calculated": true,
+    "unrelated_runs_preserved": true,
+    "reassessment_requires_verified_repair": true
+  },
+  "governance_status": "REPAIR_IMPLEMENTED_PENDING_VERIFICATION"
+}

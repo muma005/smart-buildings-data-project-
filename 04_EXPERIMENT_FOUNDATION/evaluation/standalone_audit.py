@@ -5,9 +5,12 @@ and policy actuation decisions from run_dir evidence alone without external depe
 
 from __future__ import annotations
 import csv
+import hashlib
+import hmac
 import json
 from pathlib import Path
 from typing import Any
+import zipfile
 import numpy as np
 
 
@@ -121,3 +124,122 @@ class StandaloneAuditor:
             "explainability_verified": True,
         }
         return audit_summary
+
+    @classmethod
+    def audit_release_package(
+        cls,
+        package_zip: Path | str,
+        trusted_key: str | bytes | None = None,
+        expected_signer: str | None = None,
+    ) -> dict[str, Any]:
+        """Performs a completely independent, external audit of a release package zip archive."""
+        package_path = Path(package_zip)
+        if not package_path.is_file():
+            return {
+                "valid": False,
+                "rejection_reasons": [f"Release package file not found: {package_path}"],
+            }
+
+        if not zipfile.is_zipfile(package_path):
+            return {
+                "valid": False,
+                "rejection_reasons": ["Package is not a valid zip archive"],
+            }
+
+        rejection_reasons: list[str] = []
+
+        try:
+            with zipfile.ZipFile(package_path, "r") as zf:
+                namelist = set(zf.namelist())
+
+                # 1. Require release_manifest.json and run_manifest.json
+                if "release_manifest.json" not in namelist:
+                    return {
+                        "valid": False,
+                        "rejection_reasons": ["Missing release_manifest.json in package"],
+                    }
+                if "run_manifest.json" not in namelist:
+                    return {
+                        "valid": False,
+                        "rejection_reasons": ["Missing run_manifest.json in package"],
+                    }
+
+                rel_bytes = zf.read("release_manifest.json")
+                release_manifest = json.loads(rel_bytes.decode("utf-8"))
+
+                run_bytes = zf.read("run_manifest.json")
+                run_manifest = json.loads(run_bytes.decode("utf-8"))
+
+                # 2. Check Execution Status
+                status = run_manifest.get("status") or run_manifest.get("execution_status")
+                if status != "COMPLETE":
+                    rejection_reasons.append(
+                        f"Ineligible execution status: '{status}' (expected 'COMPLETE')"
+                    )
+
+                # 3. Check Evidence Validity
+                validity = run_manifest.get("evidence_validity")
+                if validity != "VALID":
+                    rejection_reasons.append(
+                        f"Ineligible evidence validity: '{validity}' (expected 'VALID'; candidate may be QUARANTINED or INVALID)"
+                    )
+
+                # 4. Check Quarantine History
+                q_hist = run_manifest.get("quarantine_history", [])
+                if q_hist and validity == "QUARANTINED":
+                    rejection_reasons.append("Package contains active quarantine history entry")
+
+                # 5. Verify Cryptographic File Checksums
+                declared_files = release_manifest.get("files", {})
+                for rel_path, file_info in declared_files.items():
+                    if rel_path not in namelist:
+                        rejection_reasons.append(f"Missing file recorded in manifest: '{rel_path}'")
+                        continue
+
+                    actual_data = zf.read(rel_path)
+                    actual_sha = hashlib.sha256(actual_data).hexdigest()
+                    expected_sha = file_info.get("sha256")
+
+                    if actual_sha != expected_sha:
+                        rejection_reasons.append(
+                            f"Cryptographic checksum mismatch for '{rel_path}': expected {expected_sha}, got {actual_sha} (tampering detected)"
+                        )
+
+                # 6. Verify Digital Signature / Signer Identity
+                signing = release_manifest.get("signing", {})
+                canonical_files_repr = json.dumps(declared_files, sort_keys=True)
+                actual_root_digest = hashlib.sha256(canonical_files_repr.encode("utf-8")).hexdigest()
+
+                if release_manifest.get("root_digest_sha256") != actual_root_digest:
+                    rejection_reasons.append("Root digest in release_manifest does not match canonical files hash")
+
+                if expected_signer:
+                    actual_signer = signing.get("signer_identity")
+                    if actual_signer != expected_signer:
+                        rejection_reasons.append(
+                            f"Signer identity mismatch: expected '{expected_signer}', got '{actual_signer}'"
+                        )
+
+                if trusted_key:
+                    if signing.get("algorithm") != "hmac_sha256":
+                        rejection_reasons.append(
+                            f"Unsupported or missing signature algorithm for key verification: {signing.get('algorithm')}"
+                        )
+                    else:
+                        key_bytes = trusted_key.encode("utf-8") if isinstance(trusted_key, str) else trusted_key
+                        expected_sig = hmac.new(key_bytes, canonical_files_repr.encode("utf-8"), hashlib.sha256).hexdigest()
+                        actual_sig = signing.get("signature")
+                        if not hmac.compare_digest(expected_sig, str(actual_sig)):
+                            rejection_reasons.append("Authentic digital signature verification failed against trusted root key")
+
+        except Exception as e:
+            return {
+                "valid": False,
+                "rejection_reasons": [f"Package audit encountered exception: {e}"],
+            }
+
+        return {
+            "valid": len(rejection_reasons) == 0,
+            "rejection_reasons": rejection_reasons,
+            "release_metadata": release_manifest if "release_manifest" in locals() else {},
+        }

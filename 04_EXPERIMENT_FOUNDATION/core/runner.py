@@ -117,7 +117,7 @@ class SimulationRunner:
                 continue
 
             rel_str = str(rel).replace("\\", "/")
-            if any(rel_str.startswith(skip) for skip in [".venv", ".git", "experiments", "05_FAILURE_ENGINEERING/evidence"]):
+            if any(rel_str.startswith(skip) for skip in [".venv", ".git", "experiments", "05_FAILURE_ENGINEERING", "04_EXPERIMENT_FOUNDATION/tests", "tests"]):
                 continue
 
             dep_dest = local_deps_dir / rel
@@ -231,6 +231,7 @@ class SimulationRunner:
                 action_spec=action_spec,
                 metadata=metadata,
                 policy_params=policy_params,
+                local_deps_dir=run_dir / "artifacts" / "local_deps",
             )
 
             # Start trace recording

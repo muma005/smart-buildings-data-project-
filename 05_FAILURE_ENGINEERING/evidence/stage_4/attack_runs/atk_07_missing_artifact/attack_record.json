@@ -1,0 +1,24 @@
+{
+  "attack_id": "ATK-07",
+  "category": "B: Evidence Persistence",
+  "description": "Preserved local dependency declared in artifact_manifest.json missing on disk",
+  "entry_point": "ScoreVerifier.verify_run_integrity() -> artifact audit",
+  "injection_method": "Omitted local_deps/helper.py from artifacts vault",
+  "system_response": "ScoreVerifier detected missing preserved artifact and failed integrity check",
+  "dimensions": {
+    "detection": true,
+    "evidence_preservation": true,
+    "containment": true,
+    "lineage_handling": true,
+    "clean_controls": true
+  },
+  "verdict": "PASS",
+  "details": {
+    "errors": [
+      "Run status is 'RUNNING', expected 'COMPLETE'",
+      "Chunk 0 step count inconsistency: 0..0 is not 0 steps",
+      "Preserved artifact checksum mismatch for artifacts/policy.py: disk=80cffce01a3a9ceda5b7dcd901fa1f78d5f329f4fa48f347651269c4c81d1e7f, recorded=abc123",
+      "Missing preserved artifact file: artifacts/local_deps/helper.py"
+    ]
+  }
+}

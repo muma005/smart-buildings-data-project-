@@ -1,0 +1,13 @@
+{
+  "work_package": "WP2_LEAKAGE_HARDENING",
+  "test_id": "WP2_06",
+  "title": "SimulationRunner Fail-Closed Halt Before env.reset()",
+  "attack_description": "Hostile policy submitted to SimulationRunner.execute_episode()",
+  "detection_mechanism": "PolicyAdapter AST audit in SimulationRunner before env.reset()",
+  "system_response": "Zero simulation steps executed; status=FAILED, evidence_validity=INVALID recorded in run manifest",
+  "verdict": "PASS",
+  "details": {
+    "env_reset_called": false,
+    "manifest_status": "FAILED"
+  }
+}

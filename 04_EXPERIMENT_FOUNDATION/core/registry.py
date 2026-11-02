@@ -8,12 +8,14 @@ import csv
 from datetime import datetime, timezone
 from enum import Enum
 import hashlib
+import hmac
 import json
 from pathlib import Path
 import subprocess
 import sys
 from typing import Any, Mapping
 import uuid
+import zipfile
 import numpy as np
 
 
@@ -604,3 +606,90 @@ class ExperimentRegistry:
                 except Exception:
                     pass
         return recovered
+
+    def export_release_package(
+        self,
+        run_dir: Path | str,
+        output_zip: Path | str,
+        signer_key: str | bytes | None = None,
+        signer_identity: str | None = None,
+    ) -> Path:
+        """Packages certified run into an immutable release zip with cryptographic manifest and authentic signature."""
+        run_dir = Path(run_dir)
+        manifest = self.load_manifest(run_dir)
+
+        # 1. Strict Eligibility Gate: Must be COMPLETE and VALID
+        status = manifest.get("status")
+        validity = manifest.get("evidence_validity")
+
+        if status != RunStatus.COMPLETE.value:
+            raise ValueError(
+                f"Release packaging rejected: run status is '{status}', expected '{RunStatus.COMPLETE.value}'"
+            )
+        if validity != EvidenceValidity.VALID.value:
+            raise ValueError(
+                f"Release packaging rejected: evidence validity is '{validity}', expected '{EvidenceValidity.VALID.value}'"
+            )
+
+        output_zip_path = Path(output_zip)
+        output_zip_path.parent.mkdir(parents=True, exist_ok=True)
+        tmp_zip = output_zip_path.with_suffix(".zip.tmp")
+
+        # 2. Collect all files in run_dir (ignoring transient files)
+        file_records: dict[str, dict[str, Any]] = {}
+        files_to_pack: list[tuple[Path, str]] = []
+
+        for p in sorted(run_dir.rglob("*")):
+            if p.is_file() and not p.name.endswith(".tmp") and not p.name.startswith("."):
+                rel_path = str(p.relative_to(run_dir)).replace("\\", "/")
+                file_bytes = p.read_bytes()
+                sha = hashlib.sha256(file_bytes).hexdigest()
+                file_records[rel_path] = {
+                    "sha256": sha,
+                    "size_bytes": len(file_bytes),
+                }
+                files_to_pack.append((p, rel_path))
+
+        # 3. Build Release Manifest & Digital Signature
+        canonical_files_repr = json.dumps(file_records, sort_keys=True)
+        root_digest = hashlib.sha256(canonical_files_repr.encode("utf-8")).hexdigest()
+
+        if signer_key:
+            key_bytes = signer_key.encode("utf-8") if isinstance(signer_key, str) else signer_key
+            sig = hmac.new(key_bytes, canonical_files_repr.encode("utf-8"), hashlib.sha256).hexdigest()
+            signing_info = {
+                "algorithm": "hmac_sha256",
+                "signer_identity": signer_identity or "official_release_authority",
+                "signature": sig,
+                "trust_root": "trusted_authority_hmac_root",
+            }
+        else:
+            signing_info = {
+                "algorithm": "sha256_digest",
+                "signer_identity": "unsigned",
+                "signature": root_digest,
+                "trust_root": None,
+            }
+
+        release_manifest = {
+            "schema_version": "v1.0",
+            "package_type": "CERTIFIED_RELEASE_PACKAGE",
+            "run_id": manifest.get("run_id"),
+            "experiment_id": manifest.get("experiment_id"),
+            "policy_name": manifest.get("policy_name"),
+            "status": status,
+            "evidence_validity": validity,
+            "packaged_at_utc": datetime.now(timezone.utc).isoformat(),
+            "root_digest_sha256": root_digest,
+            "signing": signing_info,
+            "files": file_records,
+        }
+
+        # 4. Write zip archive atomically
+        with zipfile.ZipFile(tmp_zip, "w", compression=zipfile.ZIP_DEFLATED) as zf:
+            for src_file, rel_name in files_to_pack:
+                zf.write(src_file, arcname=rel_name)
+            zf.writestr("release_manifest.json", json.dumps(release_manifest, indent=2))
+
+        tmp_zip.replace(output_zip_path)
+        return output_zip_path

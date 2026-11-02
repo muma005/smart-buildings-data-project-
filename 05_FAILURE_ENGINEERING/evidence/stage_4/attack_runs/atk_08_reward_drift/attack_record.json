@@ -1,0 +1,20 @@
+{
+  "attack_id": "ATK-08",
+  "category": "C: Evaluation & Verification",
+  "description": "Injected 0.6 drift into trace reward arithmetic",
+  "entry_point": "ScoreVerifier.verify_reward_arithmetic()",
+  "injection_method": "Manipulated step 0 reward scalar in trace.csv",
+  "system_response": "ScoreVerifier detected arithmetic discrepancy exceeding 1.0e-06 tolerance",
+  "dimensions": {
+    "detection": true,
+    "evidence_preservation": true,
+    "containment": true,
+    "lineage_handling": true,
+    "clean_controls": true
+  },
+  "verdict": "PASS",
+  "details": {
+    "error": "Step-reward arithmetic mismatch at step 0: expected -0.400000, got -1.000000 (discrepancy 6.00e-01 > tolerance 1.00e-06)",
+    "discrepancy": 0.6
+  }
+}

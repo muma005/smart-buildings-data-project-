@@ -1,0 +1,63 @@
+{
+  "$schema": "https://smart-buildings.neurips/schemas/v1/impact_record.json",
+  "schema_version": "v1.0",
+  "investigation_id": "INV-03",
+  "taint_source_id": "Baseline_A",
+  "quarantine_boundary": {
+    "direct_descendants": [
+      "Candidate_B"
+    ],
+    "transitive_descendants": [
+      "Comparison_D",
+      "Release_E"
+    ],
+    "total_affected_count": 4,
+    "unrelated_preserved_runs": [
+      "Baseline_Z",
+      "Candidate_F"
+    ],
+    "unrelated_preserved_count": 2
+  },
+  "status_matrix": [
+    {
+      "run_id": "Baseline_A",
+      "execution_status": "COMPLETE",
+      "evidence_validity": "INVALID",
+      "experiment_eligibility": "INELIGIBLE",
+      "is_taint_source": true,
+      "is_direct_descendant": false,
+      "is_transitive_descendant": false
+    },
+    {
+      "run_id": "Candidate_B",
+      "execution_status": "COMPLETE",
+      "evidence_validity": "QUARANTINED",
+      "experiment_eligibility": "QUARANTINED",
+      "is_taint_source": false,
+      "is_direct_descendant": true,
+      "is_transitive_descendant": false
+    },
+    {
+      "run_id": "Comparison_D",
+      "execution_status": "COMPLETE",
+      "evidence_validity": "QUARANTINED",
+      "experiment_eligibility": "QUARANTINED",
+      "is_taint_source": false,
+      "is_direct_descendant": false,
+      "is_transitive_descendant": true
+    },
+    {
+      "run_id": "Release_E",
+      "execution_status": "COMPLETE",
+      "evidence_validity": "QUARANTINED",
+      "experiment_eligibility": "QUARANTINED",
+      "is_taint_source": false,
+      "is_direct_descendant": false,
+      "is_transitive_descendant": true
+    }
+  ],
+  "preservation_fidelity": {
+    "unrelated_runs_preserved": true,
+    "false_positive_quarantines": 0
+  }
+}

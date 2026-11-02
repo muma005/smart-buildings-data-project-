@@ -1,0 +1,19 @@
+{
+  "attack_id": "ATK-12",
+  "category": "D: Comparison & Lineage",
+  "description": "Candidate_F dependent on Baseline_Z evaluated during Baseline_A quarantine",
+  "entry_point": "ExperimentRegistry.quarantine_run() DAG traversal",
+  "injection_method": "Quarantine of disjoint lineage branch",
+  "system_response": "Candidate_F strictly preserved as VALID; zero false positive invalidation",
+  "dimensions": {
+    "detection": true,
+    "evidence_preservation": true,
+    "containment": true,
+    "lineage_handling": true,
+    "clean_controls": true
+  },
+  "verdict": "PASS",
+  "details": {
+    "Candidate_F_validity": "VALID"
+  }
+}

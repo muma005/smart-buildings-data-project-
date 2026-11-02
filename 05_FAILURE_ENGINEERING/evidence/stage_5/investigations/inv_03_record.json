@@ -1,0 +1,11 @@
+{
+  "investigation_id": "INV-03",
+  "target_attack_id": "ATK-11_DAG",
+  "status": "ROOT_CAUSE_CONFIRMED",
+  "timeline_analysis": {
+    "confirmed_root_cause": {
+      "type": "UPSTREAM_BASELINE_DATA_CORRUPTION",
+      "description": "Upstream baseline invalidation requires precise DAG quarantine and controlled reassessment."
+    }
+  }
+}

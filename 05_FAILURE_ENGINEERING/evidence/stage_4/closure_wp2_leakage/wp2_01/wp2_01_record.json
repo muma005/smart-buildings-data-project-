@@ -1,0 +1,12 @@
+{
+  "work_package": "WP2_LEAKAGE_HARDENING",
+  "test_id": "WP2_01",
+  "title": "Direct File Access via open('config.gin')",
+  "attack_description": "Policy attempts to open config.gin directly during __init__",
+  "detection_mechanism": "Static AST Call analysis for open() targeting sensitive path pattern",
+  "system_response": "SecurityViolationError raised before policy instantiation",
+  "verdict": "PASS",
+  "details": {
+    "error_message": "Security sandbox violation detected in policy:\n - Prohibited direct file access to sensitive path 'config.gin' in policy_entrypoint (line 5)"
+  }
+}

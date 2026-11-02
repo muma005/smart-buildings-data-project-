@@ -1,0 +1,37 @@
+{
+  "attack_id": "ATK-01",
+  "category": "A: Policy Execution",
+  "description": "Swapped VAV_1 and VAV_2 actuator channel mappings",
+  "entry_point": "SemanticActuatorProbe.evaluate_response()",
+  "injection_method": "Interventional pulse routing to wrong zone coil",
+  "system_response": "Probe flagged target \u0394T = 0.05 K < 0.5 K and identified culprit VAV_2 (\u0394T = 0.85 K)",
+  "dimensions": {
+    "detection": true,
+    "evidence_preservation": true,
+    "containment": true,
+    "lineage_handling": true,
+    "clean_controls": true
+  },
+  "verdict": "PASS",
+  "details": {
+    "schema_version": "v1.0",
+    "target_zone": "VAV_1",
+    "passed": false,
+    "delta_t_target_k": 0.05000000000001137,
+    "max_delta_others_k": 0.8500000000000227,
+    "margin_k": -0.8000000000000114,
+    "criteria": {
+      "min_delta_t_k": 0.5,
+      "min_margin_k": 0.3
+    },
+    "rejection_reasons": [
+      "Target zone 'VAV_1' thermal rise (0.050 K) below minimum threshold (0.500 K)",
+      "Target zone 'VAV_1' (0.050 K) did not exceed other zones by 0.300 K; culprit zone 'VAV_2' experienced delta 0.850 K (indicative of swapped actuator channel)"
+    ],
+    "zone_deltas": {
+      "VAV_1": 0.05000000000001137,
+      "VAV_2": 0.8500000000000227,
+      "VAV_3": 0.01999999999998181
+    }
+  }
+}

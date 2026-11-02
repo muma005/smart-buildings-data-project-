@@ -1,0 +1,25 @@
+{
+  "attack_id": "ATK-02",
+  "category": "A: Policy Execution",
+  "description": "Simulator environment fails to produce RewardResponse at step 0",
+  "entry_point": "SimulationRunner.execute_episode() -> get_reward_info_and_response()",
+  "injection_method": "get_reward_info_and_response returning None",
+  "system_response": "Raised EvidenceCaptureError, halted simulation, set execution_status = FAILED",
+  "dimensions": {
+    "detection": true,
+    "evidence_preservation": true,
+    "containment": true,
+    "lineage_handling": true,
+    "clean_controls": true
+  },
+  "verdict": "PASS",
+  "details": {
+    "status": "FAILED",
+    "errors": [
+      {
+        "timestamp": "2026-11-02T10:07:19.333481+00:00",
+        "error": "EvidenceCaptureError: Environment failed to return RewardResponse at step 0. Aborting run to prevent silent zero substitution.\nTraceback (most recent call last):\n  File \"C:\\Users\\ADMIN\\Desktop\\smart building\\04_EXPERIMENT_FOUNDATION\\core\\runner.py\", line 279, in execute_episode\n    raise EvidenceCaptureError(\ncore.trace_recorder.EvidenceCaptureError: Environment failed to return RewardResponse at step 0. Aborting run to prevent silent zero substitution.\n"
+      }
+    ]
+  }
+}

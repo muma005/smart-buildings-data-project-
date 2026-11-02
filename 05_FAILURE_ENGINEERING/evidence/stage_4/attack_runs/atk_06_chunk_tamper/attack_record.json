@@ -1,0 +1,26 @@
+{
+  "attack_id": "ATK-06",
+  "category": "B: Evidence Persistence",
+  "description": "One byte altered in committed chunk_0000.npz after manifest write",
+  "entry_point": "ScoreVerifier.verify_run_integrity() -> chunk SHA-256 audit",
+  "injection_method": "Direct byte appending to committed NPZ file",
+  "system_response": "ScoreVerifier identified chunk SHA-256 discrepancy against chunks_manifest.json",
+  "dimensions": {
+    "detection": true,
+    "evidence_preservation": true,
+    "containment": true,
+    "lineage_handling": true,
+    "clean_controls": true
+  },
+  "verdict": "PASS",
+  "details": {
+    "errors": [
+      "Missing run manifest: C:\\Users\\ADMIN\\Desktop\\smart building\\05_FAILURE_ENGINEERING\\evidence\\stage_4\\attack_runs\\atk_06_chunk_tamper\\atk06_run\\run_manifest.json",
+      "Run status is 'UNKNOWN', expected 'COMPLETE'",
+      "Missing summary file: C:\\Users\\ADMIN\\Desktop\\smart building\\05_FAILURE_ENGINEERING\\evidence\\stage_4\\attack_runs\\atk_06_chunk_tamper\\atk06_run\\summary.json",
+      "Missing trace CSV: C:\\Users\\ADMIN\\Desktop\\smart building\\05_FAILURE_ENGINEERING\\evidence\\stage_4\\attack_runs\\atk_06_chunk_tamper\\atk06_run\\trace.csv",
+      "Chunk 0 step count inconsistency: 0..287 is not 0 steps",
+      "Chunk 0 (chunk_0000.npz) SHA-256 mismatch: disk=dca65b8fca98fdbebad14c164dc892387b5751218ac92c89e8a2674b3723cefe, manifest=73694f37d6f6adbb2172ccc93df47fd3092fd13f235aa82c8fd1a049804b879d"
+    ]
+  }
+}

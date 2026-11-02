@@ -1,0 +1,83 @@
+{
+  "campaign": "PHASE_05_STAGE_4_CLOSURE",
+  "work_package": "WP2",
+  "title": "Two-Level Policy Information Leakage Hardening Campaign",
+  "total_tests": 6,
+  "all_passed": true,
+  "records": [
+    {
+      "work_package": "WP2_LEAKAGE_HARDENING",
+      "test_id": "WP2_01",
+      "title": "Direct File Access via open('config.gin')",
+      "attack_description": "Policy attempts to open config.gin directly during __init__",
+      "detection_mechanism": "Static AST Call analysis for open() targeting sensitive path pattern",
+      "system_response": "SecurityViolationError raised before policy instantiation",
+      "verdict": "PASS",
+      "details": {
+        "error_message": "Security sandbox violation detected in policy:\n - Prohibited direct file access to sensitive path 'config.gin' in policy_entrypoint (line 5)"
+      }
+    },
+    {
+      "work_package": "WP2_LEAKAGE_HARDENING",
+      "test_id": "WP2_02",
+      "title": "Pathlib Direct File Access to Weather Data",
+      "attack_description": "Policy uses Path(...weather...).read_text() to inspect ground truth weather series",
+      "detection_mechanism": "Static AST Attribute Call analysis for Path.read_text targeting sensitive pattern",
+      "system_response": "SecurityViolationError raised, execution aborted",
+      "verdict": "PASS",
+      "details": {
+        "error_message": "Security sandbox violation detected in policy:\n - Prohibited direct file access to sensitive path 'smart_buildings/weather/phoenix.csv' in policy_entrypoint (line 6)"
+      }
+    },
+    {
+      "work_package": "WP2_LEAKAGE_HARDENING",
+      "test_id": "WP2_03",
+      "title": "Prohibited Module Imports (weather, simulator)",
+      "attack_description": "Policy attempts to import smart_buildings.weather and smart_buildings.simulator",
+      "detection_mechanism": "Static AST Import and ImportFrom analysis against PROHIBITED_MODULES",
+      "system_response": "SecurityViolationError raised for both direct and from-import variants",
+      "verdict": "PASS",
+      "details": {
+        "weather_err": "Security sandbox violation detected in policy:\n - Prohibited module import: 'smart_buildings.weather' in policy_entrypoint (line 4)",
+        "sim_err": "Security sandbox violation detected in policy:\n - Prohibited module import: 'smart_buildings.simulator' in policy_entrypoint (line 2)"
+      }
+    },
+    {
+      "work_package": "WP2_LEAKAGE_HARDENING",
+      "test_id": "WP2_04",
+      "title": "Recursive Local Dependencies AST Audit",
+      "attack_description": "Clean entrypoint policy imports helper modules that contain ctypes and open('config.gin')",
+      "detection_mechanism": "Recursive walk across local_deps_dir auditing every .py file AST",
+      "system_response": "All violations in nested dependencies aggregated and raised in SecurityViolationError",
+      "verdict": "PASS",
+      "details": {
+        "error_message": "Security sandbox violation detected in policy:\n - Prohibited module import: 'ctypes' in local_dep:stealth_helper.py (line 1)\n - Prohibited direct file access to sensitive path 'scenario/config.gin' in local_dep:io_helper.py (line 2)"
+      }
+    },
+    {
+      "work_package": "WP2_LEAKAGE_HARDENING",
+      "test_id": "WP2_05",
+      "title": "Clean Policy and Clean Local Dependency Control",
+      "attack_description": "Legitimate RL policy using numpy and local math_helper.py",
+      "detection_mechanism": "Static AST audit across policy and local_deps",
+      "system_response": "Zero violations detected; returned empty violations list",
+      "verdict": "PASS",
+      "details": {
+        "violations_count": 0
+      }
+    },
+    {
+      "work_package": "WP2_LEAKAGE_HARDENING",
+      "test_id": "WP2_06",
+      "title": "SimulationRunner Fail-Closed Halt Before env.reset()",
+      "attack_description": "Hostile policy submitted to SimulationRunner.execute_episode()",
+      "detection_mechanism": "PolicyAdapter AST audit in SimulationRunner before env.reset()",
+      "system_response": "Zero simulation steps executed; status=FAILED, evidence_validity=INVALID recorded in run manifest",
+      "verdict": "PASS",
+      "details": {
+        "env_reset_called": false,
+        "manifest_status": "FAILED"
+      }
+    }
+  ]
+}

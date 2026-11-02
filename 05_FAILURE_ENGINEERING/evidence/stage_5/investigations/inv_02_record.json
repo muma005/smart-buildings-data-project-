@@ -1,0 +1,31 @@
+{
+  "$schema": "https://smart-buildings.neurips/schemas/v1/investigation_record.json",
+  "schema_version": "v1.0",
+  "investigation_id": "INV-02",
+  "target_attack_id": "ATK-05_P4",
+  "title": "Process Crash Recovery & Uncommitted RAM Buffer Window Reconstruction",
+  "status": "ROOT_CAUSE_CONFIRMED",
+  "evidence_sources": [
+    "evidence/stage_4/closure_wp3_crash/wp3_summary.json",
+    "evidence/stage_4/closure_wp3_crash/p4_uncommitted_buffer_window/RUN_EXP_WP3_P4_scen_1_20261102_100842_d9d23762/run_manifest.json"
+  ],
+  "timeline_analysis": {
+    "first_detected_symptom": "Trace CSV step count (350) exceeds durable chunk step count (288).",
+    "earliest_verified_deviation": "Step loop: Execution severed at step 350 before next chunk flush boundary.",
+    "confirmed_root_cause": {
+      "type": "PROCESS_TERMINATION_UNCOMMITTED_RAM_BUFFER",
+      "description": "Subprocess terminated with 62 steps held in volatile RAM buffer. Durable chunks commit every 288 steps; steps [288, 350) were uncommitted.",
+      "reproducible": true
+    },
+    "downstream_consequences": [
+      "Run marked status=INCOMPLETE, evidence_validity=INVALID.",
+      "Comparison eligibility blocked (valid_comparison = False).",
+      "Uncommitted data loss window strictly bounded to 62 steps.",
+      "Zero leaked steps allowed into official evaluation score aggregation."
+    ]
+  },
+  "uncertainty_assessment": {
+    "confidence_level": "HIGH",
+    "unverified_hypotheses": []
+  }
+}

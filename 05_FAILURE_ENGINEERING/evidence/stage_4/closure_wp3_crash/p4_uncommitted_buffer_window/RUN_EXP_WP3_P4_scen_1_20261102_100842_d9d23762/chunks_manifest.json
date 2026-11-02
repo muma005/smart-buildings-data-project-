@@ -1,0 +1,16 @@
+{
+  "total_chunks": 1,
+  "chunk_size": 288,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "start_step": 0,
+      "end_step": 287,
+      "num_steps": 288,
+      "sha256": "b277ed2d6a06ace2ff03e11abe8747912bfa935b9fc9726d5a808f4d0fc04bca",
+      "file_name": "chunk_0000.npz",
+      "is_final": false
+    }
+  ],
+  "recovered_at_utc": "2026-11-02T10:08:43.154225+00:00"
+}

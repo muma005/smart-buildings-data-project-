@@ -1,0 +1,51 @@
+{
+  "run_id": "RUN_EXP_WP3_P3_scen_1_20261102_100841_4ba5556c",
+  "experiment_id": "EXP_WP3_P3",
+  "policy_name": "PolicyP3",
+  "scenario_id": "scen_1",
+  "project_git_commit": "5d9a9075268a3491c3ac050c0d0b3e31e4dee70b",
+  "starter_kit_commit": "95cea5b1c57b5291f44baf0283e0a081d53f5b16",
+  "python_version": "3.12.13",
+  "platform": "win32",
+  "created_at_utc": "2026-11-02T10:08:41.609907+00:00",
+  "status": "INCOMPLETE",
+  "execution_status": "INCOMPLETE",
+  "evidence_validity": "INVALID",
+  "expected_steps": 576,
+  "actual_steps": 576,
+  "dependencies": [],
+  "quarantine_history": [],
+  "hashes": {
+    "config_sha256": "cfg_hash",
+    "policy_sha256": "pol_hash",
+    "trace_sha256": "19f76f0c7a7bd488dbeff0c5fdcdd0b52c9add37ffa159b46c855ab16a4c68f1",
+    "chunks_manifest_sha256": "3255f84f81c7ced82f88619138ac12c8ac27d421543fabe96237cd7405705b97",
+    "artifact_manifest_sha256": null
+  },
+  "artifacts": {
+    "run_dir": "C:\\Users\\ADMIN\\Desktop\\smart building\\05_FAILURE_ENGINEERING\\evidence\\stage_4\\closure_wp3_crash\\p3_mid_manifest_replacement\\RUN_EXP_WP3_P3_scen_1_20261102_100841_4ba5556c",
+    "trace_path": null,
+    "summary_path": null,
+    "evaluation_path": null,
+    "chunks_dir": null,
+    "chunks_manifest_path": null,
+    "artifacts_vault_dir": null,
+    "artifact_manifest_path": null
+  },
+  "metadata": {
+    "data_loss_window": {
+      "durable_chunk_steps": 576,
+      "streaming_csv_steps": 576,
+      "data_loss_start_step": 576,
+      "expected_steps": 576,
+      "uncommitted_steps": 0
+    }
+  },
+  "errors": [
+    {
+      "timestamp": "2026-11-02T10:08:42.396153+00:00",
+      "error": "Interrupted run recovered: crash occurred during execution. Durable chunks cover steps 0..575 (576 steps). Streaming CSV covers 576 steps. Run transitioned to INCOMPLETE; never eligible for promotion or completion."
+    }
+  ],
+  "updated_at_utc": "2026-11-02T10:08:42.396153+00:00"
+}

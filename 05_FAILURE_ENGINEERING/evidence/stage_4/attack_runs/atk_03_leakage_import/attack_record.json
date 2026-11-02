@@ -1,0 +1,19 @@
+{
+  "attack_id": "ATK-03",
+  "category": "A: Policy Execution",
+  "description": "Policy attempts to import prohibited ctypes module",
+  "entry_point": "SimulationRunner.execute_episode() -> PolicyAdapter.audit_policy_ast()",
+  "injection_method": "Prohibited import inside policy AST",
+  "system_response": "Static AST parser raised SecurityViolationError, halted execution before env.reset()",
+  "dimensions": {
+    "detection": true,
+    "evidence_preservation": true,
+    "containment": true,
+    "lineage_handling": true,
+    "clean_controls": true
+  },
+  "verdict": "PASS",
+  "details": {
+    "status": "FAILED"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "work_package": "WP2_LEAKAGE_HARDENING",
+  "test_id": "WP2_05",
+  "title": "Clean Policy and Clean Local Dependency Control",
+  "attack_description": "Legitimate RL policy using numpy and local math_helper.py",
+  "detection_mechanism": "Static AST audit across policy and local_deps",
+  "system_response": "Zero violations detected; returned empty violations list",
+  "verdict": "PASS",
+  "details": {
+    "violations_count": 0
+  }
+}

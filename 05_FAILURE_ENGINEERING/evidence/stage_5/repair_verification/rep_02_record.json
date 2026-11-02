@@ -1,0 +1,31 @@
+{
+  "$schema": "https://smart-buildings.neurips/schemas/v1/repair_record.json",
+  "schema_version": "v1.0",
+  "repair_id": "REP-02",
+  "investigation_id": "INV-02",
+  "target_attack_id": "ATK-05_P4",
+  "confirmed_root_cause": {
+    "type": "PROCESS_TERMINATION_UNCOMMITTED_RAM_BUFFER",
+    "description": "Subprocess terminated with 62 steps held in volatile RAM buffer. Durable chunks commit every 288 steps; steps [288, 350) were uncommitted.",
+    "reproducible": true
+  },
+  "authorized_by": "LEAD_SYSTEM_ARCHITECT",
+  "affected_files": [
+    "04_EXPERIMENT_FOUNDATION/evaluation/forensic_investigator.py"
+  ],
+  "patch_description": "Added ForensicInvestigator.reconstruct_crash_timeline() to audit data-loss windows and verify evaluation isolation.",
+  "pre_repair_reproduction": {
+    "description": "Process crash at P4 left 62 steps in volatile RAM with no forensic window audit.",
+    "command": "pytest tests/test_wp3_genuine_crash_recovery.py::test_wp3_p4_uncommitted_buffer_window",
+    "observed_pre_repair": "Uncommitted memory buffer discarded without structured data-loss audit"
+  },
+  "post_repair_invariants": {
+    "quantified_loss_window": [
+      288,
+      350
+    ],
+    "evaluation_leakage_prevented": true,
+    "durable_chunks_intact": true
+  },
+  "governance_status": "REPAIR_IMPLEMENTED_PENDING_VERIFICATION"
+}

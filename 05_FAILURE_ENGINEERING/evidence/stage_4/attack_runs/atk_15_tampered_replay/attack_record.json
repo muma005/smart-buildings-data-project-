@@ -1,0 +1,24 @@
+{
+  "attack_id": "ATK-15",
+  "category": "E: Promotion & Release",
+  "description": "Preserved dependency modified in artifacts vault prior to replay",
+  "entry_point": "ScoreVerifier.verify_run_integrity() -> artifact manifest audit",
+  "injection_method": "Checksum mismatch between artifact_manifest.json and helper.py on disk",
+  "system_response": "ScoreVerifier detected checksum mismatch, marked run integrity invalid, preventing replay",
+  "dimensions": {
+    "detection": true,
+    "evidence_preservation": true,
+    "containment": true,
+    "lineage_handling": true,
+    "clean_controls": true
+  },
+  "verdict": "PASS",
+  "details": {
+    "errors": [
+      "Missing run manifest: C:\\Users\\ADMIN\\Desktop\\smart building\\05_FAILURE_ENGINEERING\\evidence\\stage_4\\attack_runs\\atk_15_tampered_replay\\atk15_run\\run_manifest.json",
+      "Run status is 'UNKNOWN', expected 'COMPLETE'",
+      "Chunk 0 step count inconsistency: 0..0 is not 0 steps",
+      "Preserved artifact checksum mismatch for artifacts/local_deps/helper.py: disk=1cfeb13a2258c8d861adde18b4e105565bc270e77e710d9c26e8d55da7df5b9c, recorded=EXPECTED_CORRECT_SHA"
+    ]
+  }
+}
