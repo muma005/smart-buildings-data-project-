@@ -1,0 +1,1116 @@
+{
+  "schema_version": "v1.0",
+  "description": "Deconstructed baseline returns across 30 scenarios, buildings, and climates",
+  "total_scenarios": 30,
+  "overall_summary": {
+    "bang_bang": {
+      "total_return": -58372.49411570093,
+      "mean_scenario_return": -1945.7498038566978,
+      "mae_score": 0.2252025235945251
+    },
+    "fixed_setpoint": {
+      "total_return": -17085.22154878935,
+      "mean_scenario_return": -569.507384959645,
+      "mae_score": 0.06591520659255148
+    },
+    "pid": {
+      "total_return": -17458.618325117033,
+      "mean_scenario_return": -581.9539441705678,
+      "mae_score": 0.06735578057529719
+    },
+    "pid_water": {
+      "total_return": -14033.424047813693,
+      "mean_scenario_return": -467.78080159378976,
+      "mae_score": 0.05414129648076272
+    }
+  },
+  "building_summary": {
+    "building_train_7": {
+      "tau_hours": 1.94,
+      "archetype": "Fast / Leaky",
+      "K_ahus": 4,
+      "V_zones": 36,
+      "policy_mae": {
+        "bang_bang": 0.23539763638257927,
+        "fixed_setpoint": 0.09194287777742918,
+        "pid": 0.05824173046545598,
+        "pid_water": 0.04270953640015847
+      },
+      "policy_mean_return": {
+        "bang_bang": -2033.835578345485,
+        "fixed_setpoint": -794.3864639969881,
+        "pid": -503.2085512215396,
+        "pid_water": -369.0103944973692
+      }
+    },
+    "building_train_2": {
+      "tau_hours": 3.11,
+      "archetype": "Fast / Commercial",
+      "K_ahus": 9,
+      "V_zones": 85,
+      "policy_mae": {
+        "bang_bang": 0.2432134100806815,
+        "fixed_setpoint": 0.08039041610811834,
+        "pid": 0.06624678883292068,
+        "pid_water": 0.04719594701170223
+      },
+      "policy_mean_return": {
+        "bang_bang": -2101.363863097088,
+        "fixed_setpoint": -694.5731951741425,
+        "pid": -572.3722555164346,
+        "pid_water": -407.7729821811073
+      }
+    },
+    "building_train_8": {
+      "tau_hours": 4.94,
+      "archetype": "Medium / Insulated",
+      "K_ahus": 3,
+      "V_zones": 30,
+      "policy_mae": {
+        "bang_bang": 0.24954037205633994,
+        "fixed_setpoint": 0.07309967610634327,
+        "pid": 0.0899299003267889,
+        "pid_water": 0.06838752672653309
+      },
+      "policy_mean_return": {
+        "bang_bang": -2156.0288145667773,
+        "fixed_setpoint": -631.5812015588059,
+        "pid": -776.994338823456,
+        "pid_water": -590.8682309172458
+      }
+    },
+    "building_train_4": {
+      "tau_hours": 7.79,
+      "archetype": "Medium / Massive",
+      "K_ahus": 6,
+      "V_zones": 54,
+      "policy_mae": {
+        "bang_bang": 0.1884560501069436,
+        "fixed_setpoint": 0.034942988356797614,
+        "pid": 0.039423366093601385,
+        "pid_water": 0.03517394546863536
+      },
+      "policy_mean_return": {
+        "bang_bang": -1628.260272923993,
+        "fixed_setpoint": -301.90741940273136,
+        "pid": -340.61788304871595,
+        "pid_water": -303.90288884900946
+      }
+    },
+    "building_train_5": {
+      "tau_hours": 9.6,
+      "archetype": "Slow / Dense",
+      "K_ahus": 8,
+      "V_zones": 79,
+      "policy_mae": {
+        "bang_bang": 0.22320132665171152,
+        "fixed_setpoint": 0.04299169284046583,
+        "pid": 0.07164820907192916,
+        "pid_water": 0.04590410588372836
+      },
+      "policy_mean_return": {
+        "bang_bang": -1928.4594622707875,
+        "fixed_setpoint": -371.4482261416248,
+        "pid": -619.040526381468,
+        "pid_water": -396.61147483541305
+      }
+    },
+    "building_train_1": {
+      "tau_hours": 14.43,
+      "archetype": "Slow / Massive",
+      "K_ahus": 4,
+      "V_zones": 39,
+      "policy_mae": {
+        "bang_bang": 0.21140634628889513,
+        "fixed_setpoint": 0.0721235883661548,
+        "pid": 0.0786446886610871,
+        "pid_water": 0.08547671739381876
+      },
+      "policy_mean_return": {
+        "bang_bang": -1826.5508319360538,
+        "fixed_setpoint": -623.1478034835775,
+        "pid": -679.4901100317926,
+        "pid_water": -738.5188382825942
+      }
+    }
+  },
+  "climate_summary": {
+    "fairbanks": {
+      "regime": "Extreme Subarctic Cold",
+      "policy_mae": {
+        "bang_bang": 0.19987587610506358,
+        "fixed_setpoint": 0.0742672561362992,
+        "pid": 0.07545555277145868,
+        "pid_water": 0.07846803103834671
+      },
+      "policy_mean_return": {
+        "bang_bang": -1726.9275695477493,
+        "fixed_setpoint": -641.6690930176251,
+        "pid": -651.935975945403,
+        "pid_water": -677.9637881713155
+      }
+    },
+    "denver": {
+      "regime": "High Altitude / Continental",
+      "policy_mae": {
+        "bang_bang": 0.18436561071578583,
+        "fixed_setpoint": 0.0768235588601328,
+        "pid": 0.04956370740917586,
+        "pid_water": 0.03735132975694381
+      },
+      "policy_mean_return": {
+        "bang_bang": -1592.9188765843894,
+        "fixed_setpoint": -663.7555485515473,
+        "pid": -428.2304320152794,
+        "pid_water": -322.7154890999945
+      }
+    },
+    "atlanta": {
+      "regime": "Humid Subtropical / Variable",
+      "policy_mae": {
+        "bang_bang": 0.23203622339930638,
+        "fixed_setpoint": 0.03305632648039415,
+        "pid": 0.0417991993648692,
+        "pid_water": 0.030096726815787667
+      },
+      "policy_mean_return": {
+        "bang_bang": -2004.792970170007,
+        "fixed_setpoint": -285.6066607906055,
+        "pid": -361.14508251246986,
+        "pid_water": -260.03571968840544
+      }
+    },
+    "phoenix": {
+      "regime": "Extreme Desert Heat",
+      "policy_mae": {
+        "bang_bang": 0.23781512615269432,
+        "fixed_setpoint": 0.12020533073071449,
+        "pid": 0.09498901350289081,
+        "pid_water": 0.07814381233257611
+      },
+      "policy_mean_return": {
+        "bang_bang": -2054.722689959279,
+        "fixed_setpoint": -1038.5740575133732,
+        "pid": -820.7050766649767,
+        "pid_water": -675.1625385534576
+      }
+    },
+    "singapore": {
+      "regime": "Tropical Constant Hot/Humid",
+      "policy_mae": {
+        "bang_bang": 0.27191978159977565,
+        "fixed_setpoint": 0.02522356075521689,
+        "pid": 0.07497142982809143,
+        "pid_water": 0.04664658246015926
+      },
+      "policy_mean_return": {
+        "bang_bang": -2349.3869130220614,
+        "fixed_setpoint": -217.93156492507396,
+        "pid": -647.75315371471,
+        "pid_water": -403.026472455776
+      }
+    }
+  },
+  "scenarios": [
+    {
+      "scenario_id": "building_train_1/atlanta_2",
+      "building": "building_train_1",
+      "weather": "atlanta_2",
+      "climate_family": "atlanta",
+      "tau_hours": 14.43,
+      "archetype": "Slow / Massive",
+      "K_ahus": 4,
+      "V_zones": 39,
+      "returns": {
+        "bang_bang": -1521.123600285433,
+        "fixed_setpoint": -226.54133224006728,
+        "pid": -221.63060844315078,
+        "pid_water": -208.20547078879645
+      },
+      "mean_rewards": {
+        "bang_bang": -0.17605597225525846,
+        "fixed_setpoint": -0.026220061601859638,
+        "pid": -0.02565169079203134,
+        "pid_water": -0.02409785541536996
+      },
+      "mae_scores": {
+        "bang_bang": 0.17605597225525846,
+        "fixed_setpoint": 0.026220061601859638,
+        "pid": 0.02565169079203134,
+        "pid_water": 0.02409785541536996
+      },
+      "pid_water_advantage_over_fixed": 18.33586145127083,
+      "pid_water_advantage_over_pid": 13.42513765435433
+    },
+    {
+      "scenario_id": "building_train_1/denver_7",
+      "building": "building_train_1",
+      "weather": "denver_7",
+      "climate_family": "denver",
+      "tau_hours": 14.43,
+      "archetype": "Slow / Massive",
+      "K_ahus": 4,
+      "V_zones": 39,
+      "returns": {
+        "bang_bang": -667.0259147151455,
+        "fixed_setpoint": -265.7422221327088,
+        "pid": -264.81174467093206,
+        "pid_water": -258.4793906195655
+      },
+      "mean_rewards": {
+        "bang_bang": -0.0772020734624011,
+        "fixed_setpoint": -0.03075720163573018,
+        "pid": -0.03064950748506158,
+        "pid_water": -0.029916596136523785
+      },
+      "mae_scores": {
+        "bang_bang": 0.0772020734624011,
+        "fixed_setpoint": 0.03075720163573018,
+        "pid": 0.03064950748506158,
+        "pid_water": 0.029916596136523785
+      },
+      "pid_water_advantage_over_fixed": 7.262831513143283,
+      "pid_water_advantage_over_pid": 6.332354051366565
+    },
+    {
+      "scenario_id": "building_train_1/fairbanks_1",
+      "building": "building_train_1",
+      "weather": "fairbanks_1",
+      "climate_family": "fairbanks",
+      "tau_hours": 14.43,
+      "archetype": "Slow / Massive",
+      "K_ahus": 4,
+      "V_zones": 39,
+      "returns": {
+        "bang_bang": -2480.6730692398487,
+        "fixed_setpoint": -1274.3370816265524,
+        "pid": -1307.0561464700731,
+        "pid_water": -1828.9035575342423
+      },
+      "mean_rewards": {
+        "bang_bang": -0.28711493856942694,
+        "fixed_setpoint": -0.14749271778085096,
+        "pid": -0.1512796465821844,
+        "pid_water": -0.21167865249238915
+      },
+      "mae_scores": {
+        "bang_bang": 0.28711493856942694,
+        "fixed_setpoint": 0.14749271778085096,
+        "pid": 0.1512796465821844,
+        "pid_water": 0.21167865249238915
+      },
+      "pid_water_advantage_over_fixed": -554.5664759076899,
+      "pid_water_advantage_over_pid": -521.8474110641691
+    },
+    {
+      "scenario_id": "building_train_1/phoenix_5",
+      "building": "building_train_1",
+      "weather": "phoenix_5",
+      "climate_family": "phoenix",
+      "tau_hours": 14.43,
+      "archetype": "Slow / Massive",
+      "K_ahus": 4,
+      "V_zones": 39,
+      "returns": {
+        "bang_bang": -2312.0761033286108,
+        "fixed_setpoint": -1119.0856497205677,
+        "pid": -1334.060819694696,
+        "pid_water": -1153.7718883943899
+      },
+      "mean_rewards": {
+        "bang_bang": -0.2676014008482188,
+        "fixed_setpoint": -0.12952380205099165,
+        "pid": -0.1544051874646639,
+        "pid_water": -0.13353841300860994
+      },
+      "mae_scores": {
+        "bang_bang": 0.2676014008482188,
+        "fixed_setpoint": 0.12952380205099165,
+        "pid": 0.1544051874646639,
+        "pid_water": 0.13353841300860994
+      },
+      "pid_water_advantage_over_fixed": -34.68623867382212,
+      "pid_water_advantage_over_pid": 180.2889313003061
+    },
+    {
+      "scenario_id": "building_train_1/singapore_8",
+      "building": "building_train_1",
+      "weather": "singapore_8",
+      "climate_family": "singapore",
+      "tau_hours": 14.43,
+      "archetype": "Slow / Massive",
+      "K_ahus": 4,
+      "V_zones": 39,
+      "returns": {
+        "bang_bang": -2151.8554721112305,
+        "fixed_setpoint": -230.03273169799104,
+        "pid": -269.8912308801109,
+        "pid_water": -243.23388407597668
+      },
+      "mean_rewards": {
+        "bang_bang": -0.2490573463091702,
+        "fixed_setpoint": -0.026624158761341554,
+        "pid": -0.03123741098149432,
+        "pid_water": -0.028152069916201006
+      },
+      "mae_scores": {
+        "bang_bang": 0.2490573463091702,
+        "fixed_setpoint": 0.026624158761341554,
+        "pid": 0.03123741098149432,
+        "pid_water": 0.028152069916201006
+      },
+      "pid_water_advantage_over_fixed": -13.201152377985636,
+      "pid_water_advantage_over_pid": 26.65734680413425
+    },
+    {
+      "scenario_id": "building_train_2/atlanta_3",
+      "building": "building_train_2",
+      "weather": "atlanta_3",
+      "climate_family": "atlanta",
+      "tau_hours": 3.11,
+      "archetype": "Fast / Commercial",
+      "K_ahus": 9,
+      "V_zones": 85,
+      "returns": {
+        "bang_bang": -2197.68016190649,
+        "fixed_setpoint": -173.4145439799613,
+        "pid": -174.3497701983024,
+        "pid_water": -172.65914525010658
+      },
+      "mean_rewards": {
+        "bang_bang": -0.2543611298502882,
+        "fixed_setpoint": -0.020071127775458483,
+        "pid": -0.020179371550729443,
+        "pid_water": -0.019983697366910483
+      },
+      "mae_scores": {
+        "bang_bang": 0.2543611298502882,
+        "fixed_setpoint": 0.020071127775458483,
+        "pid": 0.020179371550729443,
+        "pid_water": 0.019983697366910483
+      },
+      "pid_water_advantage_over_fixed": 0.7553987298547327,
+      "pid_water_advantage_over_pid": 1.6906249481958184
+    },
+    {
+      "scenario_id": "building_train_2/denver_8",
+      "building": "building_train_2",
+      "weather": "denver_8",
+      "climate_family": "denver",
+      "tau_hours": 3.11,
+      "archetype": "Fast / Commercial",
+      "K_ahus": 9,
+      "V_zones": 85,
+      "returns": {
+        "bang_bang": -1782.9774064443473,
+        "fixed_setpoint": -820.0197139169904,
+        "pid": -591.6800780461381,
+        "pid_water": -343.6842219436385
+      },
+      "mean_rewards": {
+        "bang_bang": -0.20636312574587354,
+        "fixed_setpoint": -0.09490968911076278,
+        "pid": -0.06848149051459931,
+        "pid_water": -0.03977826642866186
+      },
+      "mae_scores": {
+        "bang_bang": 0.20636312574587354,
+        "fixed_setpoint": 0.09490968911076278,
+        "pid": 0.06848149051459931,
+        "pid_water": 0.03977826642866186
+      },
+      "pid_water_advantage_over_fixed": 476.33549197335196,
+      "pid_water_advantage_over_pid": 247.9958561024996
+    },
+    {
+      "scenario_id": "building_train_2/fairbanks_2",
+      "building": "building_train_2",
+      "weather": "fairbanks_2",
+      "climate_family": "fairbanks",
+      "tau_hours": 3.11,
+      "archetype": "Fast / Commercial",
+      "K_ahus": 9,
+      "V_zones": 85,
+      "returns": {
+        "bang_bang": -1603.0001924954413,
+        "fixed_setpoint": -850.7744004843989,
+        "pid": -806.0768162965214,
+        "pid_water": -689.567621762244
+      },
+      "mean_rewards": {
+        "bang_bang": -0.18553242968697237,
+        "fixed_setpoint": -0.09846925931532395,
+        "pid": -0.09329592781209739,
+        "pid_water": -0.07981106733359306
+      },
+      "mae_scores": {
+        "bang_bang": 0.18553242968697237,
+        "fixed_setpoint": 0.09846925931532395,
+        "pid": 0.09329592781209739,
+        "pid_water": 0.07981106733359306
+      },
+      "pid_water_advantage_over_fixed": 161.20677872215492,
+      "pid_water_advantage_over_pid": 116.50919453427741
+    },
+    {
+      "scenario_id": "building_train_2/phoenix_6",
+      "building": "building_train_2",
+      "weather": "phoenix_6",
+      "climate_family": "phoenix",
+      "tau_hours": 3.11,
+      "archetype": "Fast / Commercial",
+      "K_ahus": 9,
+      "V_zones": 85,
+      "returns": {
+        "bang_bang": -2536.1256021359154,
+        "fixed_setpoint": -1434.1609329137652,
+        "pid": -909.5388818592976,
+        "pid_water": -611.9813639851012
+      },
+      "mean_rewards": {
+        "bang_bang": -0.293533055802768,
+        "fixed_setpoint": -0.16599084871687098,
+        "pid": -0.10527070391890019,
+        "pid_water": -0.07083117638716449
+      },
+      "mae_scores": {
+        "bang_bang": 0.293533055802768,
+        "fixed_setpoint": 0.16599084871687098,
+        "pid": 0.10527070391890019,
+        "pid_water": 0.07083117638716449
+      },
+      "pid_water_advantage_over_fixed": 822.179568928664,
+      "pid_water_advantage_over_pid": 297.5575178741964
+    },
+    {
+      "scenario_id": "building_train_2/singapore_1",
+      "building": "building_train_2",
+      "weather": "singapore_1",
+      "climate_family": "singapore",
+      "tau_hours": 3.11,
+      "archetype": "Fast / Commercial",
+      "K_ahus": 9,
+      "V_zones": 85,
+      "returns": {
+        "bang_bang": -2387.0359525032472,
+        "fixed_setpoint": -194.49638457559604,
+        "pid": -380.2157311819137,
+        "pid_water": -220.97255796444597
+      },
+      "mean_rewards": {
+        "bang_bang": -0.2762773093175055,
+        "fixed_setpoint": -0.02251115562217547,
+        "pid": -0.04400645036827705,
+        "pid_water": -0.025575527542181245
+      },
+      "mae_scores": {
+        "bang_bang": 0.2762773093175055,
+        "fixed_setpoint": 0.02251115562217547,
+        "pid": 0.04400645036827705,
+        "pid_water": 0.025575527542181245
+      },
+      "pid_water_advantage_over_fixed": -26.47617338884993,
+      "pid_water_advantage_over_pid": 159.24317321746776
+    },
+    {
+      "scenario_id": "building_train_4/atlanta_5",
+      "building": "building_train_4",
+      "weather": "atlanta_5",
+      "climate_family": "atlanta",
+      "tau_hours": 7.79,
+      "archetype": "Medium / Massive",
+      "K_ahus": 6,
+      "V_zones": 54,
+      "returns": {
+        "bang_bang": -2159.840325841045,
+        "fixed_setpoint": -237.06985630671625,
+        "pid": -249.15797804955218,
+        "pid_water": -246.09202752732745
+      },
+      "mean_rewards": {
+        "bang_bang": -0.24998151919456538,
+        "fixed_setpoint": -0.027438640776240305,
+        "pid": -0.02883772894092039,
+        "pid_water": -0.02848287355640364
+      },
+      "mae_scores": {
+        "bang_bang": 0.24998151919456538,
+        "fixed_setpoint": 0.027438640776240305,
+        "pid": 0.02883772894092039,
+        "pid_water": 0.02848287355640364
+      },
+      "pid_water_advantage_over_fixed": -9.022171220611199,
+      "pid_water_advantage_over_pid": 3.065950522224739
+    },
+    {
+      "scenario_id": "building_train_4/denver_2",
+      "building": "building_train_4",
+      "weather": "denver_2",
+      "climate_family": "denver",
+      "tau_hours": 7.79,
+      "archetype": "Medium / Massive",
+      "K_ahus": 6,
+      "V_zones": 54,
+      "returns": {
+        "bang_bang": -1307.672117187747,
+        "fixed_setpoint": -516.7686190446111,
+        "pid": -538.6404096550923,
+        "pid_water": -470.91149244279586
+      },
+      "mean_rewards": {
+        "bang_bang": -0.15135093948932257,
+        "fixed_setpoint": -0.059811182759792955,
+        "pid": -0.062342640006376425,
+        "pid_water": -0.05450364495865693
+      },
+      "mae_scores": {
+        "bang_bang": 0.15135093948932257,
+        "fixed_setpoint": 0.059811182759792955,
+        "pid": 0.062342640006376425,
+        "pid_water": 0.05450364495865693
+      },
+      "pid_water_advantage_over_fixed": 45.85712660181525,
+      "pid_water_advantage_over_pid": 67.72891721229644
+    },
+    {
+      "scenario_id": "building_train_4/fairbanks_4",
+      "building": "building_train_4",
+      "weather": "fairbanks_4",
+      "climate_family": "fairbanks",
+      "tau_hours": 7.79,
+      "archetype": "Medium / Massive",
+      "K_ahus": 6,
+      "V_zones": 54,
+      "returns": {
+        "bang_bang": -1220.3635330546822,
+        "fixed_setpoint": -264.37772861250414,
+        "pid": -275.93898165453174,
+        "pid_water": -272.8497261964967
+      },
+      "mean_rewards": {
+        "bang_bang": -0.14124577928873636,
+        "fixed_setpoint": -0.030599274144965757,
+        "pid": -0.031937382135941175,
+        "pid_water": -0.03157982942089082
+      },
+      "mae_scores": {
+        "bang_bang": 0.14124577928873636,
+        "fixed_setpoint": 0.030599274144965757,
+        "pid": 0.031937382135941175,
+        "pid_water": 0.03157982942089082
+      },
+      "pid_water_advantage_over_fixed": -8.471997583992561,
+      "pid_water_advantage_over_pid": 3.0892554580350406
+    },
+    {
+      "scenario_id": "building_train_4/phoenix_8",
+      "building": "building_train_4",
+      "weather": "phoenix_8",
+      "climate_family": "phoenix",
+      "tau_hours": 7.79,
+      "archetype": "Medium / Massive",
+      "K_ahus": 6,
+      "V_zones": 54,
+      "returns": {
+        "bang_bang": -1314.132268779962,
+        "fixed_setpoint": -248.5439597835757,
+        "pid": -251.34978884572593,
+        "pid_water": -249.19310807158763
+      },
+      "mean_rewards": {
+        "bang_bang": -0.15209864221990302,
+        "fixed_setpoint": -0.02876666201198793,
+        "pid": -0.029091410746033095,
+        "pid_water": -0.02884179491569301
+      },
+      "mae_scores": {
+        "bang_bang": 0.15209864221990302,
+        "fixed_setpoint": 0.02876666201198793,
+        "pid": 0.029091410746033095,
+        "pid_water": 0.02884179491569301
+      },
+      "pid_water_advantage_over_fixed": -0.6491482880119293,
+      "pid_water_advantage_over_pid": 2.1566807741382945
+    },
+    {
+      "scenario_id": "building_train_4/singapore_3",
+      "building": "building_train_4",
+      "weather": "singapore_3",
+      "climate_family": "singapore",
+      "tau_hours": 7.79,
+      "archetype": "Medium / Massive",
+      "K_ahus": 6,
+      "V_zones": 54,
+      "returns": {
+        "bang_bang": -2139.2931197565276,
+        "fixed_setpoint": -242.77693326624967,
+        "pid": -388.0022570386777,
+        "pid_water": -280.4680900068397
+      },
+      "mean_rewards": {
+        "bang_bang": -0.2476033703421907,
+        "fixed_setpoint": -0.02809918209100112,
+        "pid": -0.04490766863873585,
+        "pid_water": -0.03246158449153237
+      },
+      "mae_scores": {
+        "bang_bang": 0.2476033703421907,
+        "fixed_setpoint": 0.02809918209100112,
+        "pid": 0.04490766863873585,
+        "pid_water": 0.03246158449153237
+      },
+      "pid_water_advantage_over_fixed": -37.69115674059003,
+      "pid_water_advantage_over_pid": 107.53416703183802
+    },
+    {
+      "scenario_id": "building_train_5/atlanta_6",
+      "building": "building_train_5",
+      "weather": "atlanta_6",
+      "climate_family": "atlanta",
+      "tau_hours": 9.6,
+      "archetype": "Slow / Dense",
+      "K_ahus": 8,
+      "V_zones": 79,
+      "returns": {
+        "bang_bang": -2544.417566827679,
+        "fixed_setpoint": -176.62602780643738,
+        "pid": -331.8283386600838,
+        "pid_water": -235.9095256853475
+      },
+      "mean_rewards": {
+        "bang_bang": -0.29449277393838874,
+        "fixed_setpoint": -0.020442827292411734,
+        "pid": -0.038406057715287475,
+        "pid_water": -0.027304343250618923
+      },
+      "mae_scores": {
+        "bang_bang": 0.29449277393838874,
+        "fixed_setpoint": 0.020442827292411734,
+        "pid": 0.038406057715287475,
+        "pid_water": 0.027304343250618923
+      },
+      "pid_water_advantage_over_fixed": -59.28349787891011,
+      "pid_water_advantage_over_pid": 95.91881297473628
+    },
+    {
+      "scenario_id": "building_train_5/denver_3",
+      "building": "building_train_5",
+      "weather": "denver_3",
+      "climate_family": "denver",
+      "tau_hours": 9.6,
+      "archetype": "Slow / Dense",
+      "K_ahus": 8,
+      "V_zones": 79,
+      "returns": {
+        "bang_bang": -1601.6896062492633,
+        "fixed_setpoint": -1005.1657264800451,
+        "pid": -627.5287106633259,
+        "pid_water": -377.2483699281556
+      },
+      "mean_rewards": {
+        "bang_bang": -0.1853807414640351,
+        "fixed_setpoint": -0.11633862575000523,
+        "pid": -0.07263063780825531,
+        "pid_water": -0.04366300577872172
+      },
+      "mae_scores": {
+        "bang_bang": 0.1853807414640351,
+        "fixed_setpoint": 0.11633862575000523,
+        "pid": 0.07263063780825531,
+        "pid_water": 0.04366300577872172
+      },
+      "pid_water_advantage_over_fixed": 627.9173565518895,
+      "pid_water_advantage_over_pid": 250.28034073517028
+    },
+    {
+      "scenario_id": "building_train_5/fairbanks_5",
+      "building": "building_train_5",
+      "weather": "fairbanks_5",
+      "climate_family": "fairbanks",
+      "tau_hours": 9.6,
+      "archetype": "Slow / Dense",
+      "K_ahus": 8,
+      "V_zones": 79,
+      "returns": {
+        "bang_bang": -1735.6530437519905,
+        "fixed_setpoint": -147.05764709862615,
+        "pid": -146.28287117198624,
+        "pid_water": -145.0307303881068
+      },
+      "mean_rewards": {
+        "bang_bang": -0.20088576895277668,
+        "fixed_setpoint": -0.017020561006785433,
+        "pid": -0.016930887867128038,
+        "pid_water": -0.01678596416529014
+      },
+      "mae_scores": {
+        "bang_bang": 0.20088576895277668,
+        "fixed_setpoint": 0.017020561006785433,
+        "pid": 0.016930887867128038,
+        "pid_water": 0.01678596416529014
+      },
+      "pid_water_advantage_over_fixed": 2.0269167105193446,
+      "pid_water_advantage_over_pid": 1.2521407838794403
+    },
+    {
+      "scenario_id": "building_train_5/phoenix_1",
+      "building": "building_train_5",
+      "weather": "phoenix_1",
+      "climate_family": "phoenix",
+      "tau_hours": 9.6,
+      "archetype": "Slow / Dense",
+      "K_ahus": 8,
+      "V_zones": 79,
+      "returns": {
+        "bang_bang": -1145.9699900040705,
+        "fixed_setpoint": -322.4440529941121,
+        "pid": -386.5290114189402,
+        "pid_water": -287.2800934418565
+      },
+      "mean_rewards": {
+        "bang_bang": -0.13263541550973038,
+        "fixed_setpoint": -0.0373199135409852,
+        "pid": -0.044737154099414374,
+        "pid_water": -0.033250010815029686
+      },
+      "mae_scores": {
+        "bang_bang": 0.13263541550973038,
+        "fixed_setpoint": 0.0373199135409852,
+        "pid": 0.044737154099414374,
+        "pid_water": 0.033250010815029686
+      },
+      "pid_water_advantage_over_fixed": 35.16395955225562,
+      "pid_water_advantage_over_pid": 99.24891797708369
+    },
+    {
+      "scenario_id": "building_train_5/singapore_4",
+      "building": "building_train_5",
+      "weather": "singapore_4",
+      "climate_family": "singapore",
+      "tau_hours": 9.6,
+      "archetype": "Slow / Dense",
+      "K_ahus": 8,
+      "V_zones": 79,
+      "returns": {
+        "bang_bang": -2614.5671045209347,
+        "fixed_setpoint": -205.94767632890307,
+        "pid": -1603.0336999930037,
+        "pid_water": -937.5886547335988
+      },
+      "mean_rewards": {
+        "bang_bang": -0.3026119333936267,
+        "fixed_setpoint": -0.023836536612141558,
+        "pid": -0.1855363078695606,
+        "pid_water": -0.10851720540898134
+      },
+      "mae_scores": {
+        "bang_bang": 0.3026119333936267,
+        "fixed_setpoint": 0.023836536612141558,
+        "pid": 0.1855363078695606,
+        "pid_water": 0.10851720540898134
+      },
+      "pid_water_advantage_over_fixed": -731.6409784046957,
+      "pid_water_advantage_over_pid": 665.4450452594049
+    },
+    {
+      "scenario_id": "building_train_7/atlanta_8",
+      "building": "building_train_7",
+      "weather": "atlanta_8",
+      "climate_family": "atlanta",
+      "tau_hours": 1.94,
+      "archetype": "Fast / Leaky",
+      "K_ahus": 4,
+      "V_zones": 36,
+      "returns": {
+        "bang_bang": -1765.9578466545572,
+        "fixed_setpoint": -549.1382637740917,
+        "pid": -643.8841595980612,
+        "pid_water": -416.95834617485343
+      },
+      "mean_rewards": {
+        "bang_bang": -0.2043932692887219,
+        "fixed_setpoint": -0.06355766941829764,
+        "pid": -0.07452362958310893,
+        "pid_water": -0.04825906784431174
+      },
+      "mae_scores": {
+        "bang_bang": 0.2043932692887219,
+        "fixed_setpoint": 0.06355766941829764,
+        "pid": 0.07452362958310893,
+        "pid_water": 0.04825906784431174
+      },
+      "pid_water_advantage_over_fixed": 132.17991759923825,
+      "pid_water_advantage_over_pid": 226.92581342320773
+    },
+    {
+      "scenario_id": "building_train_7/denver_5",
+      "building": "building_train_7",
+      "weather": "denver_5",
+      "climate_family": "denver",
+      "tau_hours": 1.94,
+      "archetype": "Fast / Leaky",
+      "K_ahus": 4,
+      "V_zones": 36,
+      "returns": {
+        "bang_bang": -2114.749044856462,
+        "fixed_setpoint": -1200.636057085927,
+        "pid": -371.8863025800879,
+        "pid_water": -311.7814880398123
+      },
+      "mean_rewards": {
+        "bang_bang": -0.2447626209324609,
+        "fixed_setpoint": -0.13896250660716747,
+        "pid": -0.04304239613195462,
+        "pid_water": -0.036085820374978275
+      },
+      "mae_scores": {
+        "bang_bang": 0.2447626209324609,
+        "fixed_setpoint": 0.13896250660716747,
+        "pid": 0.04304239613195462,
+        "pid_water": 0.036085820374978275
+      },
+      "pid_water_advantage_over_fixed": 888.8545690461146,
+      "pid_water_advantage_over_pid": 60.104814540275584
+    },
+    {
+      "scenario_id": "building_train_7/fairbanks_7",
+      "building": "building_train_7",
+      "weather": "fairbanks_7",
+      "climate_family": "fairbanks",
+      "tau_hours": 1.94,
+      "archetype": "Fast / Leaky",
+      "K_ahus": 4,
+      "V_zones": 36,
+      "returns": {
+        "bang_bang": -1610.6445096296375,
+        "fixed_setpoint": -615.0814339975914,
+        "pid": -681.5402987254638,
+        "pid_water": -464.1482945604612
+      },
+      "mean_rewards": {
+        "bang_bang": -0.18641718861454137,
+        "fixed_setpoint": -0.07118998078675826,
+        "pid": -0.07888197901915091,
+        "pid_water": -0.053720867425979306
+      },
+      "mae_scores": {
+        "bang_bang": 0.18641718861454137,
+        "fixed_setpoint": 0.07118998078675826,
+        "pid": 0.07888197901915091,
+        "pid_water": 0.053720867425979306
+      },
+      "pid_water_advantage_over_fixed": 150.9331394371302,
+      "pid_water_advantage_over_pid": 217.39200416500262
+    },
+    {
+      "scenario_id": "building_train_7/phoenix_3",
+      "building": "building_train_7",
+      "weather": "phoenix_3",
+      "climate_family": "phoenix",
+      "tau_hours": 1.94,
+      "archetype": "Fast / Leaky",
+      "K_ahus": 4,
+      "V_zones": 36,
+      "returns": {
+        "bang_bang": -2360.9457387775165,
+        "fixed_setpoint": -1381.7365955676978,
+        "pid": -437.4329010749087,
+        "pid_water": -383.5615453256977
+      },
+      "mean_rewards": {
+        "bang_bang": -0.27325760865480514,
+        "fixed_setpoint": -0.15992321707959464,
+        "pid": -0.0506288079947811,
+        "pid_water": -0.04439369737565946
+      },
+      "mae_scores": {
+        "bang_bang": 0.27325760865480514,
+        "fixed_setpoint": 0.15992321707959464,
+        "pid": 0.0506288079947811,
+        "pid_water": 0.04439369737565946
+      },
+      "pid_water_advantage_over_fixed": 998.1750502420001,
+      "pid_water_advantage_over_pid": 53.871355749211034
+    },
+    {
+      "scenario_id": "building_train_7/singapore_6",
+      "building": "building_train_7",
+      "weather": "singapore_6",
+      "climate_family": "singapore",
+      "tau_hours": 1.94,
+      "archetype": "Fast / Leaky",
+      "K_ahus": 4,
+      "V_zones": 36,
+      "returns": {
+        "bang_bang": -2316.8807518092513,
+        "fixed_setpoint": -225.33996955963312,
+        "pid": -381.2990941291764,
+        "pid_water": -268.6022983860212
+      },
+      "mean_rewards": {
+        "bang_bang": -0.268157494422367,
+        "fixed_setpoint": -0.026081014995327906,
+        "pid": -0.04413183959828431,
+        "pid_water": -0.03108822897986356
+      },
+      "mae_scores": {
+        "bang_bang": 0.268157494422367,
+        "fixed_setpoint": 0.026081014995327906,
+        "pid": 0.04413183959828431,
+        "pid_water": 0.03108822897986356
+      },
+      "pid_water_advantage_over_fixed": -43.26232882638806,
+      "pid_water_advantage_over_pid": 112.69679574315523
+    },
+    {
+      "scenario_id": "building_train_8/atlanta_1",
+      "building": "building_train_8",
+      "weather": "atlanta_1",
+      "climate_family": "atlanta",
+      "tau_hours": 4.94,
+      "archetype": "Medium / Insulated",
+      "K_ahus": 3,
+      "V_zones": 30,
+      "returns": {
+        "bang_bang": -1839.7383195048387,
+        "fixed_setpoint": -350.84994063635895,
+        "pid": -546.019640125669,
+        "pid_water": -280.38980270400134
+      },
+      "mean_rewards": {
+        "bang_bang": -0.21293267586861558,
+        "fixed_setpoint": -0.0406076320180971,
+        "pid": -0.06319671760713762,
+        "pid_water": -0.032452523461111264
+      },
+      "mae_scores": {
+        "bang_bang": 0.21293267586861558,
+        "fixed_setpoint": 0.0406076320180971,
+        "pid": 0.06319671760713762,
+        "pid_water": 0.032452523461111264
+      },
+      "pid_water_advantage_over_fixed": 70.46013793235761,
+      "pid_water_advantage_over_pid": 265.6298374216676
+    },
+    {
+      "scenario_id": "building_train_8/denver_6",
+      "building": "building_train_8",
+      "weather": "denver_6",
+      "climate_family": "denver",
+      "tau_hours": 4.94,
+      "archetype": "Medium / Insulated",
+      "K_ahus": 3,
+      "V_zones": 30,
+      "returns": {
+        "bang_bang": -2083.3991700533716,
+        "fixed_setpoint": -174.2009526490017,
+        "pid": -174.8353464761003,
+        "pid_water": -174.18797162599913
+      },
+      "mean_rewards": {
+        "bang_bang": -0.2411341632006217,
+        "fixed_setpoint": -0.02016214729733816,
+        "pid": -0.020235572508807906,
+        "pid_water": -0.02016064486412027
+      },
+      "mae_scores": {
+        "bang_bang": 0.2411341632006217,
+        "fixed_setpoint": 0.02016214729733816,
+        "pid": 0.020235572508807906,
+        "pid_water": 0.02016064486412027
+      },
+      "pid_water_advantage_over_fixed": 0.012981023002566872,
+      "pid_water_advantage_over_pid": 0.6473748501011869
+    },
+    {
+      "scenario_id": "building_train_8/fairbanks_8",
+      "building": "building_train_8",
+      "weather": "fairbanks_8",
+      "climate_family": "fairbanks",
+      "tau_hours": 4.94,
+      "archetype": "Medium / Insulated",
+      "K_ahus": 3,
+      "V_zones": 30,
+      "returns": {
+        "bang_bang": -1711.231069114896,
+        "fixed_setpoint": -698.3862662860774,
+        "pid": -694.7207413538417,
+        "pid_water": -667.2827985863423
+      },
+      "mean_rewards": {
+        "bang_bang": -0.19805915151792777,
+        "fixed_setpoint": -0.08083174378311081,
+        "pid": -0.0804074932122502,
+        "pid_water": -0.07723180539193777
+      },
+      "mae_scores": {
+        "bang_bang": 0.19805915151792777,
+        "fixed_setpoint": 0.08083174378311081,
+        "pid": 0.0804074932122502,
+        "pid_water": 0.07723180539193777
+      },
+      "pid_water_advantage_over_fixed": 31.10346769973512,
+      "pid_water_advantage_over_pid": 27.437942767499408
+    },
+    {
+      "scenario_id": "building_train_8/phoenix_4",
+      "building": "building_train_8",
+      "weather": "phoenix_4",
+      "climate_family": "phoenix",
+      "tau_hours": 4.94,
+      "archetype": "Medium / Insulated",
+      "K_ahus": 3,
+      "V_zones": 30,
+      "returns": {
+        "bang_bang": -2659.086436729599,
+        "fixed_setpoint": -1725.4731541005208,
+        "pid": -1605.3190570962915,
+        "pid_water": -1365.1872321021126
+      },
+      "mean_rewards": {
+        "bang_bang": -0.3077646338807406,
+        "fixed_setpoint": -0.19970754098385657,
+        "pid": -0.18580081679355226,
+        "pid_water": -0.15800778149330008
+      },
+      "mae_scores": {
+        "bang_bang": 0.3077646338807406,
+        "fixed_setpoint": 0.19970754098385657,
+        "pid": 0.18580081679355226,
+        "pid_water": 0.15800778149330008
+      },
+      "pid_water_advantage_over_fixed": 360.2859219984082,
+      "pid_water_advantage_over_pid": 240.13182499417894
+    },
+    {
+      "scenario_id": "building_train_8/singapore_7",
+      "building": "building_train_8",
+      "weather": "singapore_7",
+      "climate_family": "singapore",
+      "tau_hours": 4.94,
+      "archetype": "Medium / Insulated",
+      "K_ahus": 3,
+      "V_zones": 30,
+      "returns": {
+        "bang_bang": -2486.6890774311787,
+        "fixed_setpoint": -208.99569412207074,
+        "pid": -864.0769090653775,
+        "pid_water": -467.2933495677735
+      },
+      "mean_rewards": {
+        "bang_bang": -0.2878112358137938,
+        "fixed_setpoint": -0.024189316449313745,
+        "pid": -0.10000890151219648,
+        "pid_water": -0.054084878422196
+      },
+      "mae_scores": {
+        "bang_bang": 0.2878112358137938,
+        "fixed_setpoint": 0.024189316449313745,
+        "pid": 0.10000890151219648,
+        "pid_water": 0.054084878422196
+      },
+      "pid_water_advantage_over_fixed": -258.29765544570273,
+      "pid_water_advantage_over_pid": 396.7835594976041
+    }
+  ]
+}

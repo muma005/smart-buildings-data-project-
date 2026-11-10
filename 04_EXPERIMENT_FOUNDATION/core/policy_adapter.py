@@ -195,7 +195,7 @@ class PolicyAdapter:
                     try:
                         rel = dep_file.relative_to(ld_path)
                         # Skip underlying simulator and framework/test modules frozen from sys.modules
-                        if rel.parts and (rel.parts[0] in {"smart_buildings", "04_EXPERIMENT_FOUNDATION", "05_FAILURE_ENGINEERING"} or any(p in {"tests", "test"} for p in rel.parts)):
+                        if rel.parts and (rel.parts[0] in {"smart_buildings", "starter_kit_pinned", "04_EXPERIMENT_FOUNDATION", "05_FAILURE_ENGINEERING"} or any(p in {"tests", "test"} for p in rel.parts)):
                             continue
                         dep_text = dep_file.read_text(encoding="utf-8")
                         dep_tree = ast.parse(textwrap.dedent(dep_text))

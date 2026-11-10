@@ -238,3 +238,35 @@ Phase 04 built the experimental foundation under nominal assumptions; Phase 05 s
 It guarantees that when full-scale control-policy research begins, experimental results are trustworthy, uncorrupted, and mathematically defensible. A policy cannot inflate its leaderboard standing through reward manipulation, uncommitted steps cannot leak into comparisons, and physical actuator misalignments will be intercepted before wasting simulation compute.
 
 With Phase 05 closed and certified, the project returns to Smart Buildings control-policy research on a verified, resilient foundation.
+
+
+### Phase 06 — Solution Discovery & Strategy (CLOSED — CERTIFIED PASS)
+
+- **Phase 06 Directory & Roadmap:** [06_SOLUTION_DISCOVERY/](06_SOLUTION_DISCOVERY/)
+- **Phase 06 Implementation Plan:** [06_SOLUTION_DISCOVERY/PHASE_06_IMPLEMENTATION_PLAN.md](06_SOLUTION_DISCOVERY/PHASE_06_IMPLEMENTATION_PLAN.md)
+- **Phase 06 Architectural Overview:** [06_SOLUTION_DISCOVERY/README.md](06_SOLUTION_DISCOVERY/README.md)
+- **Baseline Characterization & Deficit Audit:** [06_SOLUTION_DISCOVERY/BASELINE_CHARACTERIZATION_REPORT.md](06_SOLUTION_DISCOVERY/BASELINE_CHARACTERIZATION_REPORT.md)
+- **Machine-Readable Deficit Matrix:** [06_SOLUTION_DISCOVERY/baseline_deficit_matrix.json](06_SOLUTION_DISCOVERY/baseline_deficit_matrix.json)
+- **Solution Architecture Taxonomy:** [06_SOLUTION_DISCOVERY/SOLUTION_INVESTIGATION_AGENDA.md](06_SOLUTION_DISCOVERY/SOLUTION_INVESTIGATION_AGENDA.md)
+- **Falsifiable Hypothesis Register (H-01 to H-05):** [06_SOLUTION_DISCOVERY/HYPOTHESIS_REGISTER.md](06_SOLUTION_DISCOVERY/HYPOTHESIS_REGISTER.md)
+- **Machine-Readable Hypothesis Registry:** [06_SOLUTION_DISCOVERY/hypotheses.json](06_SOLUTION_DISCOVERY/hypotheses.json)
+- **First Controlled Experiment Plan (EXP-001):** [06_SOLUTION_DISCOVERY/experiments/EXP-001_ADAPTIVE_PRECONDITIONING_PLAN.md](06_SOLUTION_DISCOVERY/experiments/EXP-001_ADAPTIVE_PRECONDITIONING_PLAN.md)
+- **Gate X1 Exit Certification Report:** [06_SOLUTION_DISCOVERY/PHASE_06_EXIT_REPORT.md](06_SOLUTION_DISCOVERY/PHASE_06_EXIT_REPORT.md)
+
+The Solution Discovery & Strategy phase bridges the gap between certified platform infrastructure (Phases 03–05) and live empirical controller trials (Phase 07). Rather than guessing machine learning models or black-box neural networks, Phase 06 systematically derives candidate control strategies directly from the physical mechanisms and failure modes established in Problem Research (R1–R5), Data Understanding (Phase 02), and a forensic audit of the official starter baselines. This phase satisfied all Blueprint Section 11 and Section 15 criteria, closing Gate X1 with a definitive **CERTIFIED: PASS** verdict.
+
+This strategy phase establishes authoritative discoveries and experimental governance across five core pillars:
+
+- **Baseline Performance Hierarchy & Quantitative Floor:** Deconstructs all 4 starter-kit baseline policies across the complete 30-scenario training suite ($259{,}200$ simulator timesteps), conclusively establishing the benchmark hierarchy: `pid_water` (Total Return **$-14{,}033.42$**, Mean Return $-467.78$, MAE **$0.05414$**), `fixed_setpoint` ($-17{,}085.22$, MAE $0.06592$), `pid` ($-17{,}458.62$, MAE $0.06736$), and `bang_bang` ($-58{,}372.49$, MAE $0.22520$). Establishes $0.05414$ MAE as the uncompromised target floor for all future candidate controllers.
+- **Thermal Inertia Inversion & Morning Warmup Deficit:** Discovers that building thermal mass creates a structural crossover boundary at $\tau \approx 7.8\text{h}$. On fast buildings (`building_train_7`, $\tau = 1.94\text{h}$), reactive `pid_water` dominates `fixed_setpoint` ($-369.01$ vs $-794.39$). On massive concrete buildings (`building_train_1`, $\tau = 14.43\text{h}$), reactive feedback waits until 06:00 to heat, suffering 3–5 hours of morning comfort violations and losing to static `fixed_setpoint` by $+115.37$ points per scenario.
+- **The Tropical Setback Inversion (Singapore 6-for-6):** Uncovers that `fixed_setpoint` outperforms `pid_water` in **100% of tropical Singapore scenarios (6 out of 6)**, including a $+731.64$ point deficit in `building_train_5/singapore_4`. High nocturnal humidity penetrates the unconditioned envelope overnight; when reactive PID resumes cooling at 06:00, coil saturation and damper hunting trigger simultaneous mechanical co-cooling and reheating, destroying efficiency.
+- **Hierarchical Physics-Grounded Composite Architecture:** Formulates and evaluates 5 candidate solution families against the 7 physical control difficulties, establishing a 3-layer composite architecture: (1) Top Lookahead Layer running Rule-Based Adaptive Pre-Conditioning (RAPC) to dynamically scale warmup lead time ($t_{\text{lead}}$), (2) Middle Plant Coordination Layer managing mixed-air economizing (CEMFC) and supply air resets, and (3) Local Zone Execution Layer running Modular Decentralized VAV Control (MDVC) with Anti-Windup Comfort Boundary Enforcers.
+- **Falsifiable Hypothesis Register & EXP-001 Precommitment:** Formulates formal hypotheses `H-01` through `H-05` with explicit mathematical criteria, effect size thresholds, and failure conditions, backed by schema-validated JSON metadata. Designs the first precommitted experiment (`EXP-001: Adaptive Thermal Pre-Conditioning Baseline`) governed by a strict 3-tier testing ladder (Tier 1 Feasibility $< 60\text{s}$, Tier 2 Diagnostic Screening $< 20\text{m}$, Tier 3 Benchmark $< 14\text{h}$) to enforce zero wasted compute.
+
+**Its role in the project**
+
+Phase 04 and Phase 05 built and hardened the research engine; Phase 06 establishes the scientific strategy and experimental flight plan.
+
+It ensures that Phase 07 controller development never wastes compute on blind trial-and-error: eliminating unguided neural searches, identifying the exact scenarios where baseline controllers fail, and precommitting all evaluation thresholds before live controller dispatch.
+
+With Gate X1 closed and certified, the project advances to **Phase 07: Live Controller Development & Empirical Trials**.

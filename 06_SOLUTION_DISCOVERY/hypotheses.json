@@ -1,0 +1,116 @@
+{
+  "schema_version": "2.0.0",
+  "document": "06_SOLUTION_DISCOVERY/hypotheses.json",
+  "phase": "06",
+  "governance": "Smart_Buildings_Research_Platform_Blueprint_v2.md (Section 11)",
+  "total_hypotheses": 5,
+  "hypotheses": [
+    {
+      "hypothesis_id": "H-01",
+      "short_title": "Adaptive Morning Pre-Conditioning",
+      "target_deficit_modes": ["Deficit Mode 1 (Warmup Lag)", "Deficit Mode 2 (Subarctic Cold Ramp)"],
+      "target_physical_difficulties": ["Difficulty 1 (Thermal Inertia Spread)", "Difficulty 5 (Delayed Response)"],
+      "primary_comparator": "pid_water",
+      "status": "REGISTERED",
+      "one_intended_change": "Dynamic calculation of morning heating startup lead time before 06:00 based on indoor error and outdoor temperature",
+      "held_constant_factors": [
+        "Zone PID gains and reheat control logic",
+        "AHU fan static pressure setpoints",
+        "Chilled and hot water supply temperature setpoints",
+        "Reward function and official evaluation suite"
+      ],
+      "precommitted_thresholds": {
+        "morning_comfort_regret_reduction_pct": 25.0,
+        "heavy_building_fairbanks_return_min": -1550.0,
+        "total_30_scenario_return_improvement_pts": 400.0,
+        "max_allowable_energy_cost_increase_pct": 5.0
+      },
+      "falsification_criteria": "Net return drops below pid_water or morning comfort violations fail to reduce by at least 10%",
+      "linked_experiment": "EXP-001"
+    },
+    {
+      "hypothesis_id": "H-02",
+      "short_title": "Decentralized Zone Scale Invariance",
+      "target_deficit_modes": ["Deficit Mode 4 (Limit Cycles & Oscillation)"],
+      "target_physical_difficulties": ["Difficulty 2 (Structural Heterogeneity)", "Difficulty 7 (Zero-Shot Generalization)"],
+      "primary_comparator": "Centralized monolithic controllers",
+      "status": "REGISTERED",
+      "one_intended_change": "Decoupling zone damper/reheat control into independent identical per-zone modules operating strictly on local normalized inputs",
+      "held_constant_factors": [
+        "Building physical parameters",
+        "Weather scenarios",
+        "Supervisory plant operating limits"
+      ],
+      "precommitted_thresholds": {
+        "cross_building_reward_variance_pct": 3.0,
+        "max_inference_duration_ms_per_zone": 1.0,
+        "zero_code_modifications_across_scales": true
+      },
+      "falsification_criteria": "Performance degrades by > 5% when transferring across buildings or duct starvation occurs in > 20% of zones",
+      "linked_experiment": "EXP-002"
+    },
+    {
+      "hypothesis_id": "H-03",
+      "short_title": "Night Deep-Setback & Eco Gating",
+      "target_deficit_modes": ["Deficit Mode 3 (Energy & Carbon Waste)"],
+      "target_physical_difficulties": ["Difficulty 6 (Comfort vs Energy Trade-off)"],
+      "primary_comparator": "fixed_setpoint",
+      "status": "REGISTERED",
+      "one_intended_change": "Permitting unoccupied zone temperatures to drift to the bottom of the eco-band (15.85 C) during night hours (20:00 - 04:00)",
+      "held_constant_factors": [
+        "Occupied comfort setpoint (21.5 C)",
+        "Pre-conditioning lead time logic (H-01)",
+        "Building insulation parameters"
+      ],
+      "precommitted_thresholds": {
+        "off_peak_energy_reduction_pct": 15.0,
+        "max_allowable_morning_comfort_increase_pct": 5.0,
+        "net_return_gain_mild_climates_pts": 250.0
+      },
+      "falsification_criteria": "Morning recovery fails to restore comfort by 06:15, creating quadratic penalties that negate off-peak savings",
+      "linked_experiment": "EXP-003"
+    },
+    {
+      "hypothesis_id": "H-04",
+      "short_title": "Coordinated Economizer Free Cooling",
+      "target_deficit_modes": ["Deficit Mode 3 (Cooling Inefficiency)"],
+      "target_physical_difficulties": ["Difficulty 4 (Shared Equipment Coupling)"],
+      "primary_comparator": "Fixed-damper baseline (20% minimum outdoor air)",
+      "status": "REGISTERED",
+      "one_intended_change": "Modulating AHU mixed-air dampers to 100% outdoor air when outdoor temperature is between 12 C and 18 C and below return air temperature",
+      "held_constant_factors": [
+        "Zone temperature setpoints",
+        "Minimum ventilation air requirements",
+        "Fan speed control logic"
+      ],
+      "precommitted_thresholds": {
+        "mechanical_cooling_energy_reduction_pct": 20.0,
+        "shoulder_season_return_gain_pts": 80.0,
+        "zone_overcooling_events": 0
+      },
+      "falsification_criteria": "Humidity ingress forces mechanical reheat or zone temperatures drop below 20.5 C",
+      "linked_experiment": "EXP-004"
+    },
+    {
+      "hypothesis_id": "H-05",
+      "short_title": "Anti-Windup Comfort Boundary Enforcers",
+      "target_deficit_modes": ["Deficit Mode 1 (Warmup Lag)", "Deficit Mode 2 (Cold Ramp)", "Deficit Mode 4 (Tail Risks)"],
+      "target_physical_difficulties": ["Difficulty 6 (Quadratic Comfort Cliff)"],
+      "primary_comparator": "Standard unclamped PID",
+      "status": "REGISTERED",
+      "one_intended_change": "Conditional integral error freezing on actuator saturation and hard proportional override boost when |T - T_set| > 3.0 K",
+      "held_constant_factors": [
+        "Proportional and derivative gains",
+        "Setpoint schedule",
+        "Sensor sampling frequency"
+      ],
+      "precommitted_thresholds": {
+        "quadratic_cliff_events_gt_5K": 0,
+        "worst_scenario_return_improvement_pts": 428.9,
+        "benchmark_mae_improvement": 0.0050
+      },
+      "falsification_criteria": "High-frequency actuator chatter or limit cycling (> 50% rate of change per step)",
+      "linked_experiment": "EXP-005"
+    }
+  ]
+}
