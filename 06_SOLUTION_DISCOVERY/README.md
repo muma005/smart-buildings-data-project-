@@ -34,9 +34,12 @@ Phase 06 bridges certified experimental infrastructure (Phases 03–05) and empi
 ├── SOLUTION_INVESTIGATION_AGENDA.md          # WP2: Taxonomy of candidate solution families
 ├── HYPOTHESIS_REGISTER.md                    # WP3: Falsifiable hypotheses (H-01 to H-05)
 ├── hypotheses.json                           # WP3: Machine-readable hypothesis specifications
+├── EMPIRICAL_SOLUTION_EVALUATION_REPORT.md   # Live 12-trial empirical test report
+├── empirical_test_results.json               # Machine-readable 12-trial simulation results
 ├── PHASE_06_EXIT_REPORT.md                   # WP5: Gate X1 formal certification signoff
-├── benchmarks/                               # WP1: Diagnostic scripts and baseline audits
-│   └── audit_baselines.py
+├── benchmarks/                               # Diagnostic scripts and simulation engines
+│   ├── audit_baselines.py
+│   └── run_solution_experiments.py
 ├── taxonomies/                               # WP2: Architectural candidate specifications
 └── experiments/                              # WP4: Precommitted experiment plans
     └── EXP-001_ADAPTIVE_PRECONDITIONING_PLAN.md
@@ -51,7 +54,7 @@ Phase 06 bridges certified experimental infrastructure (Phases 03–05) and empi
 | **WP1** | **Baseline Characterization & Deficit Audit** | Forensic audit of 4 starter baselines across all 30 scenarios in `baseline_returns.json`. | **CERTIFIED** | [`BASELINE_CHARACTERIZATION_REPORT.md`](BASELINE_CHARACTERIZATION_REPORT.md)<br>[`baseline_deficit_matrix.json`](baseline_deficit_matrix.json) |
 | **WP2** | **Solution Architecture Taxonomy** | Map physical problems to 5 candidate engineering solution families. | **CERTIFIED** | [`SOLUTION_INVESTIGATION_AGENDA.md`](SOLUTION_INVESTIGATION_AGENDA.md) |
 | **WP3** | **Falsifiable Hypothesis Register** | Formulate testable hypotheses (H-01 to H-05) with quantitative criteria. | **CERTIFIED** | [`HYPOTHESIS_REGISTER.md`](HYPOTHESIS_REGISTER.md)<br>[`hypotheses.json`](hypotheses.json) |
-| **WP4** | **First Experiment Plan (`EXP-001`)** | Author precommitted experimental specification for Adaptive Pre-Conditioning. | **CERTIFIED** | [`experiments/EXP-001_ADAPTIVE_PRECONDITIONING_PLAN.md`](experiments/EXP-001_ADAPTIVE_PRECONDITIONING_PLAN.md) |
+| **WP4** | **First Experiment Plan & Live Trials** | Author precommitted EXP-001 plan and execute 12 live empirical simulation trials. | **CERTIFIED** | [`experiments/EXP-001_ADAPTIVE_PRECONDITIONING_PLAN.md`](experiments/EXP-001_ADAPTIVE_PRECONDITIONING_PLAN.md)<br>[`EMPIRICAL_SOLUTION_EVALUATION_REPORT.md`](EMPIRICAL_SOLUTION_EVALUATION_REPORT.md)<br>[`empirical_test_results.json`](empirical_test_results.json) |
 | **WP5** | **Phase 06 Synthesis & Gate X1 Signoff** | Independent audit against Blueprint Section 11/15; Phase 07 handoff. | **CERTIFIED** | [`PHASE_06_EXIT_REPORT.md`](PHASE_06_EXIT_REPORT.md) |
 
 ---

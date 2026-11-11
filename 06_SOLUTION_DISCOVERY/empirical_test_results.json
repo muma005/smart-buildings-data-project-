@@ -1,0 +1,125 @@
+{
+  "timestamp": 1794384450.1517215,
+  "trials": [
+    {
+      "policy": "PIDWaterResetPolicy",
+      "scenario": "building_train_1/fairbanks_1",
+      "steps": 1152,
+      "elapsed_sec": 133.0,
+      "total_return": -196.99,
+      "mean_reward": -0.17099,
+      "day2_6am_temp_c": 16.87,
+      "day3_6am_temp_c": 15.2
+    },
+    {
+      "policy": "FixedSetpointPolicy",
+      "scenario": "building_train_1/fairbanks_1",
+      "steps": 1152,
+      "elapsed_sec": 116.1,
+      "total_return": -110.01,
+      "mean_reward": -0.09549,
+      "day2_6am_temp_c": 20.71,
+      "day3_6am_temp_c": 19.7
+    },
+    {
+      "policy": "NaiveEarlyPreheatPolicy",
+      "scenario": "building_train_1/fairbanks_1",
+      "steps": 1152,
+      "elapsed_sec": 122.0,
+      "total_return": -219.99,
+      "mean_reward": -0.19096,
+      "day2_6am_temp_c": 19.89,
+      "day3_6am_temp_c": 18.23
+    },
+    {
+      "policy": "RegimeAdaptiveHVACPolicy",
+      "scenario": "building_train_1/fairbanks_1",
+      "steps": 1152,
+      "elapsed_sec": 115.0,
+      "total_return": -110.01,
+      "mean_reward": -0.09549,
+      "day2_6am_temp_c": 20.71,
+      "day3_6am_temp_c": 19.7
+    },
+    {
+      "policy": "PIDWaterResetPolicy",
+      "scenario": "building_train_5/singapore_4",
+      "steps": 1152,
+      "elapsed_sec": 205.3,
+      "total_return": -186.29,
+      "mean_reward": -0.16171,
+      "day2_6am_temp_c": 24.86,
+      "day3_6am_temp_c": 24.79
+    },
+    {
+      "policy": "FixedSetpointPolicy",
+      "scenario": "building_train_5/singapore_4",
+      "steps": 1152,
+      "elapsed_sec": 290.3,
+      "total_return": -30.59,
+      "mean_reward": -0.02655,
+      "day2_6am_temp_c": 23.92,
+      "day3_6am_temp_c": 23.89
+    },
+    {
+      "policy": "NaiveEarlyPreheatPolicy",
+      "scenario": "building_train_5/singapore_4",
+      "steps": 1152,
+      "elapsed_sec": 270.3,
+      "total_return": -31.38,
+      "mean_reward": -0.02724,
+      "day2_6am_temp_c": 24.07,
+      "day3_6am_temp_c": 24.07
+    },
+    {
+      "policy": "RegimeAdaptiveHVACPolicy",
+      "scenario": "building_train_5/singapore_4",
+      "steps": 1152,
+      "elapsed_sec": 165.0,
+      "total_return": -30.59,
+      "mean_reward": -0.02655,
+      "day2_6am_temp_c": 23.92,
+      "day3_6am_temp_c": 23.89
+    },
+    {
+      "policy": "PIDWaterResetPolicy",
+      "scenario": "building_train_1/atlanta_2",
+      "steps": 1152,
+      "elapsed_sec": 114.6,
+      "total_return": -18.76,
+      "mean_reward": -0.01629,
+      "day2_6am_temp_c": 22.47,
+      "day3_6am_temp_c": 22.94
+    },
+    {
+      "policy": "FixedSetpointPolicy",
+      "scenario": "building_train_1/atlanta_2",
+      "steps": 1152,
+      "elapsed_sec": 117.8,
+      "total_return": -21.05,
+      "mean_reward": -0.01827,
+      "day2_6am_temp_c": 22.59,
+      "day3_6am_temp_c": 22.94
+    },
+    {
+      "policy": "NaiveEarlyPreheatPolicy",
+      "scenario": "building_train_1/atlanta_2",
+      "steps": 1152,
+      "elapsed_sec": 132.5,
+      "total_return": -18.76,
+      "mean_reward": -0.01628,
+      "day2_6am_temp_c": 22.54,
+      "day3_6am_temp_c": 22.96
+    },
+    {
+      "policy": "RegimeAdaptiveHVACPolicy",
+      "scenario": "building_train_1/atlanta_2",
+      "steps": 1152,
+      "elapsed_sec": 145.0,
+      "total_return": -19.37,
+      "mean_reward": -0.01681,
+      "day2_6am_temp_c": 22.59,
+      "day3_6am_temp_c": 22.94
+    }
+  ]
+}
