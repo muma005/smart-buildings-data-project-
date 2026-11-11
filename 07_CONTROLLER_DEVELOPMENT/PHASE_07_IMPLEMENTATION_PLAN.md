@@ -147,7 +147,82 @@ flowchart LR
 
 ---
 
-## 5. Compute Budget & Failure Containment Protocol
+## 5. Integration of Phase 05 Failure Engineering Infrastructure
+
+Phase 05 built and certified the platform's defense, failure detection, and persistence systems. In Phase 07, these certified capabilities are not passive tools—they form the **armored execution and verification pipeline** that governs every single controller experiment:
+
+```mermaid
+flowchart TD
+    subgraph PHASE 05 INTEGRATION PIPELINE
+        P["Candidate Controller (regime_adaptive_hvac.py)"]
+        
+        subgraph Gate 1: Security & Containment
+            R2["Ring 2: AST Static Audit<br/>(Scans for forbidden imports, ctypes, leakage)"]
+            R3["Ring 3: Read-Only Memory Shield<br/>(obs.flags.writeable = False)"]
+            R4["Ring 4: Deep-Copied Metadata Isolation<br/>(Prevents shared state mutation)"]
+        end
+        
+        subgraph Gate 2: Physical Verification
+            SAP["Semantic Actuator Probe (WP1)<br/>(Live pulse tests reheat & damper channels on bldg 1 & 2)"]
+        end
+        
+        subgraph Gate 3: Resilient Execution
+            SR["SimulationRunner with 288-Step Chunking (WP3)<br/>(Atomic .tmp swap & chunks_manifest checksums)"]
+            CR["P1-P5 Crash Resilience & Idempotent Recovery"]
+        end
+        
+        subgraph Gate 4: Lineage & Certification
+            DAG["LineageImpactAuditor (WP4)<br/>(Minimal blast-radius DAG quarantine)"]
+            SCE["SystemCertificationEngine (WP5)<br/>(Cryptographic HMAC-SHA256 signature for Gate C1)"]
+        end
+    end
+
+    P --> R2 --> R3 & R4 --> SAP --> SR & CR --> DAG --> SCE
+```
+
+### 5.1 Pre-Execution Ingestion: The Four Rings of Defense
+Before `RegimeAdaptiveHVACPolicy` executes a single step:
+- **Ring 2 AST Static Audit:** The policy source is parsed and audited. Any unauthorized import (`subprocess`, `ctypes`, `sys.modules` introspection) or attempts to read raw weather files directly will fail-closed immediately with a `SecurityViolationError`.
+- **Ring 3 Memory Wrapping:** `obs` arrays passed to `get_action()` are locked with `writeable = False` to prevent in-place memory tampering.
+- **Ring 4 Metadata Isolation:** `building_meta_data` is deep-copied, ensuring the controller cannot mutate simulator configuration dictionaries.
+
+### 5.2 Pre-Simulation Validation: Semantic Actuator Probing
+Before committing to multi-day or 30-day benchmarks, `SemanticActuatorProbe` executes single-variable thermal pulses against the controller in live environments:
+- Probes `reheat_valve_percentage_command` to verify that increasing reheat commands causes a physical temperature rise in the assigned zone.
+- Probes `supply_air_damper_percentage_command` to verify that damper opening delivers cooling airflow.
+- Validated on both `building_train_1` ($V=39$, $K=4$) and `building_train_2` ($V=85$, $K=9$) to catch actuator index remapping or cross-zone wiring bugs before wasting simulation compute.
+
+### 5.3 Execution Resilience: 288-Step Atomic Chunk Persistence
+Because 30-day simulations require hours of compute:
+- `SimulationRunner` persists transition traces in 288-step (1 operating day) atomic compressed chunks (`chunk_0000.npz`, etc.).
+- Each chunk commit uses atomic temporary-file swaps (`.tmp` $\to$ `.npz`) and registers cryptographic SHA-256 hashes in `chunks_manifest.json`.
+- The system is resilient across all 5 verified failure points (P1 mid-chunk, P2 orphan files, P3 manifest replacement, P4 uncommitted volatile buffers, P5 recovery idempotence), guaranteeing that unexpected interruptions can resume without data loss or corrupted leaderboards.
+
+### 5.4 Audit & Certification: DAG Lineage & Cryptographic Signing
+- **Lineage Tracking:** `LineageImpactAuditor` records all runs in the experiment DAG (`SPEC -> SUITE -> experiment -> RUN -> POLICY -> RELEASE`). If an anomaly is detected, it isolates the exact minimal blast-radius quarantine set without discarding valid runs.
+- **Candidate Promotion Signoff:** `SystemCertificationEngine` validates all 30 episode manifests and signs the candidate release dossier using `PHASE05_CERTIFICATION_KEY`. Only a cryptographically verified, 8,640-step, 100% complete run portfolio can be promoted for **Gate `C1`**.
+
+---
+
+## 6. Precommitted Performance Targets & Success Thresholds
+
+```
++------------------------------------+---------------------+---------------------+-----------------------+
+| Metric                             | Starter Baseline    | Phase 07 Target     | Minimum Gate Pass     |
++------------------------------------+---------------------+---------------------+-----------------------+
+| Total 30-Scenario Benchmark Return |    -14,033.42       |    >= -11,500.00    | > -13,000.00          |
+| Mean Scenario Return               |       -467.78       |       >= -383.33    | > -433.33             |
+| Mean Absolute Error (MAE Score)    |        0.05414      |        < 0.04400    | < 0.05000             |
+| Fairbanks_1 Return (Building 1)    |     -1,828.90       |     >= -1,250.00    | > -1,500.00           |
+| Singapore_4 Return (Building 5)    |       -937.59       |       >= -250.00    | > -400.00             |
+| Number of Inversion Scenarios Won  |        12 / 30      |        >= 28 / 30   | >= 25 / 30            |
+| Severe Discomfort Cliffs (> 5K)    |        Frequent     |        0 Events     | < 5 Events across 30s |
++------------------------------------+---------------------+---------------------+-----------------------+
+```
+
+---
+
+## 7. Compute Budget & Failure Containment Protocol
 
 * **Tier 1 Feasibility Checks:** Max 60 seconds per test. Zero full simulations.
 * **Tier 2 Diagnostic Screenings:** 4 scenarios $\times$ 4 days = $\approx 15\text{ minutes}$ total compute.
@@ -157,7 +232,7 @@ flowchart LR
 
 ---
 
-## 6. Deliverables & Gate C1 Signoff Criteria
+## 8. Deliverables & Gate C1 Signoff Criteria
 
 To achieve certification of **`Gate C1` (Candidate Arena & Promotion)**, Phase 07 must deliver:
 1. [`07_CONTROLLER_DEVELOPMENT/policies/regime_adaptive_hvac.py`](policies/regime_adaptive_hvac.py): Clean, tested, release-ready Python controller.
